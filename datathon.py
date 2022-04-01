@@ -14,7 +14,9 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
+url =  "<iframe title="datathonquiros" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e848e563-7c74-4a9e-b84b-355172b3939b&autoAuth=true&ctid=aec762e4-3d54-495e-a8fe-4287dce6fe69&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1nLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>"
 
+st.components.html(url)
 
 with st.echo(code_location='below'):
     total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
