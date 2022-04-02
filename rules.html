@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 450px;
+            background-color: #f8f8f8;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"font": {"color": "black"}, "id": "Gel-Champ\u00fa", "label": "Gel-Champ\u00fa", "shape": "dot", "title": "Gel-Champ\u00fa Relacionado:\u003cbr\u003eHidratantes", "value": 1}, {"font": {"color": "black"}, "id": "Hidratantes", "label": "Hidratantes", "shape": "dot", "title": "Hidratantes Relacionado:\u003cbr\u003eContorno de Ojos\u003cbr\u003eAntiarrugas, Desmaquillantes y limpiadores\u003cbr\u003eHidratantes Labiales\u003cbr\u003eGel-Champ\u00fa\u003cbr\u003eDesmaquillantes y limpiadores", "value": 5}, {"font": {"color": "black"}, "id": "Contorno de Ojos", "label": "Contorno de Ojos", "shape": "dot", "title": "Contorno de Ojos Relacionado:\u003cbr\u003eHidratantes\u003cbr\u003eAntiarrugas", "value": 2}, {"font": {"color": "black"}, "id": "Antiarrugas", "label": "Antiarrugas", "shape": "dot", "title": "Antiarrugas Relacionado:\u003cbr\u003eDesmaquillantes y limpiadores, Hidratantes\u003cbr\u003eContorno de Ojos\u003cbr\u003eAntimanchas\u003cbr\u003eAmpollas\u003cbr\u003eMascarillas", "value": 5}, {"font": {"color": "black"}, "id": "Antiarrugas, Desmaquillantes y limpiadores", "label": "Antiarrugas, Desmaquillantes y limpiadores", "shape": "dot", "title": "Antiarrugas, Desmaquillantes y limpiadores Relacionado:\u003cbr\u003eHidratantes", "value": 1}, {"font": {"color": "black"}, "id": "Ampollas", "label": "Ampollas", "shape": "dot", "title": "Ampollas Relacionado:\u003cbr\u003eAntiarrugas", "value": 1}, {"font": {"color": "black"}, "id": "Desmaquillantes y limpiadores, Hidratantes", "label": "Desmaquillantes y limpiadores, Hidratantes", "shape": "dot", "title": "Desmaquillantes y limpiadores, Hidratantes Relacionado:\u003cbr\u003eAntiarrugas", "value": 1}, {"font": {"color": "black"}, "id": "Antiarrugas, Hidratantes", "label": "Antiarrugas, Hidratantes", "shape": "dot", "title": "Antiarrugas, Hidratantes Relacionado:\u003cbr\u003eDesmaquillantes y limpiadores", "value": 1}, {"font": {"color": "black"}, "id": "Desmaquillantes y limpiadores", "label": "Desmaquillantes y limpiadores", "shape": "dot", "title": "Desmaquillantes y limpiadores Relacionado:\u003cbr\u003eHidratantes\u003cbr\u003eAntiarrugas, Hidratantes", "value": 2}, {"font": {"color": "black"}, "id": "Mascarillas", "label": "Mascarillas", "shape": "dot", "title": "Mascarillas Relacionado:\u003cbr\u003eAntiarrugas", "value": 1}, {"font": {"color": "black"}, "id": "Cepillos", "label": "Cepillos", "shape": "dot", "title": "Cepillos Relacionado:\u003cbr\u003eDent\u00edfricos", "value": 1}, {"font": {"color": "black"}, "id": "Dent\u00edfricos", "label": "Dent\u00edfricos", "shape": "dot", "title": "Dent\u00edfricos Relacionado:\u003cbr\u003eCepillos\u003cbr\u003eColutorios", "value": 2}, {"font": {"color": "black"}, "id": "Colutorios", "label": "Colutorios", "shape": "dot", "title": "Colutorios Relacionado:\u003cbr\u003eDent\u00edfricos", "value": 1}, {"font": {"color": "black"}, "id": "Antimanchas", "label": "Antimanchas", "shape": "dot", "title": "Antimanchas Relacionado:\u003cbr\u003eAntiarrugas", "value": 1}, {"font": {"color": "black"}, "id": "Geles", "label": "Geles", "shape": "dot", "title": "Geles Relacionado:\u003cbr\u003eHidrataci\u00f3n", "value": 1}, {"font": {"color": "black"}, "id": "Hidrataci\u00f3n", "label": "Hidrataci\u00f3n", "shape": "dot", "title": "Hidrataci\u00f3n Relacionado:\u003cbr\u003eGeles", "value": 1}, {"font": {"color": "black"}, "id": "Hidratantes Labiales", "label": "Hidratantes Labiales", "shape": "dot", "title": "Hidratantes Labiales Relacionado:\u003cbr\u003eHidratantes", "value": 1}]);
+        edges = new vis.DataSet([{"from": "Gel-Champ\u00fa", "to": "Hidratantes", "value": 39.52}, {"from": "Contorno de Ojos", "to": "Antiarrugas", "value": 38.09}, {"from": "Antiarrugas, Desmaquillantes y limpiadores", "to": "Hidratantes", "value": 36.52}, {"from": "Ampollas", "to": "Antiarrugas", "value": 35.77}, {"from": "Desmaquillantes y limpiadores, Hidratantes", "to": "Antiarrugas", "value": 34.36}, {"from": "Antiarrugas, Hidratantes", "to": "Desmaquillantes y limpiadores", "value": 32.66}, {"from": "Mascarillas", "to": "Antiarrugas", "value": 32.49}, {"from": "Cepillos", "to": "Dent\u00edfricos", "value": 32.1}, {"from": "Colutorios", "to": "Dent\u00edfricos", "value": 30.79}, {"from": "Antimanchas", "to": "Antiarrugas", "value": 26.86}, {"from": "Geles", "to": "Hidrataci\u00f3n", "value": 26.66}, {"from": "Desmaquillantes y limpiadores", "to": "Hidratantes", "value": 25.82}, {"from": "Contorno de Ojos", "to": "Hidratantes", "value": 25.39}, {"from": "Hidratantes Labiales", "to": "Hidratantes", "value": 25.34}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
