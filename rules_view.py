@@ -17,8 +17,9 @@ st.set_page_config(layout="wide")
 #     ASOCIACIONES
 #---------------------------------
 
+url="https://github.com/dcruzgz/Datahonquiros/blob/09bafb9e6c376e6b6754fba40b55bb7925d8bd19/rules.csv"
 
-df_raw = pd.read_csv("C:/Users/dcruzg/Desktop/Datathon/Atmira_Pharma_Visualization/dathon/rules.csv",  encoding = "ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+df_raw = pd.read_csv(url,  encoding = "ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
 df1 = df_raw[["lhs", "rhs", "confidence"]]
 df1["lhs"] = df1["lhs"].str.replace('{', '')
 df1["lhs"] = df1["lhs"].str.replace('}', '')
