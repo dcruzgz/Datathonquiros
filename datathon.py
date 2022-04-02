@@ -1,40 +1,103 @@
-from collections import namedtuple
-import altair as alt
-import math
-import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
+import pandas as pd
+import altair as alt
+import numpy as np
+from urllib.error import URLError
+import os
+from pyvis.network import Network
 
-"""
-# Welcome to Streamlit!
+st.set_page_config(layout="wide")
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
+#---------------------------------
+#     MAPA
+#---------------------------------
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+#---------------------------------
+#     ASOCIACIONES
+#---------------------------------
 
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
-url =  "<iframe title="datathonquiros" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=e848e563-7c74-4a9e-b84b-355172b3939b&autoAuth=true&ctid=aec762e4-3d54-495e-a8fe-4287dce6fe69&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1nLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>"
 
-st.components.html(url)
+df_raw = pd.read_csv("C:/Users/dcruzg/Desktop/Datathon/Atmira_Pharma_Visualization/dathon/rules.csv",  encoding = "ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+df1 = df_raw[["lhs", "rhs", "confidence"]]
+df1["lhs"] = df1["lhs"].str.replace('{', '')
+df1["lhs"] = df1["lhs"].str.replace('}', '')
+df1["rhs"] = df1["rhs"].str.replace('{', '')
+df1["rhs"] = df1["rhs"].str.replace('}', '')
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
+df1["confidence"]= round(pd.to_numeric(df1["confidence"])*100, 2)
 
-    Point = namedtuple('Point', 'x y')
-    data = []
+df1.columns = ["Si el cliente compró", "Comprará", "Con una confianza del (%)"]
 
-    points_per_turn = total_points / num_turns
 
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
+
+    #Relaciones gráficas
+
+r_net = Network(height='450px', width='100%', bgcolor='#f8f8f8', font_color='black')
+
+# set the physics layout of the network
+
+sources = df1['Si el cliente compró']
+targets = df1['Comprará']
+weights = df1['Con una confianza del (%)']
+
+edge_data = zip(sources, targets, weights)
+
+for e in edge_data:
+    src = e[0]
+    dst = e[1]
+    w = e[2]
+
+    r_net.add_node(src, src, title=src)
+    r_net.add_node(dst, dst, title=dst)
+    r_net.add_edge(src, dst, value=w)
+
+neighbor_map = r_net.get_adj_list()
+
+# add neighbor data to node hover data
+for node in r_net.nodes:
+    node['title'] += ' Relacionado:<br>' + '<br>'.join(neighbor_map[node['id']])
+    node['value'] = len(neighbor_map[node['id']])
+
+r_net.save_graph('rules.html')
+
+HtmlFile = open("rules.html", 'r', encoding='utf-8')
+source_code = HtmlFile.read()
+
+
+
+#Ordenar página
+
+row1_1, row1_2 = st.columns((3, 2))
+
+with row1_1:
+    st.title("¿CUÁL ES LA SIGUIENTE PROMOCIÓN?")  # add a title
+
+
+with row1_2:
+    st.write(
+        """
+    ##
+    Reglas obtenidas en el tratamiento de los datos sobre los clientes.
+    Es el resultado de aplicar arules en R.
+    """
+    )
+
+row2_1, row2_2 = st.columns((2, 2))
+
+with row2_1:
+    st.write('\n')
+    st.dataframe(df1.style.format(({"Con una confianza del (%)": "{:.2f}"})), height=470, width=650) # visualize my dataframe in the Streamlit app
+
+with row2_2:
+    components.html(source_code, height=480, width=650)
+
+st.write(
+    """
+      ##
+      Para mas información sobre los métodos usados:
+      https://cran.r-project.org/web/packages/arules/arules.pdf.
+      """
+)
+#--------------------------------------
