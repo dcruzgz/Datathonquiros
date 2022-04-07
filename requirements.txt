@@ -1,5 +1,5 @@
 streamlit>=1.2.0
-folium>=0.11
+streamlit-folium
 streamlit-aggrid==0.2.3-2
 pandas==1.3.5
 altair==4.2.0
