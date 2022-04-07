@@ -27,9 +27,9 @@ datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasif
 datos_clean_or = datos_clean_or[datos_clean_or['zp_sim'].notna()]
 
 data_code = pd.read_excel(
-    'C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//codprov.xls')
+    'codprov.xls')
 data_geo = json.load(
-    open('C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//spain_provinces.geojson',
+    open('spain_provinces.geojson',
          encoding="utf8"))
 
 
