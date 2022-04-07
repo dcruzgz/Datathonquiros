@@ -51,7 +51,7 @@ dicts = {"Ganancia": 'GAIN'}
 map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.933016292135545], zoom_start=6, width=700, height=570)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
 
-
+@st.cache(suppress_st_warning=True)
 def threshold(data):
     threshold_scale = np.linspace(data_all[dicts[data]].min(),
                                   data_all[dicts[data]].max(),
@@ -61,7 +61,7 @@ def threshold(data):
     threshold_scale[-1] = threshold_scale[-1]
     return threshold_scale
 
-
+@st.cache(suppress_st_warning=True)
 def show_maps(data, threshold_scale, nombre_valor):
     maps = folium.Choropleth(geo_data=data_geo,
                              data=data_all,
@@ -106,6 +106,7 @@ def show_maps(data, threshold_scale, nombre_valor):
 
 
 #region RULES
+@st.cache(suppress_st_warning=True)
 def df_rules():
     url = 'https://raw.githubusercontent.com/dcruzgz/Datahonquiros/09bafb9e6c376e6b6754fba40b55bb7925d8bd19/rules.csv?token=GHSAT0AAAAAABSZT435MD2WTR7XIW36ZK7GYSSRUOA'
 
@@ -120,6 +121,7 @@ def df_rules():
     df_rules["Con una confianza del (%)"] = round(pd.to_numeric(df1["confidence"]) * 100, 2)
     return df_rules
 
+@st.cache(suppress_st_warning=True)
 def rules(df_rules):
     # Relaciones gráficas
 
@@ -155,6 +157,7 @@ def rules(df_rules):
     source_code = HtmlFile.read()
     return source_code
 
+@st.cache(suppress_st_warning=True)
 def aggrid_interactive_table(df: pd.DataFrame):
     """Creates an st-aggrid interactive table based on a dataframe.
 
@@ -184,6 +187,7 @@ def aggrid_interactive_table(df: pd.DataFrame):
 #endregion
 
 #region MARCAS
+@st.cache(suppress_st_warning=True)
 def pretty(s: str) -> str:
     try:
         return dict(js="JavaScript")[s]
