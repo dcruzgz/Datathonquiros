@@ -6,3 +6,4 @@ altair==4.2.0
 numpy==1.21.3
 pyvis==0.1.9
 simplejson
+xlrd >= 1.0.0
