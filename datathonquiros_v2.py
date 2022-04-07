@@ -401,7 +401,7 @@ def run_UI():
                 ),
                 color=alt.Color(
                     "Marca",
-                    legend=alt.Legend(title="Marca"),
+                    legend=None,
                     scale=alt.Scale(scheme="category10"),
                 ),
                 tooltip=["Ventas", "Marca"],
