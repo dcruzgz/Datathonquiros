@@ -369,7 +369,7 @@ def run_UI():
         plot_df1 = df_filter.groupby('productmarca')['qty_ordered'].sum().rename_axis('Marca').reset_index(name='Ventas')
        # plot_df1 = df_filter['productmarca'].value_counts(dropna=True).rename_axis('Marca').reset_index(
         #name='Ventas')
-        top = plot_df1['Marca']
+        top = plot_df1.sort_values(by='Ventas', ascending=False)['Marca']
         plot_df1['Ventas'] = round((plot_df1['Ventas'] / (plot_df1['Ventas'].sum())) * 100, 2)
         st.expander(label='Campo a consultar')
 
