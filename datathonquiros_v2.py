@@ -18,7 +18,7 @@ PAGES = [
     'Próximas promociones'
 ]
 
-datos_clean_or = pd.read_csv('C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//tickets_dfbigcatbienfechazipcatbien.csv'
+datos_clean_or = pd.read_csv('https://www.dropbox.com/s/mp1zbrj68ccz0oc/datos_f.csv?dl=1'
                          , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
 
 datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
