@@ -3,7 +3,6 @@ import streamlit.components.v1 as components
 import os
 import pandas as pd
 import json
-from geopy.geocoders import Nominatim
 from streamlit_folium import folium_static
 import folium
 import numpy as np
@@ -48,17 +47,6 @@ data_all = dat_1.set_index('CODIGO')
 
 dicts = {"Ganancia": 'GAIN'}
 
-def center():
-     address = 'Surabaya, ID'
-     geolocator = Nominatim(user_agent="id_explorer")
-     location = geolocator.geocode(address)
-     latitude = location.latitude
-     longitude = location.longitude
-     return latitude, longitude
-
-
-# for calling the function for getting center of maps
-centers = center()
 # showing the maps
 map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.933016292135545], zoom_start=6, width=700, height=570)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
