@@ -304,14 +304,11 @@ def run_UI():
                         df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/1000
                         data_all['GAIN'] = df_sum['Precio_calculado']
                         
-            if st.button('Actualizar Consulta'):
-                for idx in range(51):
-                    data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
-                    data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
-            else:
-                st.write('Datos Actualizados!')
-           
 
+            for idx in range(51):
+                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
+                data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas        
+                      
     ### LLAMAR A LA GESTION PARA CREAR GAIN A PARTIR DE VARIABLE MAP
         select_data = variable_map
         nombre_valor = "Balance (k€): "
