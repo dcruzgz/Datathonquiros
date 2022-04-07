@@ -3,13 +3,13 @@ import streamlit.components.v1 as components
 import os
 import pandas as pd
 import json
-from streamlit_folium import folium_static
 import folium
 import numpy as np
 from pyvis.network import Network
 from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 import altair as alt
+from streamlit_folium import folium_static
 
 PAGES = [
     'Nuestras ventas en el territorio',
