@@ -108,7 +108,7 @@ def show_maps(data, threshold_scale, nombre_valor):
 #region RULES
 
 def df_rules():
-    url = 'https://raw.githubusercontent.com/dcruzgz/Datahonquiros/09bafb9e6c376e6b6754fba40b55bb7925d8bd19/rules.csv?token=GHSAT0AAAAAABSZT435MD2WTR7XIW36ZK7GYSSRUOA'
+    url = 'Data/rules.csv'
 
     df_raw = pd.read_csv(url, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
 
