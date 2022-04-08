@@ -21,15 +21,15 @@ time.sleep(3)
 content = browser.find_element_by_xpath('//*[@id="pane"]/div/div[1]/div/div/div[2]/div[5]').click() ##Yr7JMd-pane-content cYB2Ge-oHo7ed
 htmlstring = browser.page_source
 afterstring = ""
-for i in range(12):
+for i in range(20):
     afterstring = htmlstring
     actions.send_keys(Keys.PAGE_DOWN).perform()
     htmlstring = browser.page_source + htmlstring
-    if (i > 12):
+    if (i > 20):
         print("ended scraping crack test one")
         actions.send_keys(Keys.PAGE_DOWN).perform()
         htmlstring = browser.page_source + htmlstring
-        if (i > 12):
+        if (i > 20):
             print("--Scrapping End--")
             break
     time.sleep(3)
@@ -42,9 +42,12 @@ counter = 0
 Reviwer_data = {'Index': [], 'Reviewer Name': [], 'Reviewer Rating': [], 'Reviewer Profile URL': [], 'Review': [], 'Time': []}
 
 for a in mydivs:
-    if ('Index', counter) in Reviwer_data.items():
+    list = Reviwer_data['Reviewer Name']
+    act_name = str(a.find("div", class_="ODSEW-ShBeI-title").text).strip()
+    if act_name in list:
         continue
     else:
+        print("no")
         textdoc.write(str(
             "\nReviewer name: " + a.find("div",
                                          class_="ODSEW-ShBeI-title").text) + " \n||Reviewerer Profile URL:" + str(
@@ -64,6 +67,6 @@ for a in mydivs:
 print("Total reviews scraped:" + str(counter))
 textdoc.close()
 pd.DataFrame(Reviwer_data).to_csv('data.csv',sep=';', index= False)
-
+browser.quit()
 
 
