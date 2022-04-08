@@ -42,12 +42,13 @@ for i in range(100):
         for a in mydivs:
             list = Reviwer_data['Reviewer Name']
             act_name = str(a.find("div", class_="ODSEW-ShBeI-title").text).strip()
-            print(str(a.find("div", class_="ODSEW-ShBeI-title").text))
+            
             Reviwer_data['Index'].append(counter)
             Reviwer_data['Reviewer Name'].append(str(a.find("div", class_="ODSEW-ShBeI-title").text).strip())
             Reviwer_data['Reviewer Rating'].append(str(a.find("span", class_="ODSEW-ShBeI-H1e3jb")))
             Reviwer_data['Review'].append(a.find("span", class_="ODSEW-ShBeI-text").text)
             Reviwer_data['Time'].append(a.find("span", class_="ODSEW-ShBeI-RgZmSc-date").text)
+            
             counter = counter + 1
     else:
         continue
