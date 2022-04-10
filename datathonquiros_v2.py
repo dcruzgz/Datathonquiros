@@ -17,6 +17,18 @@ PAGES = [
     'Próximas promociones'
 ]
 
+st.set_page_config(
+    page_title="Datathonquiros",
+    page_icon=":brain:",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Report a bug': "https://github.com/arup-group/social-data/issues/new/choose",
+        'About': """            
+       Antonio
+       Daniel
+       """
+    }
+)
 
 @st.experimental_memo
 def get_data():
@@ -202,18 +214,6 @@ def pretty(s: str) -> str:
 #endregion
 
 def run_UI():
-    st.set_page_config(
-        page_title="Datathonquiros",
-        page_icon=":brain:",
-        initial_sidebar_state="expanded",
-        menu_items={
-            'Report a bug': "https://github.com/arup-group/social-data/issues/new/choose",
-            'About': """            
-        Antonio
-        Daniel
-        """
-        }
-    )
     st.sidebar.title('Datathonquiros - Análisis')
 
     if st.session_state.page:
