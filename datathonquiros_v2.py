@@ -321,9 +321,25 @@ def run_UI():
         select_data = variable_map
         nombre_valor = "Balance (k€): "
         if cols[1].button('Actualizar búsqueda 🔍' ):
-            st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
-                year) + '.' + " En categorías: " + cat1 + " - " + cat2 + " - " + cat3)
-            show_maps(select_data, threshold(select_data), nombre_valor)
+            
+            if cat1 == 'Toda la Categoría':
+                st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
+                    year) + '.' + " En todas las categorías")
+                show_maps(select_data, threshold(select_data), nombre_valor)
+                
+            elsif cat2 == 'Toda la Categoría' and cat1 != 'Toda la Categoría':
+                st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
+                    year) + '.' + " En categoría: " + cat1 )
+                show_maps(select_data, threshold(select_data), nombre_valor)
+           
+            elsif cat3 == 'Toda la Categoría' and cat2 != 'Toda la Categoría' and cat1 != 'Toda la Categoría':
+                st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
+                    year) + '.' + " En categoría: " + cat1 + ", " + "Subcategoría:" + cat2)
+                show_maps(select_data, threshold(select_data), nombre_valor)
+            else:                
+                st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
+                    year) + '.' + " En categoría: " + cat1 + ", " + "Subcategoría:" + cat2 +  ", "  + "Subcategoría:"+ cat3)
+                show_maps(select_data, threshold(select_data), nombre_valor)
         else:
             cols[2].write(" ")
 
