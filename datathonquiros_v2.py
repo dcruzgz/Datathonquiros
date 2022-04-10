@@ -31,12 +31,28 @@ st.set_page_config(
 )
 
 @st.experimental_memo
-def get_data():
+def get_data_clean():
     data = pd.read_csv('https://www.dropbox.com/s/mp1zbrj68ccz0oc/datos_f.csv?dl=1'
                          , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
     return data
 
-datos_clean_or = get_data()
+@st.experimental_memo
+def get_data_prov():
+    data = pd.read_excel(
+        'C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//codprov.xls')
+    return data
+
+@st.experimental_memo
+def get_data_geo():
+    data = json.load(
+        open('C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//spain_provinces.geojson',
+             encoding="utf8"))
+    return data
+
+datos_clean_or = get_data_clean()
+data_code = get_data_prov()
+data_geo = get_data_geo()
+
 
 datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
 datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
