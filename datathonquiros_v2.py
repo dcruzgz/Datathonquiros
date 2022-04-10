@@ -24,7 +24,7 @@ def get_data():
                          , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
     return data
 
-datos_clean_or = get(data)
+datos_clean_or = get_data()
 
 datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
 datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
