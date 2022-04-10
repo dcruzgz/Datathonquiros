@@ -321,7 +321,12 @@ def run_UI():
     ### LLAMAR A LA GESTION PARA CREAR GAIN A PARTIR DE VARIABLE MAP
         select_data = variable_map
         nombre_valor = "Balance (k€): "
-        show_maps(select_data, threshold(select_data), nombre_valor)
+        if cols[1].button('Actualizar datos 🔍' ):
+            st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)' + str(mes) + '/' + str(
+                year) + '.' + " En categorías: " + cat1 + " - " + cat2 + " - " + cat3)
+            show_maps(select_data, threshold(select_data), nombre_valor)
+        else:
+            cols[2].write(" ")
 
     elif page == 'TOP MARCAS':
         st.sidebar.write("""
