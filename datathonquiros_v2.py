@@ -318,15 +318,14 @@ def run_UI():
                 data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas        
                       
-    ### LLAMAR A LA GESTION PARA CREAR GAIN A PARTIR DE VARIABLE MAP
-        select_data = variable_map
-        nombre_valor = "Balance (k€): "
-        if cols[1].button('Actualizar búsqueda 🔍' ):
-            st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
-                year) + '.' + " En categorías: " + cat1 + " - " + cat2 + " - " + cat3)
-            show_maps(select_data, threshold(select_data), nombre_valor)
-        else:
-            cols[2].write(" ")
+            select_data = variable_map
+            nombre_valor = "Balance (k€): "
+            if cols[1].button('Actualizar búsqueda 🔍' ):
+                st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
+                    year) + '.' + " En categorías: " + cat1 + " - " + cat2 + " - " + cat3)
+                show_maps(select_data, threshold(select_data), nombre_valor)
+            else:
+                cols[2].write(" ")
 
     elif page == 'TOP MARCAS':
         st.sidebar.write("""
