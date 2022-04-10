@@ -20,13 +20,7 @@ PAGES = [
 st.set_page_config(
     page_title="Datathonquiros",
     page_icon=":brain:",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Report a bug': "https://github.com/arup-group/social-data/issues/new/choose",
-        'About': """            
-       Antonio
-       Daniel
-       """
+    initial_sidebar_state="expanded"
     }
 )
 
@@ -39,13 +33,13 @@ def get_data_clean():
 @st.experimental_memo
 def get_data_prov():
     data = pd.read_excel(
-        'C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//codprov.xls')
+        'Data/codprov.xls')
     return data
 
 @st.experimental_memo
 def get_data_geo():
     data = json.load(
-        open('C://Users//dcruzg//Desktop//Datathon//Atmira_Pharma_Visualization//dathon//spain_provinces.geojson',
+        open('Data/spain_provinces.geojson',
              encoding="utf8"))
     return data
 
@@ -58,12 +52,6 @@ datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasif
 datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
 datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
 datos_clean_or = datos_clean_or[datos_clean_or['zp_sim'].notna()]
-
-data_code = pd.read_excel(
-    'Data/codprov.xls')
-data_geo = json.load(
-    open('Data/spain_provinces.geojson',
-         encoding="utf8"))
 
 
 #region MAPA
