@@ -327,12 +327,12 @@ def run_UI():
                     year) + '.' + " En todas las categorías")
                 show_maps(select_data, threshold(select_data), nombre_valor)
                 
-            elsif cat2 == 'Toda la Categoría' and cat1 != 'Toda la Categoría':
+            elif cat2 == 'Toda la Categoría' and cat1 != 'Toda la Categoría':
                 st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
                     year) + '.' + " En categoría: " + cat1 )
                 show_maps(select_data, threshold(select_data), nombre_valor)
            
-            elsif cat3 == 'Toda la Categoría' and cat2 != 'Toda la Categoría' and cat1 != 'Toda la Categoría':
+            elif cat3 == 'Toda la Categoría' and cat2 != 'Toda la Categoría' and cat1 != 'Toda la Categoría':
                 st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
                     year) + '.' + " En categoría: " + cat1 + ", " + "Subcategoría:" + cat2)
                 show_maps(select_data, threshold(select_data), nombre_valor)
