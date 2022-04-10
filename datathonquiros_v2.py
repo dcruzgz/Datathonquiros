@@ -322,7 +322,7 @@ def run_UI():
         select_data = variable_map
         nombre_valor = "Balance (k€): "
         if cols[1].button('Actualizar búsqueda 🔍' ):
-            st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)' + str(mes) + '/' + str(
+            st.write('Búsqueda actualizada: ' + variable_map + ' en fecha(s)  :' + str(mes) + '/' + str(
                 year) + '.' + " En categorías: " + cat1 + " - " + cat2 + " - " + cat3)
             show_maps(select_data, threshold(select_data), nombre_valor)
         else:
