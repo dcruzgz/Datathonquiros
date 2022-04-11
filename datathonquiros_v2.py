@@ -96,7 +96,7 @@ def threshold(data):
     threshold_scale[-1] = threshold_scale[-1]
     return threshold_scale
 
-@st.experimental_memo(ttl=60)
+@st.experimental_memo(ttl=60, suppress_st_warning=True)
 def show_maps(data, threshold_scale, nombre_valor):
     maps = folium.Choropleth(geo_data=data_geo,
                              data=data_all,
