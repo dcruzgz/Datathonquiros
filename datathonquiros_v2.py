@@ -19,6 +19,7 @@ PAGES = [
 
 st.set_page_config(
     page_title="Datathonquiros",
+    layout='wide',
     page_icon=":brain:",
     initial_sidebar_state="expanded"
 )
