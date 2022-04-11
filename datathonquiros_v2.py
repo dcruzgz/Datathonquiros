@@ -30,21 +30,38 @@ def get_data_clean():
     return data
 
 @st.experimental_memo
-def get_data_prov():
-    data = pd.read_excel(
-        'Data/codprov.xls')
-    return data
-
-@st.experimental_memo
 def get_data_geo():
     data = json.load(
         open('Data/spain_provinces.geojson',
              encoding="utf8"))
     return data
 
+
+@st.experimental_memo
+def get_data_pobl():
+    data_raw = pd.read_csv('Data/poblacion.csv', sep=";"
+                       , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+    data_raw['Provincias'] = data_raw['Provincias'].str[:2]
+    data_raw = data_raw.sort_values('Provincias')
+    data_raw = pd.DataFrame(data_raw.iloc[0:52, [0, 3]])
+    data_raw['CODIGO'] = data_raw['Provincias'].astype(int)
+    data_raw['Total'] = data_raw['Total'].str.replace('.','', regex=False)
+    data_raw['Total'] = data_raw['Total'].astype(int)
+    return data_raw.iloc[:, [1, 2]]
+
+@st.experimental_memo
+def get_data_prov():
+    data = pd.read_excel(
+        'Data/codprov.xls')
+    data_pobl = get_data_pobl()
+    data = data.merge(data_pobl, on="CODIGO", how="left")
+    return data
+
+
 datos_clean_or = get_data_clean()
 data_code = get_data_prov()
 data_geo = get_data_geo()
+
 
 
 datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
@@ -52,8 +69,7 @@ datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasif
 datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
 datos_clean_or = datos_clean_or[datos_clean_or['zp_sim'].notna()]
 
-
-#region MAPA
+# region MAPA
 # ---------------------------------
 #     MAPA
 # ---------------------------------
@@ -63,8 +79,8 @@ dat_1['cod_prov'] = data_code['CODIGO'].astype(int).astype(str)
 dat_1['cod_prov'] = dat_1['cod_prov']
 data_all = dat_1.set_index('CODIGO')
 
-dicts = {"Ganancia": 'GAIN'}
-
+dicts = {"Ganancias": 'GAIN',
+         "Ganancias/hab": 'GAIN'}
 # showing the maps
 map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.933016292135545], zoom_start=6, width=700, height=570)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
@@ -262,19 +278,31 @@ def run_UI():
 
 
             ####
+            if variable_map == 'Ganancias':
+                nombre_valor = "Balance (k€): "
+            else:
+                nombre_valor = " Ganancias por hab: "
 
             prod1 = datos_clean['productcat1'].unique()
             prod1 = np.append(prod1, ['Toda la Categoría'])
 
             cat1 = cols[0].selectbox("Categoría:",
-                                        prod1)
+                                     prod1)
             if cat1 == 'Toda la Categoría':
                 cols[1].selectbox("Subcategoría 1:",
                                   ['Toda la Categoría'])
                 cols[2].selectbox("Subcategoría 3:",
                                   ['Toda la Categoría'])
 
-                df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()/1000
+                if variable_map == 'Ganancias':
+                    nombre_valor = "Balance (k€): "
+                    df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
+                else:
+                    nombre_valor = " Ganancias por hab.:"
+                    df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
+                    df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
+                    df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+
                 data_all['GAIN'] = df_sum['Precio_calculado']
 
             else:
@@ -283,18 +311,37 @@ def run_UI():
                 prod2 = np.append(prod2, ['Toda la Categoría'])
 
                 cat2 = cols[1].selectbox("Categoría 2",
-                                prod2)
+                                         prod2)
 
                 if cat2 == 'Toda la Categoría':
-                    df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()/1000
+
+                    if variable_map == 'Ganancias':
+                        nombre_valor = "Balance (k€): "
+                        df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
+                    else:
+                        nombre_valor = " Ganancias por hab.:"
+                        df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
+                        df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
+                        df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+
+
+
                     data_all['GAIN'] = df_sum['Precio_calculado']
                     cols[2].selectbox("Categoría 3",
                                       ['Toda la Categoría'])
                 else:
 
-                    df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()/1000
-                    data_all['GAIN'] = df_sum['Precio_calculado']
+                    if variable_map == 'Ganancias':
+                        nombre_valor = "Balance (k€): "
+                        df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
+                    else:
+                        nombre_valor = " Ganancias por hab.:"
+                        df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
+                        df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
+                        df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
 
+
+                    data_all['GAIN'] = df_sum['Precio_calculado']
 
                     df_va2 = datos_clean.loc[datos_clean.loc[:, 'productcat2'] == cat2]
                     prod3 = df_va2['productcat3'].unique()
@@ -303,11 +350,32 @@ def run_UI():
                                              prod3)
 
                     if cat3 == 'Toda la Categoría':
-                        df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
+
+                        if variable_map == 'Ganancias':
+                            nombre_valor = "Balance (k€): "
+                            df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
+                        else:
+                            nombre_valor = " Ganancias por hab.:"
+                            df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
+                            df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
+                            df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+
+
                         data_all['GAIN'] = df_sum['Precio_calculado']
                     else:
                         df_va3 = df_va2.loc[datos_clean.loc[:, 'productcat3'] == cat3]
-                        df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/1000
+
+                        if variable_map == 'Ganancias':
+                            nombre_valor = "Balance (k€): "
+                            df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/ 1000
+                        else:
+                            nombre_valor = " Ganancias por hab.:"
+                            df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()
+                            df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
+                            df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+
+
+
                         data_all['GAIN'] = df_sum['Precio_calculado']
             
             for idx in range(51):
