@@ -340,6 +340,7 @@ def run_UI():
                 st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
                 st.write('Durante el mes/año  :'+ " " + str(mes) + '/' + str(year))
                 st.write(" En categoría: "+ " " + cat1 + ", "+ " " + "Subcategoría:" + " " + cat2 +  ", " + " "  + "Subcategoría:"+ " "+ cat3)
+                show_maps(select_data, threshold(select_data), nombre_valor)
                 
         else:
             cols[2].write(" ")
