@@ -383,7 +383,7 @@ def run_UI():
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
                       
         select_data = variable_map
-        nombre_valor = "Balance (k€): "
+ 
         if cols[1].button('Actualizar búsqueda 🔍' ):
             
             if cat1 == 'Toda la Categoría':
