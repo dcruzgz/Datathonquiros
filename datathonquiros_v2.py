@@ -245,7 +245,7 @@ def run_UI():
             Si alguna provincia aparece en gris con valor NaN en esa provincia no hubo ventas en ese mes.
           """)
         st.title(":earth_africa: Las ventas por el territorio")
-        my_expander = st.expander(label='Filtros de la búsqueda')
+        my_expander = st.expander(label='Filtros de la búsqueda', expanded = True)
         with my_expander:
             cols = st.columns((1, 1, 1))
 
