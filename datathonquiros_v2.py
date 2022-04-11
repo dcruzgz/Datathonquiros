@@ -86,6 +86,7 @@ map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.9330
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
 
 
+@st.experimental_memo(ttl=60)
 def threshold(data):
     threshold_scale = np.linspace(data_all[dicts[data]].min(),
                                   data_all[dicts[data]].max(),
@@ -95,7 +96,7 @@ def threshold(data):
     threshold_scale[-1] = threshold_scale[-1]
     return threshold_scale
 
-
+@st.experimental_memo(ttl=60)
 def show_maps(data, threshold_scale, nombre_valor):
     maps = folium.Choropleth(geo_data=data_geo,
                              data=data_all,
