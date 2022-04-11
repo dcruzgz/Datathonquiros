@@ -262,7 +262,7 @@ def run_UI():
                               year_1)
 
             variable_map = cols[2].selectbox("Dato",
-                                             ("Ganancia", "Codigo"))
+                                             ("Ganancias", "Ganancias/hab"))
 
             if mes == 'Todo el año' and year != 'Todos los años':
                 datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
