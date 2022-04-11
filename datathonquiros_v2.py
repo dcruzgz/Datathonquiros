@@ -63,8 +63,11 @@ dat_1['cod_prov'] = data_code['CODIGO'].astype(int).astype(str)
 dat_1['cod_prov'] = dat_1['cod_prov']
 data_all = dat_1.set_index('CODIGO')
 
-
-
+#Inicializacion de los datos del mapa
+for idx in range(51):
+    data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
+    data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][
+                    idx + 1]  # igualar los codigos los 0 a la izq dan problemas
 
 dicts = {"Ganancia": 'GAIN'}
 
@@ -313,14 +316,19 @@ def run_UI():
                         df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/1000
                         data_all['GAIN'] = df_sum['Precio_calculado']
             
-            for idx in range(51):
-                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
-                data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
+            #for idx in range(51):
+             #   data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
+              #  data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
                       
         select_data = variable_map
         nombre_valor = "Balance (k€): "
         if cols[1].button('Actualizar búsqueda 🔍' ):
             
+            for idx in range(51):
+                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
+                data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][
+                    idx + 1]  # igualar los codigos los 0 a la izq dan problemas
+                
             if cat1 == 'Toda la Categoría':
                 st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
                 st.write('Durante el mes/año  :'+ " " + str(mes) + '/' + str(year))
