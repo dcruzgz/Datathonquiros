@@ -84,7 +84,7 @@ dicts = {"Ganancias": 'GAIN',
          "Ganancias € por 100 mil hab": 'GAIN'}
 # showing the maps
 f = folium.Figure(width=1000, height=1300)
-map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.933016292135545], zoom_start=6, width=700, height=1300).add_to(f
+map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.933016292135545], zoom_start=6, width=700, height=1300).add_to(f)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
 
 
