@@ -80,7 +80,7 @@ dat_1['cod_prov'] = dat_1['cod_prov']
 data_all = dat_1.set_index('CODIGO')
 
 dicts = {"Ganancias": 'GAIN',
-         "Ganancias/hab": 'GAIN'}
+         "Ganancias € por 100 mil hab": 'GAIN'}
 # showing the maps
 map_sby = folium.Map(tiles='OpenStreetMap', location=[39.59130262109639, -3.933016292135545], zoom_start=6, width=700, height=570)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
@@ -262,7 +262,7 @@ def run_UI():
                               year_1)
 
             variable_map = cols[2].selectbox("Dato",
-                                             ("Ganancias", "Ganancias/hab"))
+                                             ("Ganancias", "Ganancias € por 100 mil hab"))
 
             if mes == 'Todo el año' and year != 'Todos los años':
                 datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
