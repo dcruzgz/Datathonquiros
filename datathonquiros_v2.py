@@ -311,42 +311,42 @@ def run_UI():
                     else:
                         df_va3 = df_va2.loc[datos_clean.loc[:, 'productcat3'] == cat3]
                         df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/1000
-                        data_all['GAIN'] = df_sum['Precio_calculado']
-                        
-
-            for idx in range(51):
-                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
-                data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas        
+                        data_all['GAIN'] = df_sum['Precio_calculado']       
                       
         select_data = variable_map
         nombre_valor = "Balance (k€): "
         if cols[1].button('Actualizar búsqueda 🔍' ):
             
+            for idx in range(51):
+                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
+                data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas 
+                
             if cat1 == 'Toda la Categoría':
                 st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
                 st.write('Durante el mes/año  :'+ " " + str(mes) + '/' + str(year))
                 st.write("En todas las categorías.")   
-                show_maps(select_data, threshold(select_data), nombre_valor)
+                #show_maps(select_data, threshold(select_data), nombre_valor)
                 
             elif cat2 == 'Toda la Categoría' and cat1 != 'Toda la Categoría':
                 st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
                 st.write( 'Durante el mes/año  :' + " " + str(mes) + '/' + str(year))
                 st.write(" En categoría: "+ " " + cat1)
-                show_maps(select_data, threshold(select_data), nombre_valor)
+                #show_maps(select_data, threshold(select_data), nombre_valor)
            
             elif cat3 == 'Toda la Categoría' and cat2 != 'Toda la Categoría' and cat1 != 'Toda la Categoría':
                 st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
                 st.write('Durante el mes/año  :' + str(mes) + '/' + str(year))
                 st.write(" En categoría: "+ " " + cat1 + ", " + " "+ "Subcategoría:"+ " " + cat2)   
-                show_maps(select_data, threshold(select_data), nombre_valor)
+                #show_maps(select_data, threshold(select_data), nombre_valor)
                 
             else:
                 st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
                 st.write('Durante el mes/año  :'+ " " + str(mes) + '/' + str(year))
                 st.write(" En categoría: "+ " " + cat1 + ", "+ " " + "Subcategoría:" + " " + cat2 +  ", " + " "  + "Subcategoría:"+ " "+ cat3)
-                show_maps(select_data, threshold(select_data), nombre_valor)
+                
         else:
             cols[2].write(" ")
+        show_maps(select_data, threshold(select_data), nombre_valor)
 
     elif page == 'TOP MARCAS':
         st.sidebar.write("""
