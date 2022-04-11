@@ -298,10 +298,10 @@ def run_UI():
                     nombre_valor = "Balance (k€): "
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
                 else:
-                    nombre_valor = " Ganancias por hab.:"
+                    nombre_valor = " Ganancias € por 100 mil hab:"
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                     df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
-                    df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+                    df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
                 data_all['GAIN'] = df_sum['Precio_calculado']
 
@@ -319,10 +319,10 @@ def run_UI():
                         nombre_valor = "Balance (k€): "
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
                     else:
-                        nombre_valor = " Ganancias por hab.:"
+                        nombre_valor = " Ganancias € por 100 mil hab:"
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
-                        df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+                        df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
 
 
@@ -335,10 +335,10 @@ def run_UI():
                         nombre_valor = "Balance (k€): "
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
                     else:
-                        nombre_valor = " Ganancias por hab.:"
+                        nombre_valor = " Ganancias € por 100 mil hab:"
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
-                        df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+                        df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
 
                     data_all['GAIN'] = df_sum['Precio_calculado']
@@ -355,10 +355,10 @@ def run_UI():
                             nombre_valor = "Balance (k€): "
                             df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
                         else:
-                            nombre_valor = " Ganancias por hab.:"
+                            nombre_valor = " Ganancias € por 100 mil hab:"
                             df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
-                            df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+                            df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
 
                         data_all['GAIN'] = df_sum['Precio_calculado']
@@ -369,17 +369,17 @@ def run_UI():
                             nombre_valor = "Balance (k€): "
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/ 1000
                         else:
-                            nombre_valor = " Ganancias por hab.:"
+                            nombre_valor = " Ganancias € por 100 mil hab:"
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
-                            df_sum['Precio_calculado'] = df_sum['Precio_calculado'] / df_sum['Poblacion']
+                            df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
 
 
                         data_all['GAIN'] = df_sum['Precio_calculado']
             
             for idx in range(51):
-                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 2)
+                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 3)
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
                       
         select_data = variable_map
