@@ -135,7 +135,7 @@ def show_maps(data, threshold_scale, nombre_valor):
     map_sby.add_child(NIL)
     map_sby.keep_in_front(NIL)
     folium.LayerControl().add_to(map_sby)
-    folium_static(map_sby)
+    folium_static(map_sby, width=1000, height=500)
 
 # endregion
 
