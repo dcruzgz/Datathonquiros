@@ -6,8 +6,6 @@ import json
 import folium
 import numpy as np
 from pyvis.network import Network
-from st_aggrid import AgGrid, GridOptionsBuilder
-from st_aggrid.shared import GridUpdateMode
 import altair as alt
 from streamlit_folium import folium_static
 import plotly.express as px
@@ -192,34 +190,6 @@ def rules(df_rules):
     HtmlFile = open("rules.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read()
     return source_code
-
-
-def aggrid_interactive_table(df: pd.DataFrame):
-    """Creates an st-aggrid interactive table based on a dataframe.
-
-    Args:
-        df (pd.DataFrame]): Source dataframe
-
-    Returns:
-        dict: The selected row
-    """
-    options = GridOptionsBuilder.from_dataframe(
-        df, enableRowGroup=True, enableValue=True, enablePivot=True
-    )
-
-    options.configure_side_bar()
-
-    options.configure_selection("single")
-    selection = AgGrid(
-        df,
-        enable_enterprise_modules=True,
-        gridOptions=options.build(),
-        theme="light",
-        update_mode=GridUpdateMode.MODEL_CHANGED,
-        allow_unsafe_jscode=True,
-    )
-
-    return selection
 #endregion
 
 #region MARCAS
@@ -552,7 +522,7 @@ def run_UI():
 
         components.html(rules(df_rules()), height=480, width=650)
         df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"}))
-        aggrid_interactive_table(df=df_rules())
+        st.write(df_rules())
 
 def run_shell():
     st.write("Cargando...")
