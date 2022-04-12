@@ -10,6 +10,7 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 from st_aggrid.shared import GridUpdateMode
 import altair as alt
 from streamlit_folium import folium_static
+import plotly.express as px
 
 PAGES = [
     'Nuestras ventas en el territorio',
