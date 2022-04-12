@@ -422,6 +422,33 @@ def run_UI():
           Bayes
           """)
         st.title(" TOP MARCAS :star:")
+        
+        
+        ##CATEGORIAS TREEMAP
+        
+        st.write('Distribución de las Ganancias según categoría')        
+        df_categorias = datos_clean_or.groupby(['productcat1', 'productcat2', 'productcat3'])['Precio_calculado'].sum().reset_index(
+            name='Ganancia')
+
+        df_categorias = df_categorias.loc[df_categorias['Ganancia'] >= 0]
+        df_categorias = df_categorias.loc[df_categorias['productcat1'] != 'Sin clasificar']
+        df = pd.DataFrame(
+            dict(productcat1=df_categorias['productcat1'],productcat2=df_categorias['productcat2'],
+                 productcat3=df_categorias['productcat3'], Ganancia=df_categorias['Ganancia'])
+        )
+        df["Todas"] = "Todas"  # in order to have a single root node
+        fig = px.treemap(df, path=[px.Constant("Todo"), 'productcat1', 'productcat2', 'productcat3'], values='Ganancia'
+                         #,color='Ganancia', color_continuous_scale='OrRd'
+                         )
+        #fig.update_traces(root_color="lightgrey")
+        fig.update_layout(margin=dict(t=50, l=25, r=25, b=25), width= 800, height= 700)
+        st.plotly_chart(fig)
+        
+        #####
+        
+        
+     
+        
         cols = st.columns((1, 1, 1))
 
         prod1 = datos_clean_or['productcat1'].unique()
