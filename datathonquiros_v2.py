@@ -17,10 +17,11 @@ PAGES = [
 ]
 
 st.set_page_config(
-    layout = 'wide',
+    
     page_title="Datathonquiros",
     page_icon=":brain:",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    layout = 'wide'
 )
 
 @st.experimental_memo(ttl=300)
