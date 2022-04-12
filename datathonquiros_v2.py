@@ -423,7 +423,6 @@ def run_UI():
         df_categorias = datos_clean_or.groupby(['productcat1', 'productcat2', 'productcat3'])[
             'Precio_calculado'].sum().reset_index(
             name='Pérdidas')
-        print(df_categorias)
         df_categorias = df_categorias.loc[df_categorias['Pérdidas'] < 0]
        # df_categorias = df_categorias.loc[df_categorias['productcat1'] != 'Sin clasificar']
         df = pd.DataFrame(
