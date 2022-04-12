@@ -424,7 +424,7 @@ def run_UI():
             'Precio_calculado'].sum().reset_index(
             name='Pérdidas')
         df_categorias = df_categorias.loc[df_categorias['Pérdidas'] < 0]
-        df_categorias['Ganancia'] = round(df_categorias['Pérdidas'], 0)
+        df_categorias['Pérdidas'] = round(df_categorias['Pérdidas'], 0)
         df = pd.DataFrame(
             dict(productcat1=df_categorias['productcat1'], productcat2=df_categorias['productcat2'],
                  productcat3=df_categorias['productcat3'], Pérdidas=df_categorias['Pérdidas'].abs())
