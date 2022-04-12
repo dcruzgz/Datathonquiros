@@ -521,8 +521,7 @@ def run_UI():
         st.title(":rocket: Próximas promociones")
 
         components.html(rules(df_rules()), height=480, width=650)
-        df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"}))
-        st.write(df_rules())
+        st.write(df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"})))
 
 def run_shell():
     st.write("Cargando...")
