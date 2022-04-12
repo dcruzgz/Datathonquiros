@@ -82,7 +82,7 @@ data_all = dat_1.set_index('CODIGO')
 dicts = {"Ganancias": 'GAIN',
          "Ganancias € por 100 mil hab": 'GAIN'}
 # showing the maps
-map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.3)
+map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.5)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
 
 
