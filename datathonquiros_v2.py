@@ -106,9 +106,9 @@ def show_maps(data, threshold_scale, nombre_valor):
                              fill_color='YlOrRd',
                              fill_opacity=0.7,
                              line_opacity=0.2,
-                            #legend_name=dicts[data],
                              highlight=True,
-                             reset=True).add_to(map_sby)
+                             reset=True, 
+                             prefer_canvas=True).add_to(map_sby)
 
     style_function = lambda x: {'fillColor': '#ffffff',
                                 'color': '#000000',
@@ -127,7 +127,7 @@ def show_maps(data, threshold_scale, nombre_valor):
         control=False,
         highlight_function=highlight_function,
         tooltip=folium.features.GeoJsonTooltip(
-            fields=['name', 'GAIN'],
+            fields=['texto', 'GAIN'],
             aliases=['Provincia : ', nombre_valor],
             style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;")
         )
