@@ -386,6 +386,7 @@ def run_UI():
         else:
             cols[2].write(" ")
        
+        show_maps(select_data, threshold(select_data), nombre_valor)
 
     elif page == 'TOP MARCAS':
         get_data_clean.clear()
