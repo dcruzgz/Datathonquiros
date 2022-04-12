@@ -404,6 +404,7 @@ def run_UI():
 
         df_categorias = df_categorias.loc[df_categorias['Ganancia'] >= 0]
         df_categorias = df_categorias.loc[df_categorias['productcat1'] != 'Sin clasificar']
+        df_categorias['Ganancia'] = round(df_categorias['Ganancia'], 0)
         df = pd.DataFrame(
             dict(productcat1=df_categorias['productcat1'],productcat2=df_categorias['productcat2'],
                  productcat3=df_categorias['productcat3'], Ganancia=df_categorias['Ganancia'])
@@ -412,7 +413,6 @@ def run_UI():
         fig = px.treemap(df, path=[px.Constant("Todo"), 'productcat1', 'productcat2', 'productcat3'], values='Ganancia'
                          #,color='Ganancia', color_continuous_scale='OrRd'
                          )
-        #fig.update_traces(root_color="lightgrey")
         fig.update_layout(margin=dict(t=50, l=25, r=25, b=25), width= 800, height= 700)
         st.plotly_chart(fig, use_container_width=True)
         
@@ -424,7 +424,7 @@ def run_UI():
             'Precio_calculado'].sum().reset_index(
             name='Pérdidas')
         df_categorias = df_categorias.loc[df_categorias['Pérdidas'] < 0]
-       # df_categorias = df_categorias.loc[df_categorias['productcat1'] != 'Sin clasificar']
+        df_categorias['Ganancia'] = round(df_categorias['Pérdidas'], 0)
         df = pd.DataFrame(
             dict(productcat1=df_categorias['productcat1'], productcat2=df_categorias['productcat2'],
                  productcat3=df_categorias['productcat3'], Pérdidas=df_categorias['Pérdidas'].abs())
