@@ -235,7 +235,7 @@ def run_UI():
                               year_1, index=len(year_1)-1)
 
             variable_map = cols[2].selectbox("Dato",
-                                             ("Ganancias", "Ganancias € por 100 mil hab"))
+                                             ("Ganancias", "Ganancias € por 100 mil hab"),  index=0)
 
             if mes == 'Todo el año' and year != 'Todos los años':
                 datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
@@ -354,39 +354,8 @@ def run_UI():
             for idx in range(51):
                 data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 3)
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
-                      
-        select_data = variable_map
- 
-        if cols[1].button('Actualizar búsqueda 🔍' ):
-            
-            if cat1 == 'Toda la Categoría':
-                st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
-                st.write('Durante el mes/año  :'+ " " + str(mes) + '/' + str(year))
-                st.write("En todas las categorías.")   
-                show_maps(select_data, threshold(select_data), nombre_valor)
-                
-            elif cat2 == 'Toda la Categoría' and cat1 != 'Toda la Categoría':
-                st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
-                st.write( 'Durante el mes/año  :' + " " + str(mes) + '/' + str(year))
-                st.write(" En categoría: "+ " " + cat1)
-                show_maps(select_data, threshold(select_data), nombre_valor)
-           
-            elif cat3 == 'Toda la Categoría' and cat2 != 'Toda la Categoría' and cat1 != 'Toda la Categoría':
-                st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
-                st.write('Durante el mes/año  :' + str(mes) + '/' + str(year))
-                st.write(" En categoría: "+ " " + cat1 + ", " + " "+ "Subcategoría:"+ " " + cat2)   
-                show_maps(select_data, threshold(select_data), nombre_valor)
-                
-            else:
-                st.write('Búsqueda actualizada: '+ " " + variable_map + '.')
-                st.write('Durante el mes/año  :'+ " " + str(mes) + '/' + str(year))
-                st.write(" En categoría: "+ " " + cat1 + ", "+ " " + "Subcategoría:" + " " + cat2 +  ", " + " "  + "Subcategoría:"+ " "+ cat3)
-                show_maps(select_data, threshold(select_data), nombre_valor)
-                
-        else:
-            cols[2].write(" ")
-       
-        show_maps(select_data, threshold(select_data), nombre_valor)
+                     
+        show_maps(variable_map, threshold(variable_map), nombre_valor)
 
     elif page == 'TOP MARCAS':
         get_data_clean.clear()
