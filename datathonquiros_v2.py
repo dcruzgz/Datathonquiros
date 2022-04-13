@@ -197,9 +197,7 @@ if check_password():
         # Relaciones gráficas
 
         r_net = Network(height='450px', width='1000px', bgcolor='#FFFFFF.', font_color='black')
-        
-        r_net.barnes_hut(spring_length=100, spring_strength=0.08, overlap=1)
-        
+                
         # set the physics layout of the network
 
         sources = df_rules['Si el cliente compró']
