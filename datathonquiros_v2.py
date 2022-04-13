@@ -281,9 +281,9 @@ def run_UI():
             else:
                 df_va1 = datos_clean.loc[datos_clean.loc[:, 'productcat1'] == cat1]
                 prod2 = df_va1['productcat2'].unique()
-                prod2 = np.append(prod2, ['Toda la Categoría'])
+                prod2 = np.append(prod2, ['Toda la Categoría:'])
 
-                cat2 = cols[1].selectbox("Subcategoría 1",
+                cat2 = cols[1].selectbox("Subcategoría 1:",
                                          prod2,  index=len(prod2)-1)
 
                 if cat2 == 'Toda la Categoría':
@@ -300,7 +300,7 @@ def run_UI():
 
 
                     data_all['GAIN'] = df_sum['Precio_calculado']
-                    cols[2].selectbox("Subcategoría 2",
+                    cols[2].selectbox("Subcategoría 2:",
                                       ['Toda la Categoría'])
                 else:
 
@@ -319,7 +319,7 @@ def run_UI():
                     df_va2 = datos_clean.loc[datos_clean.loc[:, 'productcat2'] == cat2]
                     prod3 = df_va2['productcat3'].unique()
                     prod3 = np.append(prod3, ['Toda la Categoría'])
-                    cat3 = cols[2].selectbox("Subcategoría 2",
+                    cat3 = cols[2].selectbox("Subcategoría 2:",
                                              prod3,  index=len(prod3)-1)
 
                     if cat3 == 'Toda la Categoría':
@@ -434,7 +434,7 @@ def run_UI():
 
                 df_filter = datos_clean_or.loc[datos_clean_or['productcat1'] == cat1]
 
-                cols[2].selectbox("Subcategoría 2",
+                cols[2].selectbox("Subcategoría 1:",
                                   ['Toda la Categoría'])
             else:
                 df_va2 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat2'] == cat2]
@@ -442,7 +442,7 @@ def run_UI():
 
 
                 prod3 = np.append(prod3, ['Toda la Categoría'])
-                cat3 = cols[2].selectbox("Subcategoría 2",
+                cat3 = cols[2].selectbox("Subcategoría 2:",
                                          prod3, index=len(prod3)-1)
 
                 if cat3 == 'Toda la Categoría':
