@@ -211,9 +211,9 @@ if check_password():
             dst = e[1]
             w = e[2]
 
-            r_net.add_node(src, src, title=src, color='#00ff1e')
-            r_net.add_node(dst, dst, title=dst, color='#162347')
-            r_net.add_edge(src, dst, value=w, color='#dd4b39')
+            r_net.add_node(src, src, title=src, color='#E2DCDB')
+            r_net.add_node(dst, dst, title=dst, color='#93C9F7')
+            r_net.add_edge(src, dst, value=w, color='#EF7E62')
 
         neighbor_map = r_net.get_adj_list()
 
