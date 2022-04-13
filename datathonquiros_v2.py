@@ -201,7 +201,7 @@ def rules(df_rules):
     r_net = Network(height='450px', width='1000px', bgcolor='#FFFFFF.', font_color='black')
             
     # set the physics layout of the network
-    r_net.barnes_hut(spring_length=1050)
+    #r_net.barnes_hut(spring_length=1050)
     sources = df_rules['Si el cliente compró']
     targets = df_rules['Comprará']
     weights = df_rules['Con una confianza del (%)']
@@ -213,9 +213,9 @@ def rules(df_rules):
         dst = e[1]
         w = e[2]
 
-        r_net.add_node(src, src, title=src, size=100, color='#EF7E62')
-        r_net.add_node(dst, dst, title=dst, size=250, color='#93C9F7')
-        r_net.add_edge(src, dst, value=w, size=250, color='#E2DCDB')
+        r_net.add_node(src, src, title=src, size=10, color='#EF7E62')
+        r_net.add_node(dst, dst, title=dst, size=25, color='#93C9F7')
+        r_net.add_edge(src, dst, value=w, size=25, color='#E2DCDB')
 
     neighbor_map = r_net.get_adj_list()
 
