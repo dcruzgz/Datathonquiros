@@ -303,8 +303,7 @@ def run_UI():
                         df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
                     data_all['GAIN'] = df_sum['Precio_calculado']
-                    cols[2].selectbox("Subcategoría 2:",
-                                      ['Toda la Categoría'])
+                
                 else:
 
                     if variable_map == 'Ganancias':
