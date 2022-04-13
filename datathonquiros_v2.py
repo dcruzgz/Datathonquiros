@@ -24,43 +24,6 @@ st.set_page_config(
     layout = 'wide'
 )
 
-
-# ACCESO CON CONTRASEÑA
-
-def check_password():
-    """Returns `True` if the user had the correct password."""
-
-    def password_entered():
-        """Checks whether a password entered by the user is correct."""
-        if st.session_state["password"] == st.secrets["password"]:
-            st.session_state["password_correct"] = True
-            del st.session_state["password"]  # don't store password
-        else:
-            st.session_state["password_correct"] = False
-
-    if "password_correct" not in st.session_state:
-        # First run, show input for password.
-        st.text_input(
-            "Password", type="password", on_change=password_entered, key="password"
-        )
-        return False
-    elif not st.session_state["password_correct"]:
-        # Password not correct, show input + error.
-        st.text_input(
-            "Password", type="password", on_change=password_entered, key="password"
-        )
-        st.error("😕 Contraseña incorrecta")
-        return False
-    else:
-        # Password correct.
-        time.sleep(3)
-        return True
-
-
-    
-## FIN ACCESO CON CONTRASEÑA
-
-
 @st.experimental_memo(ttl=30)
 def get_data_clean():
     data = pd.read_csv('https://www.dropbox.com/s/mp1zbrj68ccz0oc/datos_f.csv?dl=1'
@@ -564,7 +527,7 @@ if __name__ == '__main__':
             st.session_state['data_type'] = 'County Level'
             st.session_state['data_format'] = 'Raw Values'
             st.session_state['loaded'] = False
-        if check_password():
             run_UI()
     else:
         run_shell()
+
