@@ -204,8 +204,7 @@ def pretty(s: str) -> str:
 #endregion
 
 def run_UI():
-    st.sidebar.title('Datathonquiros - Análisis')
-
+    
     if st.session_state.page:
         page = st.sidebar.radio('Navigation', PAGES, index=st.session_state.page)
     else:
