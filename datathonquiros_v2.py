@@ -198,7 +198,7 @@ if check_password():
 
         r_net = Network(height='450px', width='1000px', bgcolor='#FFFFFF.', font_color='black')
         
-        r_net.barnes_hut(spring_length=200, spring_strength=10.08, overlap=1)
+        r_net.barnes_hut(spring_length=200, spring_strength=100.08)
         
         # set the physics layout of the network
 
