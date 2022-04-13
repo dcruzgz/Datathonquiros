@@ -201,7 +201,7 @@ def rules(df_rules):
     r_net = Network(height='450px', width='1000px', bgcolor='#FFFFFF.', font_color='black')
             
     # set the physics layout of the network
-    r_net.barnes_hut(central_gravity=1050)
+    r_net.barnes_hut(central_gravity=-10)
     sources = df_rules['Si el cliente compró']
     targets = df_rules['Comprará']
     weights = df_rules['Con una confianza del (%)']
