@@ -520,7 +520,7 @@ if __name__ == '__main__':
         url_params = st.experimental_get_query_params()
         if 'loaded' not in st.session_state:
             if len(url_params.keys()) == 0:
-                st.experimental_set_query_params(page='Datathonquiros')
+                st.experimental_set_query_params(page='TOP MARCAS')
                 url_params = st.experimental_get_query_params()
             
             st.session_state.page = PAGES.index(url_params['page'][0])
