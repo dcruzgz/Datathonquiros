@@ -256,9 +256,6 @@ def run_UI():
             cat3 = cols[2].selectbox("Subcategoría 2:",
                                      prod3, index=len(prod3) - 1)
 
-            cat1 = cols[0].selectbox("Categoría:",
-                                     prod1, index=len(prod1) - 1)
-
             if mes == 'Todo el año' and year != 'Todos los años':
                 datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
               
