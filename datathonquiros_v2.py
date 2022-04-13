@@ -512,7 +512,7 @@ def run_shell():
     st.write("Cargando...")
 
 
-f __name__ == '__main__':
+if __name__ == '__main__':
 
     if not os.path.exists('Output'):
         os.makedirs('Output')
