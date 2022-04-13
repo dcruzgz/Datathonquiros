@@ -442,7 +442,7 @@ def run_UI():
 
 
                 prod3 = np.append(prod3, ['Toda la Categoría'])
-                cat3 = cols[2].selectbox("Subcategoría 2::",
+                cat3 = cols[2].selectbox("Subcategoría 2:",
                                          prod3, index=len(prod3)-1)
 
                 if cat3 == 'Toda la Categoría':
