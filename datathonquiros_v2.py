@@ -281,7 +281,7 @@ def run_UI():
             else:
                 df_va1 = datos_clean.loc[datos_clean.loc[:, 'productcat1'] == cat1]
                 prod2 = df_va1['productcat2'].unique()
-                prod2 = np.append(prod2, ['Toda la Categoría:'])
+                prod2 = np.append(prod2, ['Toda la Categoría'])
 
                 cat2 = cols[1].selectbox("Subcategoría 1:",
                                          prod2,  index=len(prod2)-1)
