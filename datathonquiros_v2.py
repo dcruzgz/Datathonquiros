@@ -523,7 +523,7 @@ if __name__ == '__main__':
                 st.experimental_set_query_params(page='TOP MARCAS')
                 url_params = st.experimental_get_query_params()
             
-            st.session_state.page = PAGES.index(url_params['page'][0])
+          #  st.session_state.page = PAGES.index(url_params['page'][0])
             st.session_state['data_type'] = 'County Level'
             st.session_state['data_format'] = 'Raw Values'
             st.session_state['loaded'] = False
