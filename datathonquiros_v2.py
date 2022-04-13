@@ -243,6 +243,22 @@ def run_UI():
             cat1 = cols[0].selectbox("Categoría:",
                                      prod1, index=len(prod1) - 1)
 
+            df_cat1 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat1'] == cat1]
+            prod2 = df_cat1['productcat2'].unique()
+            prod2 = np.append(prod2, ['Toda la Categoría'])
+
+            cat2 = cols[1].selectbox("Subcategoría 1:",
+                                     prod2, index=len(prod2) - 1)
+
+            df_cat2 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat2'] == cat2]
+            prod3 = df_cat2['productcat3'].unique()
+            prod3 = np.append(prod3, ['Toda la Categoría'])
+            cat3 = cols[2].selectbox("Subcategoría 2:",
+                                     prod3, index=len(prod3) - 1)
+
+            cat1 = cols[0].selectbox("Categoría:",
+                                     prod1, index=len(prod1) - 1)
+
             if mes == 'Todo el año' and year != 'Todos los años':
                 datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
               
@@ -263,11 +279,7 @@ def run_UI():
                 nombre_valor = " Ganancias por hab: "
 
             if cat1 == 'Toda la Categoría':
-                cols[1].selectbox("Subcategoría 1:",
-                                  ['Toda la Categoría'])
-                cols[2].selectbox("Subcategoría 2:",
-                                  ['Toda la Categoría'])
-
+                
                 if variable_map == 'Ganancias':
                     nombre_valor = "Balance (k€): "
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
@@ -281,12 +293,7 @@ def run_UI():
 
             else:
                 df_va1 = datos_clean.loc[datos_clean.loc[:, 'productcat1'] == cat1]
-                prod2 = df_va1['productcat2'].unique()
-                prod2 = np.append(prod2, ['Toda la Categoría'])
-
-                cat2 = cols[1].selectbox("Subcategoría 1:",
-                                         prod2,  index=len(prod2)-1)
-
+              
                 if cat2 == 'Toda la Categoría':
 
                     if variable_map == 'Ganancias':
@@ -297,8 +304,6 @@ def run_UI():
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                         df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
-
-
 
                     data_all['GAIN'] = df_sum['Precio_calculado']
                     cols[2].selectbox("Subcategoría 2:",
@@ -318,11 +323,7 @@ def run_UI():
                     data_all['GAIN'] = df_sum['Precio_calculado']
 
                     df_va2 = datos_clean.loc[datos_clean.loc[:, 'productcat2'] == cat2]
-                    prod3 = df_va2['productcat3'].unique()
-                    prod3 = np.append(prod3, ['Toda la Categoría'])
-                    cat3 = cols[2].selectbox("Subcategoría 2:",
-                                             prod3,  index=len(prod3)-1)
-
+                   
                     if cat3 == 'Toda la Categoría':
 
                         if variable_map == 'Ganancias':
@@ -347,8 +348,6 @@ def run_UI():
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                             df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
-
-
 
                         data_all['GAIN'] = df_sum['Precio_calculado']
             
