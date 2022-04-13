@@ -196,7 +196,7 @@ if check_password():
     def rules(df_rules):
         # Relaciones gráficas
 
-        r_net = Network(height='450px', width='1050px', bgcolor='#FFFFFF.', font_color='black')
+        r_net = Network(height='450px', width='800px', bgcolor='#FFFFFF.', font_color='black')
 
         # set the physics layout of the network
 
@@ -540,7 +540,7 @@ if check_password():
                """)
             st.title(":rocket: Próximas promociones")
 
-            components.html(rules(df_rules()), height=480, width=800)
+            components.html(rules(df_rules()), height=480, width=850)
             st.write(df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"})))
 
     def run_shell():
