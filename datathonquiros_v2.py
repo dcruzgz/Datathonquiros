@@ -264,7 +264,7 @@ def run_UI():
             if cat1 == 'Toda la Categoría':
                 cols[1].selectbox("Subcategoría 1:",
                                   ['Toda la Categoría'])
-                cols[2].selectbox("Subcategoría 3:",
+                cols[2].selectbox("Subcategoría 2:",
                                   ['Toda la Categoría'])
 
                 if variable_map == 'Ganancias':
@@ -418,7 +418,7 @@ def run_UI():
         if cat1 == 'Toda la Categoría':
             cols[1].selectbox("Subcategoría 1:",
                               ['Toda la Categoría'])
-            cols[2].selectbox("Subcategoría 3:",
+            cols[2].selectbox("Subcategoría 2:",
                               ['Toda la Categoría'])
             df_filter = datos_clean_or
 
