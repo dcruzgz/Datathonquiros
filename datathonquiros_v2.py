@@ -230,9 +230,9 @@ def run_UI():
             year_1 = np.append(year_1, ['Todos los años'])
 
             mes = cols[0].selectbox("Mes",
-                              month)
+                              month, index=len(month)-1)
             year = cols[1].selectbox("Año",
-                              year_1)
+                              year_1, index=len(year_1)-1)
 
             variable_map = cols[2].selectbox("Dato",
                                              ("Ganancias", "Ganancias € por 100 mil hab"))
@@ -260,7 +260,7 @@ def run_UI():
             prod1 = np.append(prod1, ['Toda la Categoría'])
 
             cat1 = cols[0].selectbox("Categoría:",
-                                     prod1)
+                                     prod1, index=len(prod1)-1)
             if cat1 == 'Toda la Categoría':
                 cols[1].selectbox("Subcategoría 1:",
                                   ['Toda la Categoría'])
@@ -284,7 +284,7 @@ def run_UI():
                 prod2 = np.append(prod2, ['Toda la Categoría'])
 
                 cat2 = cols[1].selectbox("Categoría 2",
-                                         prod2)
+                                         prod2,  index=len(prod2)-1)
 
                 if cat2 == 'Toda la Categoría':
 
@@ -320,7 +320,7 @@ def run_UI():
                     prod3 = df_va2['productcat3'].unique()
                     prod3 = np.append(prod3, ['Toda la Categoría'])
                     cat3 = cols[2].selectbox("Categoría 3",
-                                             prod3)
+                                             prod3,  index=len(prod3)-1)
 
                     if cat3 == 'Toda la Categoría':
 
@@ -445,7 +445,7 @@ def run_UI():
         prod1 = np.append(prod1, ['Toda la Categoría'])
 
         cat1 = cols[0].selectbox("Categoría:",
-                                 prod1)
+                                 prod1,  index=len(prod1)-1)
         if cat1 == 'Toda la Categoría':
             cols[1].selectbox("Subcategoría 1:",
                               ['Toda la Categoría'])
@@ -459,7 +459,7 @@ def run_UI():
             prod2 = np.append(prod2, ['Toda la Categoría'])
 
             cat2 = cols[1].selectbox("Categoría 2",
-                                     prod2)
+                                     prod2, index=len(prod2)-1)
 
             if cat2 == 'Toda la Categoría':
 
@@ -474,7 +474,7 @@ def run_UI():
 
                 prod3 = np.append(prod3, ['Toda la Categoría'])
                 cat3 = cols[2].selectbox("Categoría 3",
-                                         prod3)
+                                         prod3, index=len(prod3)-1)
 
                 if cat3 == 'Toda la Categoría':
                     df_filter1 = datos_clean_or.loc[datos_clean_or['productcat1'] == cat1]
