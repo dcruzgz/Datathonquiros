@@ -540,7 +540,7 @@ if check_password():
                """)
             st.title(":rocket: Próximas promociones")
 
-            components.html(rules(df_rules()), height=480, width=650)
+            components.html(rules(df_rules()), height=480, width=1050)
             st.write(df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"})))
 
     def run_shell():
