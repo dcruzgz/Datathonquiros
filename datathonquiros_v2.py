@@ -196,7 +196,7 @@ if check_password():
     def rules(df_rules):
         # Relaciones gráficas
 
-        r_net = Network(height='450px', width='1000px', bgcolor='#222222.', font_color='white')
+        r_net = Network(height='450px', width='1000px', bgcolor='#FFFFFF.', font_color='black')
         
         r_net.barnes_hut()
         
