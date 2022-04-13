@@ -236,6 +236,12 @@ def run_UI():
 
             variable_map = cols[2].selectbox("Dato",
                                              ("Ganancias", "Ganancias € por 100 mil hab"))
+            
+            prod1 = datos_clean_or['productcat1'].unique()
+            prod1 = np.append(prod1, ['Toda la Categoría'])
+
+            cat1 = cols[0].selectbox("Categoría:",
+                                     prod1, index=len(prod1) - 1)
 
             if mes == 'Todo el año' and year != 'Todos los años':
                 datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
@@ -256,11 +262,6 @@ def run_UI():
             else:
                 nombre_valor = " Ganancias por hab: "
 
-            prod1 = datos_clean['productcat1'].unique()
-            prod1 = np.append(prod1, ['Toda la Categoría'])
-
-            cat1 = cols[0].selectbox("Categoría:",
-                                     prod1, index=len(prod1)-1)
             if cat1 == 'Toda la Categoría':
                 cols[1].selectbox("Subcategoría 1:",
                                   ['Toda la Categoría'])
