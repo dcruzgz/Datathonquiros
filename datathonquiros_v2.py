@@ -512,7 +512,7 @@ def run_shell():
     st.write("Cargando...")
 
 
-if __name__ == '__main__':
+f __name__ == '__main__':
 
     if not os.path.exists('Output'):
         os.makedirs('Output')
@@ -520,14 +520,16 @@ if __name__ == '__main__':
         url_params = st.experimental_get_query_params()
         if 'loaded' not in st.session_state:
             if len(url_params.keys()) == 0:
-                st.experimental_set_query_params(page='TOP MARCAS')
+                st.experimental_set_query_params(page='Nuestras ventas en el territorio')
                 url_params = st.experimental_get_query_params()
-            
-          #  st.session_state.page = PAGES.index(url_params['page'][0])
+
+            st.session_state.page = PAGES.index(url_params['page'][0])
             st.session_state['data_type'] = 'County Level'
             st.session_state['data_format'] = 'Raw Values'
             st.session_state['loaded'] = False
-            run_UI()
+
+        run_UI()
     else:
         run_shell()
+
 
