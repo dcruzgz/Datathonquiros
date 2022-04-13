@@ -53,6 +53,7 @@ def check_password():
         return False
     else:
         # Password correct.
+        time.sleep(3)
         return True
 
 
