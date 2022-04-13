@@ -127,7 +127,7 @@ def show_maps(data, threshold_scale, nombre_valor):
         control=False,
         highlight_function=highlight_function,
         tooltip=folium.features.GeoJsonTooltip(
-            fields=['texto', 'GAIN'],
+            fields=['name', 'GAIN'],
             aliases=['Provincia : ', nombre_valor],
             style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;")
         )
