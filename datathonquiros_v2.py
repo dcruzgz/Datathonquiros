@@ -9,6 +9,7 @@ from pyvis.network import Network
 import altair as alt
 from streamlit_folium import folium_static
 import plotly.express as px
+import plotly.graph_objects as go
 import time 
 
 PAGES = [
@@ -352,6 +353,72 @@ def run_UI():
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
 
         show_maps(variable_map, threshold(variable_map), nombre_valor)
+        st.write("Evolución de las ganancias.")
+        ##GRAFICOS TEMPORALES
+        datos_clean['date'] = datos_clean["Month"].astype(str) + "/" + datos_clean["Year"].astype(str)
+        datos_clean['date'] = pd.to_datetime(datos_clean['date'])
+
+        if cat1 == 'Toda la Categoría':
+            df_sum = datos_clean.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
+            df_total = datos_clean.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
+        else:
+            df_va1 = datos_clean.loc[datos_clean.loc[:, 'productcat1'] == cat1]
+            if cat2 == 'Toda la Categoría':
+                df_sum = df_va1.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
+                df_total = datos_clean.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
+            else:
+                df_va2 = datos_clean.loc[datos_clean.loc[:, 'productcat2'] == cat2]
+                if cat3 == 'Toda la Categoría':
+                    df_sum = df_va2.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat2'].sum()
+                    df_total = df_va2.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
+                else:
+                    df_va3 = df_va2.loc[datos_clean.loc[:, 'productcat3'] == cat3]
+                    df_sum = df_va3.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat3'].sum()
+                    df_total = df_va3.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
+
+
+        seleccion = st.multiselect(
+            "Provincias:", options=data_code['LITERAL'], default=['Almería', 'León'], format_func=pretty
+        )
+        fig1 = go.Figure()
+        for provincia in seleccion:
+
+            cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
+            if variable_map == 'Ganancias':
+                fig1.add_trace(go.Scatter( x=df_sum.loc[cd_prov, :].index, y=df_sum.loc[cd_prov, :]["Precio_calculado"],
+                    mode='lines',
+                    name=provincia))
+            else:
+                poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0]
+                fig1.add_trace(
+                    go.Scatter(x=df_sum.loc[cd_prov, :].index, y=(df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion,
+                               mode='lines',
+                               name=provincia))
+        fig1.update_layout(
+                title="Evolución de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3 + "por provincias",
+                xaxis_title="Fecha",
+                yaxis_title=variable_map,
+                legend_title="Provincia"
+        )
+        
+        st.plotly_chart(fig1, use_container_width=True)
+        df = pd.DataFrame()
+
+        df['Fecha'] = df_total.index
+        df['Ganancia'] = df_total['Precio_calculado']
+
+        if variable_map == 'Ganancias':
+            fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
+
+        else:
+            fig = px.line(df_total, x=df_total.index, y=df_total["Precio_calculado"] / 46722980)
+            
+        fig.update_layout(
+                title="Evolución en todo el país de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3,
+                xaxis_title="Fecha",
+                yaxis_title=variable_map
+        )
+        st.plotly_chart(fig, use_container_width=True)
 
     elif page == 'TOP MARCAS':
         get_data_clean.clear()
