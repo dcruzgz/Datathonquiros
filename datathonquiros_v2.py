@@ -349,6 +349,8 @@ def run_UI():
                         data_all['GAIN'] = df_sum['Precio_calculado']
 
             for idx in range(51):
+                if pd.isna(data_all['GAIN'][idx + 1]):
+                    data_all['GAIN'][idx + 1] = 0
                 data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 3)
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
 
