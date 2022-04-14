@@ -390,17 +390,27 @@ def run_UI():
         for provincia in seleccion:
             cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
             if variable_map == 'Ganancias':
-                fig1.add_trace(go.Scatter(x=df_sum.loc[cd_prov, :].index, y=df_sum.loc[cd_prov, :]["Precio_calculado"].replace(np.nan, 0),
-                    mode='lines',
-                    name=provincia))
+                x_axis = df_sum.loc[cd_prov, :].index
+                y_axis = df_sum.loc[cd_prov, :]["Precio_calculado"]
+                if pd.isna(x_axis) or pd.isna(y_axis):
+                    continue
+                else:
+                    fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
+                        mode='lines',
+                        name=provincia))
             else:
-                poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0]
-                fig1.add_trace(
-                    go.Scatter(x=df_sum.loc[cd_prov, :].index, y=((df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion)*100000,
-                               mode='lines',
-                               name=provincia))
+                poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0] 
+                x_axis = df_sum.loc[cd_prov, :].index
+                y_axis = ((df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion)*100000
+                if pd.isna(x_axis) or pd.isna(y_axis):
+                    continue
+                else:
+                    fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
+                        mode='lines',
+                        name=provincia))
+
         fig1.update_layout(
-                title="Evolución de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3 + "por provincias",
+                title="Evolución de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3 + " por provincias",
                 xaxis_title="Fecha",
                 yaxis_title=variable_map,
                 legend_title="Provincia"
