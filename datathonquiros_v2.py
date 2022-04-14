@@ -69,7 +69,7 @@ data_geo = get_data_geo()
 datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
 datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
 datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
-datos_clean_or = datos_clean_or[datos_clean_or['zp_sim'].notna()]
+datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
 
 # region MAPA
 # ---------------------------------
@@ -224,10 +224,10 @@ def run_UI():
             cols = st.columns((1, 1, 1))
 
             #SELECCION DE FECHAS
-            month = datos_clean_or['Month'].unique()
+            month = datos_clean_map['Month'].unique()
             month = np.append(month, ['Todo el año'])
 
-            year_1 = datos_clean_or['Year'].unique()
+            year_1 = datos_clean_map['Year'].unique()
             year_1 = np.append(year_1, ['Todos los años'])
 
             mes = cols[0].selectbox("Mes",
@@ -238,36 +238,36 @@ def run_UI():
             variable_map = cols[2].selectbox("Dato",
                                              ("Ganancias", "Ganancias € por 100 mil hab"))
 
-            prod1 = datos_clean_or['productcat1'].unique()
+            prod1 = datos_clean_map['productcat1'].unique()
             prod1 = np.append(prod1, ['Toda la Categoría'])
 
             cat1 = cols[0].selectbox("Categoría:",
                                      prod1, index=len(prod1) - 1)
 
-            df_cat1 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat1'] == cat1]
+            df_cat1 = datos_clean_map.loc[datos_clean_map.loc[:, 'productcat1'] == cat1]
             prod2 = df_cat1['productcat2'].unique()
             prod2 = np.append(prod2, ['Toda la Categoría'])
 
             cat2 = cols[1].selectbox("Subcategoría 1:",
                                      prod2, index=len(prod2) - 1)
 
-            df_cat2 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat2'] == cat2]
+            df_cat2 = datos_clean_map.loc[datos_clean_map.loc[:, 'productcat2'] == cat2]
             prod3 = df_cat2['productcat3'].unique()
             prod3 = np.append(prod3, ['Toda la Categoría'])
             cat3 = cols[2].selectbox("Subcategoría 2:",
                                      prod3, index=len(prod3) - 1)
 
             if mes == 'Todo el año' and year != 'Todos los años':
-                datos_clean = datos_clean_or[datos_clean_or['Year'] == int(year)]
+                datos_clean = datos_clean_map[datos_clean_map['Year'] == int(year)]
 
 
             elif mes != 'Todo el año' and year == 'Todos los años':
-                datos_clean = datos_clean_or[datos_clean_or['Month'] == int(mes)]
+                datos_clean = datos_clean_map[datos_clean_map['Month'] == int(mes)]
 
             elif mes == 'Todo el año' and year == 'Todos los años':
-                datos_clean = datos_clean_or
+                datos_clean = datos_clean_map
             else:
-                datos_clean = datos_clean_or[(datos_clean_or['Month'] == int(mes)) & (datos_clean_or['Year'] == int(year))]
+                datos_clean = datos_clean_map[(datos_clean_map['Month'] == int(mes)) & (datos_clean_map['Year'] == int(year))]
 
 
             ####
