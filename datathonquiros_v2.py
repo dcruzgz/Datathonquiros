@@ -389,9 +389,8 @@ def run_UI():
         fig1 = go.Figure()      
         for provincia in seleccion:
             cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
-            df_sum = df_sum.fillna(0)
             if variable_map == 'Ganancias':
-                fig1.add_trace(go.Scatter(x=df_sum.loc[cd_prov, :].index, y=df_sum.loc[cd_prov, :]["Precio_calculado"],
+                fig1.add_trace(go.Scatter(x=df_sum.loc[cd_prov, :].index, y=df_sum.loc[cd_prov, :]["Precio_calculado"].replace(np.nan, 0),
                     mode='lines',
                     name=provincia))
             else:
