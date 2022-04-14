@@ -392,20 +392,14 @@ def run_UI():
             if variable_map == 'Ganancias':
                 x_axis = df_sum.loc[cd_prov, :].index
                 y_axis = df_sum.loc[cd_prov, :]["Precio_calculado"]
-                if pd.isna(x_axis) or pd.isna(y_axis):
-                    continue
-                else:
-                    fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
-                        mode='lines',
-                        name=provincia))
+                fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
+                    mode='lines',
+                    name=provincia))
             else:
                 poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0] 
                 x_axis = df_sum.loc[cd_prov, :].index
                 y_axis = ((df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion)*100000
-                if pd.isna(x_axis) or pd.isna(y_axis):
-                    continue
-                else:
-                    fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
+                fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
                         mode='lines',
                         name=provincia))
 
