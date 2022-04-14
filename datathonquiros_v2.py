@@ -382,8 +382,14 @@ def run_UI():
                     df_total = df_va3.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
 
 
+        array = df_sum.index #Solo permitimos la selección de provincias que contienen datos
+        codigos = []
+        for e in array:
+            codigos.append(int(e[0]))
+        prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
+
         seleccion = st.multiselect(
-            "Provincias:", options=data_code['LITERAL'], default=['Almería', 'León'], format_func=pretty
+            "Provincias con ventas:", options=prov_ok, default=prov_ok[1:3], format_func=pretty
         )
         
         fig1 = go.Figure()      
