@@ -395,7 +395,7 @@ def run_UI():
             else:
                 poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0]
                 fig1.add_trace(
-                    go.Scatter(x=df_sum.loc[cd_prov, :].index, y=(df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion,
+                    go.Scatter(x=df_sum.loc[cd_prov, :].index, y=((df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion)*100000,
                                mode='lines',
                                name=provincia))
         fig1.update_layout(
@@ -415,7 +415,7 @@ def run_UI():
             fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
 
         else:
-            fig = px.line(df_total, x=df_total.index, y=df_total["Precio_calculado"] / 46722980)
+            fig = px.line(df_total, x=df_total.index, y=(df_total["Precio_calculado"] / 46722980)*100000)
             
         fig.update_layout(
                 title="Evolución en todo el país de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3,
