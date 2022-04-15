@@ -575,6 +575,42 @@ def run_UI():
         )
 
         st.altair_chart(chart, use_container_width=True)
+        
+        #Ganancias de las marcas mas vendidas
+
+        marca_gain = df_filter.groupby('productmarca')['Precio_calculado'].sum().rename_axis('Marca').reset_index(
+            name='Ventas €')
+
+        plot_df = marca_gain[marca_gain.Marca.isin(langs)].sort_values(by="Ventas €", ascending=False)
+
+        plot_df['Ventas €'] = round(plot_df['Ventas €'], 0)
+        chart = (
+        alt.Chart(
+            plot_df,
+            title="Ganancias de las marcas más vendidas",
+        )
+            .mark_bar()
+            .encode(
+            x= alt.Y( "Marca",
+                sort=alt.EncodingSortField(field="Ventas €", order="descending"),
+                title="",
+            ),
+            y=alt.X("Ventas €", title="Ganancias"),
+
+            color=alt.Color(
+                "Marca",
+                legend=None,
+                scale=alt.Scale(scheme="category10"),
+            ),
+            tooltip=["Ventas €", "Marca"],
+        )
+        )
+
+        yrule = (
+            alt.Chart().mark_rule(color="red", strokeWidth=2).encode(y=alt.datum(0))
+        )
+
+        st.altair_chart(chart + yrule, use_container_width=True)
 
     else:
         get_data_clean.clear()
