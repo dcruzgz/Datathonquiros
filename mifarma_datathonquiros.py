@@ -445,7 +445,7 @@ def run_UI():
         prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
 
         seleccion = st.multiselect(
-            "Provincias con ventas:", options=prov_ok, default=prov_ok[1:3], format_func=pretty
+            "Provincias con registro de ventas en categoría seleccionada:", options=prov_ok, default=prov_ok[1:3], format_func=pretty
         )
         
         fig1 = go.Figure()      
@@ -466,7 +466,7 @@ def run_UI():
                         name=provincia))
 
         fig1.update_layout(
-                title="Evolución de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3 + " por provincias",
+                title="Evolución de las ganancias en: \t " + cat1 + "-" + cat2 + "-" + cat3 + " por provincias",
                 xaxis_title="Fecha",
                 yaxis_title=variable_map,
                 legend_title="Provincia"
