@@ -251,16 +251,16 @@ def rules(df_rules):
 def run_UI():
     
     if st.session_state.page:
-      with st.sidebar:
-           image = Image.open('Data/mifarma.png')
-           st.image(image, caption)
-           page = st.radio('Niveles: ', PAGES, index=st.session_state.page)
-        
+        with st.sidebar:
+            image = Image.open('Data/mifarma.png')
+            st.image(image, caption)
+            page = st.radio('Niveles: ', PAGES, index=st.session_state.page)
+
     else:
-      with st.sidebar:
-        image = Image.open('Data/mifarma.png')
-        st.image(image, caption)
-        page = st.sidebar.radio('Niveles: ', PAGES, index=0)
+        with st.sidebar:
+            image = Image.open('Data/mifarma.png')
+            st.image(image, caption)
+            page = st.sidebar.radio('Niveles: ', PAGES, index=0)
 
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
