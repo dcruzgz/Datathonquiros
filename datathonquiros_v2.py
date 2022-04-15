@@ -476,9 +476,9 @@ def run_UI():
         cat1 = cols[0].selectbox("Categoría:",
                                  prod1,  index=len(prod1)-1)
         if cat1 == 'Toda la Categoría':
-            cols[1].selectbox("Subcategoría 1:",
+            cat2 = cols[1].selectbox("Subcategoría 1:",
                               ['Toda la Categoría'])
-            cols[2].selectbox("Subcategoría 2:",
+            cat3 = cols[2].selectbox("Subcategoría 2:",
                               ['Toda la Categoría'])
             df_filter = datos_clean_or
 
@@ -494,7 +494,7 @@ def run_UI():
 
                 df_filter = datos_clean_or.loc[datos_clean_or['productcat1'] == cat1]
 
-                cols[2].selectbox("Subcategoría 2:",
+                cat3 = cols[2].selectbox("Subcategoría 2:",
                                   ['Toda la Categoría'])
             else:
                 df_va2 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat2'] == cat2]
