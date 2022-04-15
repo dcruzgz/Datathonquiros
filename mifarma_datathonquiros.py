@@ -493,6 +493,7 @@ def run_UI():
                 xaxis_title="Fecha",
                 yaxis_title=variable_map
         )
+        fig.add_hline(y=0)
         st.plotly_chart(fig, use_container_width=True)
 
     #Página sobre los productos y marcas
