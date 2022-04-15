@@ -263,7 +263,7 @@ def run_UI():
             :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
             las provincias que desees y en todo el país. 
           """)
-        st.title(":earth_africa: Las ventas por el territorio")
+        st.title(":earth_africa: Ventas a nivel geográfico y temporal :clock130:")
         my_expander = st.expander(label='Filtros de la búsqueda', expanded = True)
         with my_expander:
             cols = st.columns((1, 1, 1))
