@@ -254,7 +254,6 @@ def rules(df_rules):
 def run_UI():
     
     if st.session_state.page:
-        st.sidebar.image(get_logo())
         page = st.sidebar.radio('Navigation', PAGES, index=st.session_state.page)
         
     else:
@@ -262,6 +261,7 @@ def run_UI():
 
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
+        st.sidebar.image(get_logo())
         st.sidebar.write("""
             ## Nivel geográfico y temporal
             :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
