@@ -248,7 +248,7 @@ def rules(df_rules):
 def run_UI():
     
     if st.session_state.page:
-         st.sidebar.image('Data/mifarma.png')
+        st.sidebar.image('Data/mifarma.png')
         page = st.sidebar.radio('Navigation', PAGES, index=st.session_state.page)
         
     else:
