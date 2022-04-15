@@ -447,7 +447,7 @@ def run_UI():
                     df_sum = df_va3.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat3'].sum()
                     df_total = df_va3.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
 
-         array = df_sum.index  # Solo permitimos la selección de provincias que contienen datos
+        array = df_sum.index  # Solo permitimos la selección de provincias que contienen datos
         codigos = []
         
         for e in array:
