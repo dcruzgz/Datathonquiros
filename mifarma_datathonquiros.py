@@ -85,11 +85,6 @@ def pretty(s: str) -> str:
         return dict(js="JavaScript")[s]
     except KeyError:
         return s.capitalize()
-   
-@st.experimental_memo(ttl=60)
-def get_logo():
-   image = Image.open('Data/mifarma.png')
-   return image
 
 
 
@@ -261,7 +256,6 @@ def run_UI():
 
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
-        st.sidebar.image(get_logo())
         st.sidebar.write("""
             ## Nivel geográfico y temporal
             :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
