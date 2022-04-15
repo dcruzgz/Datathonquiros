@@ -27,7 +27,7 @@ st.set_page_config(
 
 @st.experimental_memo(ttl=30)
 def get_data_clean():
-    data = pd.read_csv('https://www.dropbox.com/s/kr2kp858y9dxepo/tickets_data.csv?dl=1'
+    data = pd.read_csv('https://www.dropbox.com/s/bj5mnpqkq70itd1/tickets_data.csv?dl=1'
                          ,header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
     return data
 
