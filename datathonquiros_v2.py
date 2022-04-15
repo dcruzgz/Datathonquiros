@@ -464,27 +464,9 @@ def run_UI():
         fig.update_layout(margin=dict(t=50, l=25, r=25, b=25), width= 800, height= 700)
         st.plotly_chart(fig, use_container_width=True)
 
-        #####
-
-        st.write('Categórias con pérdidas')
-
-        df_categorias = datos_clean_or.groupby(['productcat1', 'productcat2', 'productcat3'])[
-            'Precio_calculado'].sum().reset_index(
-            name='Pérdidas')
-        df_categorias = df_categorias.loc[df_categorias['Pérdidas'] < 0]
-        df_categorias['Pérdidas'] = round(df_categorias['Pérdidas'], 0)
-        df = pd.DataFrame(
-            dict(productcat1=df_categorias['productcat1'], productcat2=df_categorias['productcat2'],
-                 productcat3=df_categorias['productcat3'], Pérdidas=df_categorias['Pérdidas'].abs())
-        )
-        df["Todas"] = "Todas"  # in order to have a single root node
-        fig = px.sunburst(df, path=[px.Constant("Todo"), 'productcat1', 'productcat2', 'productcat3'], values='Pérdidas')
-        fig.update_layout(margin=dict(t=0, l=0, r=0, b=0))
-
-        st.plotly_chart(fig, use_container_width=True)
-
-        #######
-
+        
+        st.write('Marcas')
+ 
 
         cols = st.columns((1, 1, 1))
 
