@@ -13,7 +13,7 @@ from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
 from PIL import Image
-import statistics as st
+
 
 
 #Páginas de la aplicación web
@@ -457,7 +457,7 @@ def run_UI():
       
         seleccion = st.multiselect(
             "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
-            default=st.mode(prov_ok), format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
+            default=prov_ok[1:3], format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
         )
 
         fig1 = go.Figure()
