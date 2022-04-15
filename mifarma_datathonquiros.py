@@ -409,7 +409,7 @@ def run_UI():
         
         show_maps(variable_map, threshold(variable_map), nombre_valor)
         
-        st.write(" ** Evolución de las ganancias. **")
+        st.markdown(" ** Evolución de las ganancias. **")
         
         ##GRAFICOS TEMPORALES
         
