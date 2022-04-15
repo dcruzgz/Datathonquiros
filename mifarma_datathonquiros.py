@@ -447,12 +447,14 @@ def run_UI():
                     df_sum = df_va3.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat3'].sum()
                     df_total = df_va3.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
 
-        array = df_sum.index  # Solo permitimos la selección de provincias que contienen datos
+         array = df_sum.index  # Solo permitimos la selección de provincias que contienen datos
         codigos = []
+        
         for e in array:
             codigos.append(int(e[0]))
-        prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
 
+        prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
+    
         seleccion = st.multiselect(
             "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
             default=prov_ok[1:3], format_func=pretty
@@ -463,19 +465,19 @@ def run_UI():
         for provincia in seleccion:
             cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
             if variable_map == 'Ganancias':
-                x_axis = fechas
+                x_axis = df_sum.loc[cd_prov, :].index
                 y_axis = df_sum.loc[cd_prov, :]["Precio_calculado"]
                 fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
                                           mode='lines',
                                           name=provincia))
             else:
                 poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0]
-                x_axis = fechas
+                x_axis = df_sum.loc[cd_prov, :].index
                 y_axis = ((df_sum.loc[cd_prov, :]["Precio_calculado"]) / poblacion) * 100000
                 fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
                                           mode='lines',
                                           name=provincia))
-
+        fig1.update_layout(xaxis=dict(tickformat="%m-%Y"))
         fig1.update_layout(
             title="Evolución de las ganancias en: \t " + cat1 + "-" + cat2 + "-" + cat3 + " en las provincias seleccionadas",
             xaxis_title="Fecha",
@@ -492,11 +494,12 @@ def run_UI():
         # Ganancias en categoría en todo el territorio
 
         if variable_map == 'Ganancias':
-            fig = px.line(df_total, x=fechas, y="Precio_calculado")
+            fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
 
         else:
-            fig = px.line(df_total, x=fechas, y=(df_total["Precio_calculado"] / 46722980) * 100000)
+            fig = px.line(df_total, x=df_total.index, y=(df_total["Precio_calculado"] / 46722980) * 100000)
 
+        fig.update_layout(xaxis=dict(tickformat="%m-%Y"))
         fig.update_layout(
             title="Evolución en todo el país de las ganancias en: \t" + cat1 + "-" + cat2 + "-" + cat3,
             xaxis_title="Fecha",
@@ -506,7 +509,7 @@ def run_UI():
         fig.add_hline(y=0)
 
         st.plotly_chart(fig, use_container_width=True)
-
+         
     #Página sobre los productos y marcas
     
     elif page == 'TOP MARCAS':
