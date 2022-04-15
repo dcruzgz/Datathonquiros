@@ -12,7 +12,7 @@ import altair as alt
 from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
-import time 
+import locale
 
 #Páginas de la aplicación web
 
