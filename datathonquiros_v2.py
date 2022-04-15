@@ -605,7 +605,7 @@ def run_UI():
                 .mark_bar()
                 .encode(
                 x=alt.Y("Marca",
-                        sort=alt.EncodingSortField(field="Ventas €", order="descending"),
+                        sort=alt.EncodingSortField(field="Ventas €", order="ascending"),
                         title="",
                         ),
                 y=alt.X("Ventas €", title="Ganancias"),
