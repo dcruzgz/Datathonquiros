@@ -457,7 +457,7 @@ def run_UI():
         try:
             sel = mode(prov_ok)
         except:
-            sel = prov_ok[0:1]
+            sel = prov_ok[1:3]
             
         seleccion = st.multiselect(
             "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
