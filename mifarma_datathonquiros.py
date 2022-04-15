@@ -13,6 +13,8 @@ from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
 from PIL import Image
+from collections import Counter
+from itertools import groupby
 
 
 
@@ -455,9 +457,12 @@ def run_UI():
 
         prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
       
+        # Sacar las provincias con mas fechas por defecto
+        freqs = groupby(Counter(prov_ok).most_common(), lambda x:x[1])
+        
         seleccion = st.multiselect(
             "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
-            default=prov_ok[1:3], format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
+            default=[val for val,count in next(freqs)[1]], format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
         )
 
         fig1 = go.Figure()
