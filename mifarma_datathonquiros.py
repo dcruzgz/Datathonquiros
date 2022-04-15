@@ -19,11 +19,9 @@ from itertools import groupby
 #Páginas de la aplicación web
 
 PAGES = [
-   
     'Nivel geográfico y temporal',
     'Nivel de producto',
-    'Nivel de cliente',
-    'Sobre la web'
+    'Nivel de cliente'    
 ]
 
 
@@ -523,7 +521,7 @@ def run_UI():
             ## About
           Bayes
           """)
-        st.title(" TOP MARCAS :star:")
+        st.title(" Nivel de producto :star:")
         
         descuentos = get_descuentos() #Para descuentos creación del DATAFRAME
 
@@ -748,14 +746,7 @@ def run_UI():
             )
         st.altair_chart(chart, use_container_width=True)
         
-    elif page == 'Inicio':
-        
-        st.sidebar.write("""
-            ## About
-          Bayes
-          """)
-        st.title("Datathonquiros :star:")
-        
+            
     else:
     
     #Página sobre Asociaciones
@@ -767,7 +758,7 @@ def run_UI():
             Para mas información sobre los métodos usados:
             https://cran.r-project.org/web/packages/arules/arules.pdf.
            """)
-        st.title(":rocket: Próximas promociones")
+        st.title(":rocket: Nivel de cliente")
 
         #Llamada a la creación del html con la Network y representación 
         
