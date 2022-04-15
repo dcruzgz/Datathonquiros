@@ -252,14 +252,14 @@ def run_UI():
     
     if st.session_state.page:
         with st.sidebar:
-            image = Image.open('mifarma.png')
-            st.image(image, caption)
+            image = Image.open('Data/mifarma.png')
+            st.image(image)
             page = st.radio('Niveles: ', PAGES, index=st.session_state.page)
 
     else:
         with st.sidebar:
-            image = Image.open('mifarma.png')
-            st.image(image, caption)
+            image = Image.open('Data/mifarma.png')
+            st.image(image)
             page = st.sidebar.radio('Niveles: ', PAGES, index=0)
 
 #Página MAPA
