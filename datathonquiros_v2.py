@@ -620,6 +620,41 @@ def run_UI():
         )
 
         st.altair_chart(chart, use_container_width=True)
+        
+        ##DESCUENTOS
+        if cat1 == 'Toda la Categoría':
+            des1 = descuentos
+        else:
+            des1 = descuentos.loc[descuentos.loc[:, 'productcat1'] == cat1]
+            if cat2 != 'Toda la Categoría':
+                des1 = des1.loc[des1.loc[:, 'productcat2'] == cat2]
+                if cat3 != 'Toda la Categoría':
+                    des1 = des1.loc[des1.loc[:, 'productcat3'] == cat3]
+
+        etiquetas = des1['descuentolabel'].unique()
+        print(etiquetas)
+        des1 = des1.groupby('descuentolabel')['Precio_calculado'].sum().rename_axis('Descuento').reset_index(
+            name='Balance')
+
+        chart =  (alt.Chart(
+                des1,
+                title="Ganancias según descuentos en Categoría: " + cat1+ "-"+cat2+"-"+cat3,
+            )
+                .mark_bar()
+                .encode(
+                x=alt.Y("Descuento",
+                        sort = etiquetas),
+                y=alt.X("Balance", title="Balance"), 
+
+                color=alt.condition(
+                    alt.datum.Balance > 0,
+                    alt.value("steelblue"),  # The positive color
+                    alt.value("red")  # The negative color
+                    ),
+                tooltip=["Balance", "Descuento"],
+            )
+            )
+        st.altair_chart(chart, use_container_width=True)
 
     else:
         get_data_clean.clear()
