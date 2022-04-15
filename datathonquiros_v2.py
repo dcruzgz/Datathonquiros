@@ -281,7 +281,7 @@ def run_UI():
                               year_1, index=len(year_1)-1)
 
             variable_map = cols[2].selectbox("Dato",
-                                             ("Ganancias", "Ganancias € por 100 mil hab"), "Ganancias € por 100 mil hab")
+                                             ("Ganancias", "Ganancias € por 100 mil hab"), index=1)
 
             prod1 = datos_clean_map['productcat1'].unique()
             prod1 = np.append(prod1, ['Toda la Categoría'])
