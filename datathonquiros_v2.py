@@ -627,7 +627,7 @@ def run_UI():
         marca_gain = df_filter.groupby('productmarca')['Precio_calculado'].sum().rename_axis('Marca').reset_index(
             name='Ventas €')
 
-        plot_df = marca_gain[marca_gain.Marca.isin(langs)].sort_values(by="Ventas €", ascending=False)
+        plot_df = marca_gain[marca_gain.Marca.isin(seleccion)].sort_values(by="Ventas €", ascending=False)
 
         plot_df['Ventas €'] = round(plot_df['Ventas €'], 0)
         chart = (
