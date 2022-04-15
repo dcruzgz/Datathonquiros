@@ -480,8 +480,9 @@ def run_UI():
         df['Fecha'] = df_total.index
         df['Ganancia'] = df_total['Precio_calculado']
 
-
+      
         #Ganancias en categoría en todo el territorio 
+        fig = go.Figure()
         fig.add_hline(y=0)
         if variable_map == 'Ganancias':
             fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
