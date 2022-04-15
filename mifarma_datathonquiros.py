@@ -414,6 +414,7 @@ def run_UI():
         ##GRAFICOS TEMPORALES
         
         datos_clean['date'] = datos_clean["Month"].astype(str) + "/" + datos_clean["Year"].astype(str)
+        
         datos_clean['date'] = pd.to_datetime(datos_clean['date'])
 
         #Seleccion de categoría 
