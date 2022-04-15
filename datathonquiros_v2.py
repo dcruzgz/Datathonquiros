@@ -17,9 +17,10 @@ import time
 #Páginas de la aplicación web
 
 PAGES = [
-    'Nuestras ventas en el territorio',
-    'TOP MARCAS',
-    'Próximas promociones'
+    'Inicio',
+    'Nivel geográfico y temporal',
+    'Nivel de producto',
+    'Nivel de cliente'
 ]
 
 
@@ -251,12 +252,16 @@ def run_UI():
         page = st.sidebar.radio('Navigation', PAGES, index=1)
 
 #Página MAPA
-    if page == 'Nuestras ventas en el territorio':
+    if page == 'Nivel geográfico y temporal':
         st.sidebar.write("""
-            ## About
-            AQUI VA EL MAPA
-            Seleccione en los filtros de búsqueda. 
-            Si alguna provincia aparece en gris con valor NaN en esa provincia no hubo ventas en ese mes.
+            ## ## Nivel geográfico y temporal
+            :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
+            :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
+            :moneybag: Si quieres consultar las ganancias ajustadas a los habitantes de cada provincia seleccionar 
+            'Ganancias € por 100 mil habitantes' de lo 
+            contrario se mostrarán las ganancias totales de cada provincia. \n
+            :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
+            las provincias que desees y en todo el país. 
           """)
         st.title(":earth_africa: Las ventas por el territorio")
         my_expander = st.expander(label='Filtros de la búsqueda', expanded = True)
@@ -722,7 +727,15 @@ def run_UI():
             )
             )
         st.altair_chart(chart, use_container_width=True)
-
+        
+    elif page == 'Inicio':
+        
+        st.sidebar.write("""
+            ## About
+          Bayes
+          """)
+        st.title("Datathonquiros :star:")
+        
     else:
     
     #Página sobre Asociaciones
