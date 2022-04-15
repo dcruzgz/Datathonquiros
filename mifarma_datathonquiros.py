@@ -482,8 +482,7 @@ def run_UI():
 
       
         #Ganancias en categoría en todo el territorio 
-        fig = go.Figure()
-        fig.add_hline(y=0)
+
         if variable_map == 'Ganancias':
             fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
 
@@ -496,6 +495,8 @@ def run_UI():
                 yaxis_title=variable_map
         )
         
+        fig.add_hline(y=0)
+      
         st.plotly_chart(fig, use_container_width=True)
 
     #Página sobre los productos y marcas
