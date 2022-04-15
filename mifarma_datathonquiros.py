@@ -1,5 +1,3 @@
-
-#Librerias
 import streamlit as st
 import streamlit.components.v1 as components
 import os
@@ -256,13 +254,13 @@ def run_UI():
         with st.sidebar:
             image = Image.open('Data/mifarma.png')
             st.image(image)
-            page = st.radio('Niveles: ', PAGES, index=st.session_state.page)
+            page = st.radio('Niveles de análisis: ', PAGES, index=st.session_state.page)
 
     else:
         with st.sidebar:
             image = Image.open('Data/mifarma.png')
             st.image(image)
-            page = st.sidebar.radio('Niveles: ', PAGES, index=0)
+            page = st.sidebar.radio('Niveles de análisis: ', PAGES, index=0)
 
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
