@@ -1,0 +1,1291 @@
+,productcat1,productcat2,productcat3,descuentolabel,descuento,Precio_calculado
+1,Veterinaria,,,1-5%,1,227.5111
+2,Salud,Botiquín,,1-5%,1,20.4971
+3,Salud,Descanso y relajación,,1-5%,1,5318.9739
+4,Salud,Problemas cardiovasculares y circulación,,1-5%,1,2984.4885
+5,Salud,Trastornos digestivos ,,1-5%,1,1702.8014
+6,Salud,Vitaminas y Minerales,,1-5%,1,3491.7889
+7,Salud,Salud Sexual,Accesorios,1-5%,1,857.9242
+8,Infantil,Lactancia,Accesorios de extracción,1-5%,1,648.2486
+9,Higiene y cuidado personal,Facial,Accesorios de limpieza,1-5%,1,44.6377
+10,Infantil,Paseo y primeros pasos,Accesorios de paseo,1-5%,1,22.3115
+11,Infantil,Seguridad infantil,Accesorios de seguridad,1-5%,1,238.6345
+12,Cosmética y Belleza,Sol,Aceite solar,1-5%,1,1212.3043
+13,Nutrición,Alimentos,Aceite y vinagre,1-5%,1,3.7568
+14,Salud,Aromaterapia,Aceites esenciales,1-5%,1,2715.8674
+15,Cosmética y Belleza,Facial,Acné,1-5%,1,17402.0197
+16,Nutrición,Pérdida de peso,Activadores,1-5%,1,491.3536
+17,Nutrición,Nutrición específica,Adultos,1-5%,1,1829.1036
+18,Cosmética y Belleza,Hombres,Afeitado masculino,1-5%,1,674.5656
+19,Cosmética y Belleza,Sol,After-sun,1-5%,1,1496.8847
+20,Higiene y cuidado personal,Limpieza Hogar,Ambientadores y velas,1-5%,1,319.2085
+21,Cosmética y Belleza,Facial,Ampollas,1-5%,1,12949.2227
+22,Cosmética y Belleza,Facial,Antiarrugas,1-5%,1,42300.0622
+23,Cosmética y Belleza,Labial,Antiarrugas,1-5%,1,806.0312
+24,Cosmética y Belleza,Hombres,Antiarrugas hombre,1-5%,1,513.3543
+25,Higiene y cuidado personal,Cabello,Anticaída,1-5%,1,17936.298
+26,Higiene y cuidado personal,Cabello,Anticaspa,1-5%,1,2249.7452
+27,Salud,Belleza,Antienvejecimiento,1-5%,1,827.17
+28,Higiene y cuidado personal,Cabello,Antigrasa,1-5%,1,683.3054
+29,Cosmética y Belleza,Facial,Antimanchas,1-5%,1,10334.6745
+30,Salud,Botiquín,Antimareo,1-5%,1,86.7492
+31,Salud,Botiquín,Antimosquitos,1-5%,1,2952.7404
+32,Salud,Botiquín,Apósitos tiritas y gasas,1-5%,1,3304.9428
+33,Salud,Trastornos digestivos ,Ardor y reflujo,1-5%,1,871.8493
+34,Cosmética y Belleza,Sol,Auto bronceadores,1-5%,1,1585.0781
+35,Infantil,Accesorios de alimentación,Baberos y otros,1-5%,1,109.7888
+36,Infantil,Mobiliario y descanso del bebé,Bañeras de bebé,1-5%,1,498.5097
+37,Salud,Ortopedia,Básculas,1-5%,1,44.5215
+38,Nutrición,Alimentos,Bebidas y zumos,1-5%,1,70.6663
+39,Infantil,Biberones,Biberones,1-5%,1,2174.162
+40,Salud,Mujer,Bienestar de la mujer,1-5%,1,285.0362
+41,Higiene y cuidado personal,Dental,Blanqueamiento dental,1-5%,1,2820.989
+42,Nutrición,Pérdida de peso,Bloqueadores de hidratos,1-5%,1,21.2496
+43,Salud,Ortopedia,Bolsas de frío y calor,1-5%,1,168.7183
+44,Cosmética y Belleza,Ojos,Bolsas en ojos,1-5%,1,2122.4217
+45,Infantil,Preparación al parto y maternidad,Bragas y compresas postparto,1-5%,1,463.4895
+46,Cosmética y Belleza,Accesorios de Belleza,Brochas y pinceles,1-5%,1,127.97
+47,Salud,Belleza,Cabello | uñas,1-5%,1,2730.4151
+48,Infantil,Chupetes,Cadenitas chupetes,1-5%,1,100.8832
+49,Infantil,Biberones,Calienta biberones,1-5%,1,95.0154
+50,Higiene y cuidado personal,Pies,Callos,1-5%,1,86.8485
+51,Salud,Ortopedia,Camaras de inhalación,1-5%,1,4.466
+52,Infantil,Higiene infantil,Canastillas y kits bebé,1-5%,1,891.169
+53,Cosmética y Belleza,Ojos,Cejas,1-5%,1,353.3316
+54,Salud,Belleza,Celulitis,1-5%,1,305.2764
+55,Cosmética y Belleza,Corporal,Celulitis,1-5%,1,3513.3012
+56,Higiene y cuidado personal,Dental,Cepillos,1-5%,1,2552.4709
+57,Higiene y cuidado personal,Dental,Cepillos eléctricos,1-5%,1,1532.6697
+58,Higiene y cuidado personal,Dental,Cepillos interdentales,1-5%,1,576.294
+59,Nutrición,Alimentos,Cereales y harinas,1-5%,1,24.3847
+60,Higiene y cuidado personal,Cabello,Champu,1-5%,1,6706.7506
+61,Higiene y cuidado personal,Cabello,Champús especiales,1-5%,1,2542.2169
+62,Infantil,Chupetes,Chupetes de latex o caucho,1-5%,1,166.2773
+63,Infantil,Chupetes,Chupetes de silicona,1-5%,1,621.1316
+64,Infantil,Chupetes,Chupetes personalizados,1-5%,1,266.819
+65,Salud,Aparato Urinario,Cistitis,1-5%,1,4149.9012
+66,Infantil,Lactancia,Cojin de lactancia,1-5%,1,33.8865
+67,Salud,Huesos articulaciones y músculos,Colágeno,1-5%,1,30498.7397
+68,Infantil,Mobiliario y descanso del bebé,Colchones,1-5%,1,314.0952
+69,Salud,Problemas cardiovasculares y circulación,Colesterol,1-5%,1,7170.7563
+70,Salud,Óptica,Colirios,1-5%,1,7239.4052
+71,Salud,Trastornos digestivos ,Colon irritable,1-5%,1,2726.149
+72,Infantil,Higiene infantil,Colonias,1-5%,1,760.3918
+73,Higiene y cuidado personal,Dental,Colutorios,1-5%,1,8348.5907
+74,Nutrición,Nutrición Deportiva,Complementos,1-5%,1,308.4691
+75,Higiene y cuidado personal,Íntima,Compresas,1-5%,1,2276.9532
+76,Cosmética y Belleza,Labial,Con protección solar,1-5%,1,743.2788
+77,Infantil,Cambio de pañal,Contenedor y recambios pañal,1-5%,1,25.3115
+78,Cosmética y Belleza,Ojos,Contorno de ojos,1-5%,1,12330.4159
+79,Salud,Botiquín,Control de glucosa,1-5%,1,124.6731
+80,Higiene y cuidado personal,Íntima,Copas menstruales,1-5%,1,1262.9153
+81,Cosmética y Belleza,Uñas,Cortauñas y tijeras,1-5%,1,288.5036
+82,Infantil,Higiene infantil,Costra láctea,1-5%,1,503.2939
+83,Cosmética y Belleza,Manos,Crema de manos,1-5%,1,2007.6513
+84,Infantil,Higiene infantil,Crema pañal,1-5%,1,3721.5921
+85,Nutrición,Alimentos,Cremas salsas y siropes,1-5%,1,4.3807
+86,Infantil,Accesorios de alimentación,Cubiertos,1-5%,1,294.8095
+87,Cosmética y Belleza,Corporal,Cuello escote y pecho,1-5%,1,1276.9665
+88,Infantil,Lactancia,Cuidado del pezón,1-5%,1,746.3802
+89,Infantil,Preparación al parto y maternidad,Cuidado perineal,1-5%,1,56.4062
+90,Higiene y cuidado personal,Dental,Cuidados especiales,1-5%,1,1944.6903
+91,Infantil,Mobiliario y descanso del bebé,Cunas portatiles,1-5%,1,127.0505
+92,Higiene y cuidado personal,Corporal,Decolorante del vello,1-5%,1,174.6635
+93,Higiene y cuidado personal,Dental,Dentífricos,1-5%,1,7402.9963
+94,Higiene y cuidado personal,Corporal,Depilatorios,1-5%,1,68.2482
+95,Cosmética y Belleza,Facial,Dermatitis y eczemas,1-5%,1,497.8923
+96,Salud,Botiquín,Desinfectantes,1-5%,1,443.2699
+97,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,1-5%,1,15404.3919
+98,Higiene y cuidado personal,Pies,Desodorante de pies,1-5%,1,418.8284
+99,Higiene y cuidado personal,Corporal,Desodorantes,1-5%,1,4266.9696
+100,Salud,Aromaterapia,Difusores,1-5%,1,79.9116
+101,Infantil,Lactancia,Discos de lactancia,1-5%,1,1180.3898
+102,Salud,Botiquín,Dolor de cabeza,1-5%,1,56.8264
+103,Salud,Mujer,Dolor menstrual,1-5%,1,338.734
+104,Salud,Huesos articulaciones y músculos,Dolores articulares,1-5%,1,474.3562
+105,Nutrición,Pérdida de peso,Drenajes,1-5%,1,2896.7897
+106,Infantil,Juguetes,Educativos e interactivos,1-5%,1,294.2529
+107,Nutrición,Alimentos,Edulcorantes,1-5%,1,325.0072
+108,Salud,Mujer,Embarazo y lactancia,1-5%,1,3288.2194
+109,Nutrición,Nutrición Deportiva,Energéticos,1-5%,1,332.309
+110,Cosmética y Belleza,Accesorios de Belleza,Espejos,1-5%,1,28.619
+111,Infantil,Higiene infantil,Esponjas,1-5%,1,894.9006
+112,Higiene y cuidado personal,Corporal,Esponjas y toallitas corporales,1-5%,1,69.4905
+113,Infantil,Accesorios de alimentación,Esterilización y limpieza,1-5%,1,1925.0992
+114,Salud,Trastornos digestivos ,Estreñimiento,1-5%,1,1996.0498
+115,Cosmética y Belleza,Corporal,Estrias,1-5%,1,3407.6973
+116,Infantil,Guardería,Etiquetas infantiles,1-5%,1,9.1275
+117,Higiene y cuidado personal,Corporal,Exfoliantes,1-5%,1,439.5218
+118,Higiene y cuidado personal,Facial,Exfoliantes,1-5%,1,2461.066
+119,Infantil,Preparación al parto y maternidad,Fajas postparto,1-5%,1,402.9327
+120,Salud,Salud Sexual,Falta de deseo,1-5%,1,1867.7722
+121,Salud,Fertilidad,Fertilidad y concepción,1-5%,1,6271.8426
+122,Salud,Trastornos digestivos ,Flora intestinal y digestión,1-5%,1,2982.0364
+123,Salud,Trastornos digestivos ,Función hepática,1-5%,1,495.5323
+124,Salud,Aparato respiratorio,Garganta y tos,1-5%,1,2777.5563
+125,Salud,Trastornos digestivos ,Gases,1-5%,1,610.1656
+126,Infantil,Higiene infantil,Gel-champú,1-5%,1,4877.906
+127,Higiene y cuidado personal,Corporal,Geles,1-5%,1,7361.4501
+128,Salud,Botiquín,Golpes y hematomas,1-5%,1,822.1167
+129,Salud,Botiquín,Guantes,1-5%,1,36.7164
+130,Infantil,Mobiliario y descanso del bebé,Hamacas bebe,1-5%,1,130.2989
+131,Salud,Problemas cardiovasculares y circulación,Hemorroides,1-5%,1,50.8426
+132,Salud,Botiquín,Heridas,1-5%,1,46.4589
+133,Cosmética y Belleza,Labial,Herpes labial,1-5%,1,60.7002
+134,Cosmética y Belleza,Corporal,Hidratación,1-5%,1,15495.869
+135,Cosmética y Belleza,Facial,Hidratantes,1-5%,1,22605.9726
+136,Infantil,Higiene infantil,Hidratantes,1-5%,1,4211.417
+137,Cosmética y Belleza,Hombres,Hidratantes,1-5%,1,246.6646
+138,Higiene y cuidado personal,Íntima,Hidratantes,1-5%,1,1709.0508
+139,Cosmética y Belleza,Labial,Hidratantes labiales,1-5%,1,3259.9471
+140,Higiene y cuidado personal,Pies,Hidratantes pies,1-5%,1,1437.0721
+141,Higiene y cuidado personal,Mascarillas,Higiénicas - quirúrgicas,1-5%,1,2.1268
+142,Higiene y cuidado personal,Dental,Hilo dental,1-5%,1,989.7722
+143,Cosmética y Belleza,Perfumería,Hombre,1-5%,1,432.7108
+144,Cosmética y Belleza,Uñas,Hongos,1-5%,1,69.5895
+145,Salud,Ortopedia,Humidificadores,1-5%,1,106.0254
+146,Salud,Aparato Urinario,Incontinencia,1-5%,1,738.5368
+147,Higiene y cuidado personal,Íntima,Incontinencia,1-5%,1,1242.0305
+148,Cosmética y Belleza,Perfumería,Infantil,1-5%,1,211.3201
+149,Salud,Mujer,Infecciones íntimas,1-5%,1,1599.7162
+150,Infantil,Alimentación infantil,Infusiones,1-5%,1,106.1722
+151,Salud,Descanso y relajación,Insomnio,1-5%,1,618.001
+152,Higiene y cuidado personal,Dental,Irrigadores bucales,1-5%,1,126.2529
+153,Nutrición,Nutrición Deportiva,Isotónicos y recuperadores,1-5%,1,198.2225
+154,Cosmética y Belleza,Manos,Jabón de manos,1-5%,1,156.5153
+155,Salud,Vitaminas y Minerales,Jalea real,1-5%,1,2782.904
+156,Higiene y cuidado personal,Dental,Kit dental,1-5%,1,0.756
+157,Cosmética y Belleza,Ojos,Lapiz y sombra de ojos,1-5%,1,469.321
+158,Nutrición,Alimentos,Leche y bebidas vegetales,1-5%,1,44.1396
+159,Infantil,Alimentación infantil,Leches infantiles,1-5%,1,549.7639
+160,Nutrición,Alimentos,Legumbres,1-5%,1,0.1851
+161,Salud,Ortopedia,Lesiones,1-5%,1,259.2645
+162,Higiene y cuidado personal,Pies,Limas y durezas,1-5%,1,341.2186
+163,Cosmética y Belleza,Uñas,Limas y tratamiento uñas,1-5%,1,651.4804
+164,Higiene y cuidado personal,Íntima,Limpieza,1-5%,1,4703.8604
+165,Higiene y cuidado personal,Nariz y oído,Limpieza,1-5%,1,3729.5923
+166,Salud,Óptica,Líquido lentillas,1-5%,1,1365.4649
+167,Salud,Salud Sexual,Lubricantes,1-5%,1,2909.8378
+168,Cosmética y Belleza,Facial,Luminosidad,1-5%,1,539.2359
+169,Cosmética y Belleza,Facial,Maquillajes,1-5%,1,7566.1569
+170,Higiene y cuidado personal,Cabello,Mascarillas,1-5%,1,2197.3598
+171,Higiene y cuidado personal,Facial,Mascarillas,1-5%,1,1899.2301
+172,Salud,Mujer,Menopausia,1-5%,1,4517.0214
+173,Salud,Vitaminas y Minerales,Minerales,1-5%,1,2209.2252
+174,Infantil,Guardería,Mochilas infantiles,1-5%,1,24.054
+175,Infantil,Juguetes,Mordedores,1-5%,1,346.1431
+176,Salud,Ortopedia,Movilidad y descanso,1-5%,1,28.7617
+177,Cosmética y Belleza,Perfumería,Mujer,1-5%,1,2076.7153
+178,Salud,Vitaminas y Minerales,Multivitamínicos,1-5%,1,13819.8076
+179,Salud,Aparato respiratorio,Nariz,1-5%,1,240.9734
+180,Salud,Ortopedia,Nebulizador,1-5%,1,179.2189
+181,Cosmética y Belleza,Accesorios de Belleza,Neceseres y otros,1-5%,1,18.6575
+182,Salud,Descanso y relajación,Nerviosismo y estrés,1-5%,1,284.2429
+183,Nutrición,Nutrición específica,Niños,1-5%,1,2810.8951
+184,Infantil,Mobiliario y descanso del bebé,Orinales,1-5%,1,471.3802
+185,Higiene y cuidado personal,Dental,Ortodoncia,1-5%,1,79.2819
+186,Infantil,Mobiliario y descanso del bebé,Otros descanso del bebé,1-5%,1,41.3153
+187,Nutrición,Alimentos,Pan y tortitas,1-5%,1,0.3704
+188,Infantil,Cambio de pañal,Pañales,1-5%,1,49171.8769
+189,Higiene y cuidado personal,Nariz y oído,Pañuelos,1-5%,1,7.9047
+190,Infantil,Alimentación infantil,Papillas,1-5%,1,850.8707
+191,Infantil,Juguetes,Para el baño,1-5%,1,42.6661
+192,Infantil,Juguetes,Para la cuna,1-5%,1,2.4363
+193,Higiene y cuidado personal,Corporal,Pastilla de jabón,1-5%,1,194.103
+194,Salud,Aparato respiratorio,Pecho,1-5%,1,153.0197
+195,Higiene y cuidado personal,Cabello,Peinado y tratamiento,1-5%,1,4604.8419
+196,Cosmética y Belleza,Accesorios de Belleza,Peines o cepillos,1-5%,1,368.355
+197,Infantil,Juguetes,Peluches,1-5%,1,3.5966
+198,Cosmética y Belleza,Ojos,Pestañas,1-5%,1,3421.4954
+199,Infantil,Lactancia,Pezoneras,1-5%,1,200.0081
+200,Salud,Belleza,Piel,1-5%,1,8672.826
+201,Cosmética y Belleza,Facial,Piel atópica,1-5%,1,1252.0595
+202,Cosmética y Belleza,Facial,Piel seca,1-5%,1,1791.6503
+203,Cosmética y Belleza,Corporal,Piel seca y atópica,1-5%,1,6765.5169
+204,Infantil,Higiene infantil,Pieles atópicas,1-5%,1,1111.2567
+205,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,1-5%,1,1373.0856
+206,Cosmética y Belleza,Labial,Pintalabios,1-5%,1,364.1023
+207,Cosmética y Belleza,Uñas,Pintauñas,1-5%,1,194.5348
+208,Cosmética y Belleza,Accesorios de Belleza,Pinzas de depilar,1-5%,1,387.7703
+209,Higiene y cuidado personal,Cabello,Piojos,1-5%,1,1423.2147
+210,Salud,Ortopedia,Plantillas,1-5%,1,556.0625
+211,Infantil,Paseo y primeros pasos,Portabebés,1-5%,1,26.184
+212,Infantil,Chupetes,Portachupetes,1-5%,1,27.8473
+213,Nutrición,Alimentos,Postres y dulces,1-5%,1,15.0811
+214,Infantil,Alimentación infantil,Potitos,1-5%,1,17.11
+215,Salud,Salud Sexual,Preservativos,1-5%,1,2639.9298
+216,Infantil,Higiene infantil,Primeros dientes,1-5%,1,78.3827
+217,Nutrición,Pérdida de peso,Productos sustitutivos y entrehoras,1-5%,1,6050.1618
+218,Salud,Aparato Urinario,Próstata,1-5%,1,498.7538
+219,Cosmética y Belleza,Sol,Protección nieve,1-5%,1,11092.3596
+220,Cosmética y Belleza,Sol,Protectores solares,1-5%,1,34532.1668
+221,Higiene y cuidado personal,Íntima,Protegeslip,1-5%,1,500.3549
+222,Nutrición,Nutrición Deportiva,Proteínas,1-5%,1,1058.9372
+223,Higiene y cuidado personal,Dental,Prótesis dentales,1-5%,1,1611.2924
+224,Salud,Ortopedia,Pulsioximetro,1-5%,1,21.6807
+225,Salud,Botiquín,Quemaduras y cicatrices,1-5%,1,9444.7302
+226,Nutrición,Pérdida de peso,Quemagrasas,1-5%,1,3184.3878
+227,Cosmética y Belleza,Uñas,Quitaesmalte,1-5%,1,72.4466
+228,Infantil,Accesorios de alimentación,Recipientes de conservación,1-5%,1,171.0654
+229,Salud,Huesos articulaciones y músculos,Recuperación muscular,1-5%,1,2413.3187
+230,Cosmética y Belleza,Hombres,Reductores - abdominales,1-5%,1,94.3845
+231,Cosmética y Belleza,Corporal,Reductores y reafirmantes,1-5%,1,2361.3063
+232,Cosmética y Belleza,Facial,Rojeces,1-5%,1,5828.4611
+233,Infantil,Lactancia,Sacaleches,1-5%,1,416.9751
+234,Nutrición,Pérdida de peso,Saciantes,1-5%,1,1735.7828
+235,Nutrición,Alimentos,Sal y especias,1-5%,1,73.6938
+236,Salud,Óptica,Salud ocular,1-5%,1,2883.5762
+237,Nutrición,Alimentos,Semillas y superalimentos,1-5%,1,45.2592
+238,Cosmética y Belleza,Facial,Serum,1-5%,1,3964.4704
+239,Infantil,Alimentación infantil,Snacks,1-5%,1,0.5833
+240,Cosmética y Belleza,Sol,Solar pelo,1-5%,1,498.2344
+241,Infantil,Juguetes,Sonajeros,1-5%,1,41.8573
+242,Salud,Botiquín,Suero fisiológico,1-5%,1,829.3013
+243,Infantil,Lactancia,Sujetadores lactancia,1-5%,1,35.0661
+244,Cosmética y Belleza,Sol,Suplementos,1-5%,1,6713.0298
+245,Salud,Vitaminas y Minerales,Suplementos,1-5%,1,11150.2459
+246,Higiene y cuidado personal,Íntima,Tampones,1-5%,1,508.363
+247,Higiene y cuidado personal,Nariz y oído,Tapones y protección,1-5%,1,478.7243
+248,Salud,Ortopedia,Tensiómetros,1-5%,1,57.3594
+249,Salud,Problemas cardiovasculares y circulación,Tensión,1-5%,1,50.8852
+250,Infantil,Accesorios de alimentación,Termo,1-5%,1,376.227
+251,Salud,Botiquín,Termómetros,1-5%,1,423.5687
+252,Nutrición,Alimentos,Tés e infusiones,1-5%,1,726.8449
+253,Infantil,Biberones,Tetinas,1-5%,1,1347.3074
+254,Higiene y cuidado personal,Cabello,Tintes de pelo,1-5%,1,1235.2524
+255,Infantil,Higiene infantil,Toallitas bebé,1-5%,1,2642.1021
+256,Salud,Óptica,Toallitas oculares,1-5%,1,1964.9167
+257,Cosmética y Belleza,Corporal,Urticaria y psoriasis,1-5%,1,1438.047
+258,Infantil,Accesorios de alimentación,Útiles de aprendizaje,1-5%,1,325.3505
+259,Infantil,Accesorios de alimentación,Vajillas infantiles,1-5%,1,399.1745
+260,Salud,Botiquín,Verrugas,1-5%,1,253.3042
+261,Salud,Vitaminas y Minerales,Vitaminas,1-5%,1,342.7186
+262,Salud,Ortopedia,Zapatos y zuecos,1-5%,1,63.5855
+263,Veterinaria,,,6-10%,2,97.0041
+264,Salud,Botiquín,,6-10%,2,68.6504
+265,Salud,Descanso y relajación,,6-10%,2,5561.3884
+266,Salud,Problemas cardiovasculares y circulación,,6-10%,2,2151.7979
+267,Salud,Trastornos digestivos ,,6-10%,2,1852.5016
+268,Salud,Vitaminas y Minerales,,6-10%,2,2873.612
+269,Salud,Salud Sexual,Accesorios,6-10%,2,720.3936
+270,Infantil,Lactancia,Accesorios de extracción,6-10%,2,810.235
+271,Higiene y cuidado personal,Facial,Accesorios de limpieza,6-10%,2,49.9833
+272,Infantil,Paseo y primeros pasos,Accesorios de paseo,6-10%,2,23.5459
+273,Infantil,Seguridad infantil,Accesorios de seguridad,6-10%,2,196.9205
+274,Cosmética y Belleza,Sol,Aceite solar,6-10%,2,406.7007
+275,Nutrición,Alimentos,Aceite y vinagre,6-10%,2,21.8411
+276,Salud,Aromaterapia,Aceites esenciales,6-10%,2,3207.5298
+277,Cosmética y Belleza,Facial,Acné,6-10%,2,15352.0967
+278,Nutrición,Pérdida de peso,Activadores,6-10%,2,406.4223
+279,Nutrición,Nutrición específica,Adultos,6-10%,2,1404.4733
+280,Cosmética y Belleza,Hombres,Afeitado masculino,6-10%,2,521.1001
+281,Cosmética y Belleza,Sol,After-sun,6-10%,2,613.3625
+282,Higiene y cuidado personal,Limpieza Hogar,Ambientadores y velas,6-10%,2,319.2834
+283,Cosmética y Belleza,Facial,Ampollas,6-10%,2,17435.4045
+284,Cosmética y Belleza,Facial,Antiarrugas,6-10%,2,51167.227
+285,Cosmética y Belleza,Labial,Antiarrugas,6-10%,2,807.9276
+286,Cosmética y Belleza,Hombres,Antiarrugas hombre,6-10%,2,779.1606
+287,Higiene y cuidado personal,Cabello,Anticaída,6-10%,2,20948.0435
+288,Higiene y cuidado personal,Cabello,Anticaspa,6-10%,2,2115.8374
+289,Salud,Belleza,Antienvejecimiento,6-10%,2,759.3832
+290,Higiene y cuidado personal,Cabello,Antigrasa,6-10%,2,747.3098
+291,Cosmética y Belleza,Facial,Antimanchas,6-10%,2,9611.2348
+292,Salud,Botiquín,Antimareo,6-10%,2,123.8358
+293,Salud,Botiquín,Antimosquitos,6-10%,2,916.3467
+294,Salud,Botiquín,Apósitos tiritas y gasas,6-10%,2,2574.1792
+295,Salud,Trastornos digestivos ,Ardor y reflujo,6-10%,2,919.1167
+296,Cosmética y Belleza,Sol,Auto bronceadores,6-10%,2,840.336
+297,Infantil,Accesorios de alimentación,Baberos y otros,6-10%,2,67.4698
+298,Infantil,Mobiliario y descanso del bebé,Bañeras de bebé,6-10%,2,623.554
+299,Salud,Ortopedia,Básculas,6-10%,2,58.4806
+300,Nutrición,Alimentos,Bebidas y zumos,6-10%,2,24.1775
+301,Infantil,Biberones,Biberones,6-10%,2,1725.0617
+302,Salud,Mujer,Bienestar de la mujer,6-10%,2,407.1767
+303,Higiene y cuidado personal,Dental,Blanqueamiento dental,6-10%,2,2189.9072
+304,Nutrición,Pérdida de peso,Bloqueadores de hidratos,6-10%,2,48.0773
+305,Salud,Ortopedia,Bolsas de frío y calor,6-10%,2,152.9985
+306,Cosmética y Belleza,Ojos,Bolsas en ojos,6-10%,2,2431.4529
+307,Salud,Botiquín,Botiquines y kits,6-10%,2,1.715
+308,Infantil,Preparación al parto y maternidad,Bragas y compresas postparto,6-10%,2,445.2711
+309,Cosmética y Belleza,Accesorios de Belleza,Brochas y pinceles,6-10%,2,164.5072
+310,Salud,Belleza,Cabello | uñas,6-10%,2,2749.2606
+311,Infantil,Chupetes,Cadenitas chupetes,6-10%,2,62.815
+312,Infantil,Biberones,Calienta biberones,6-10%,2,71.1657
+313,Higiene y cuidado personal,Pies,Callos,6-10%,2,44.0289
+314,Salud,Ortopedia,Camaras de inhalación,6-10%,2,0.7567
+315,Infantil,Higiene infantil,Canastillas y kits bebé,6-10%,2,819.5274
+316,Cosmética y Belleza,Ojos,Cejas,6-10%,2,369.3758
+317,Salud,Belleza,Celulitis,6-10%,2,288.1277
+318,Cosmética y Belleza,Corporal,Celulitis,6-10%,2,3057.815
+319,Higiene y cuidado personal,Dental,Cepillos,6-10%,2,2078.6779
+320,Higiene y cuidado personal,Dental,Cepillos eléctricos,6-10%,2,1295.2526
+321,Higiene y cuidado personal,Dental,Cepillos interdentales,6-10%,2,494.1167
+322,Nutrición,Alimentos,Cereales y harinas,6-10%,2,57.1871
+323,Higiene y cuidado personal,Cabello,Champu,6-10%,2,6003.6336
+324,Higiene y cuidado personal,Cabello,Champús especiales,6-10%,2,2419.7655
+325,Infantil,Chupetes,Chupetes de latex o caucho,6-10%,2,153.8376
+326,Infantil,Chupetes,Chupetes de silicona,6-10%,2,552.0265
+327,Infantil,Chupetes,Chupetes personalizados,6-10%,2,204.8734
+328,Salud,Aparato Urinario,Cistitis,6-10%,2,2897.9911
+329,Infantil,Lactancia,Cojin de lactancia,6-10%,2,45.6172
+330,Salud,Huesos articulaciones y músculos,Colágeno,6-10%,2,39941.7251
+331,Infantil,Mobiliario y descanso del bebé,Colchones,6-10%,2,1008.0466
+332,Salud,Problemas cardiovasculares y circulación,Colesterol,6-10%,2,7199.0223
+333,Salud,Óptica,Colirios,6-10%,2,6529.4997
+334,Salud,Trastornos digestivos ,Colon irritable,6-10%,2,3007.4753
+335,Infantil,Higiene infantil,Colonias,6-10%,2,553.2757
+336,Higiene y cuidado personal,Dental,Colutorios,6-10%,2,6392.0336
+337,Nutrición,Nutrición Deportiva,Complementos,6-10%,2,367.6506
+338,Higiene y cuidado personal,Íntima,Compresas,6-10%,2,2069.5148
+339,Cosmética y Belleza,Labial,Con protección solar,6-10%,2,618.471
+340,Infantil,Cambio de pañal,Contenedor y recambios pañal,6-10%,2,40.732
+341,Cosmética y Belleza,Ojos,Contorno de ojos,6-10%,2,13404.8652
+342,Salud,Botiquín,Control de glucosa,6-10%,2,12.8116
+343,Higiene y cuidado personal,Íntima,Copas menstruales,6-10%,2,986.9241
+344,Cosmética y Belleza,Uñas,Cortauñas y tijeras,6-10%,2,293.6008
+345,Infantil,Higiene infantil,Costra láctea,6-10%,2,359.703
+346,Cosmética y Belleza,Manos,Crema de manos,6-10%,2,2236.4273
+347,Infantil,Higiene infantil,Crema pañal,6-10%,2,3078.1705
+348,Nutrición,Alimentos,Cremas salsas y siropes,6-10%,2,39.1018
+349,Infantil,Accesorios de alimentación,Cubiertos,6-10%,2,207.4989
+350,Cosmética y Belleza,Corporal,Cuello escote y pecho,6-10%,2,1337.6746
+351,Infantil,Lactancia,Cuidado del pezón,6-10%,2,513.9337
+352,Infantil,Preparación al parto y maternidad,Cuidado perineal,6-10%,2,25.385
+353,Higiene y cuidado personal,Dental,Cuidados especiales,6-10%,2,1640.5162
+354,Infantil,Mobiliario y descanso del bebé,Cunas portatiles,6-10%,2,125.1543
+355,Higiene y cuidado personal,Corporal,Decolorante del vello,6-10%,2,127.1862
+356,Higiene y cuidado personal,Dental,Dentífricos,6-10%,2,6758.7701
+357,Higiene y cuidado personal,Corporal,Depilatorios,6-10%,2,66.9349
+358,Cosmética y Belleza,Facial,Dermatitis y eczemas,6-10%,2,530.51
+359,Salud,Botiquín,Desinfectantes,6-10%,2,456.9195
+360,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,6-10%,2,14275.0275
+361,Higiene y cuidado personal,Pies,Desodorante de pies,6-10%,2,260.7356
+362,Higiene y cuidado personal,Corporal,Desodorantes,6-10%,2,3372.0553
+363,Salud,Aromaterapia,Difusores,6-10%,2,89.8373
+364,Infantil,Lactancia,Discos de lactancia,6-10%,2,930.152
+365,Salud,Botiquín,Dolor de cabeza,6-10%,2,76.5292
+366,Salud,Mujer,Dolor menstrual,6-10%,2,197.1622
+367,Salud,Huesos articulaciones y músculos,Dolores articulares,6-10%,2,612.7722
+368,Nutrición,Pérdida de peso,Drenajes,6-10%,2,2409.8556
+369,Infantil,Juguetes,Educativos e interactivos,6-10%,2,248.7115
+370,Nutrición,Alimentos,Edulcorantes,6-10%,2,301.8558
+371,Salud,Mujer,Embarazo y lactancia,6-10%,2,2585.4412
+372,Nutrición,Nutrición Deportiva,Energéticos,6-10%,2,285.3921
+373,Cosmética y Belleza,Accesorios de Belleza,Espejos,6-10%,2,105.5094
+374,Infantil,Higiene infantil,Esponjas,6-10%,2,654.2206
+375,Higiene y cuidado personal,Corporal,Esponjas y toallitas corporales,6-10%,2,52.3283
+376,Infantil,Accesorios de alimentación,Esterilización y limpieza,6-10%,2,1598.2349
+377,Salud,Trastornos digestivos ,Estreñimiento,6-10%,2,1834.4587
+378,Cosmética y Belleza,Corporal,Estrias,6-10%,2,3464.3474
+379,Infantil,Guardería,Etiquetas infantiles,6-10%,2,4.2946
+380,Higiene y cuidado personal,Corporal,Exfoliantes,6-10%,2,351.6384
+381,Higiene y cuidado personal,Facial,Exfoliantes,6-10%,2,2249.8443
+382,Infantil,Preparación al parto y maternidad,Fajas postparto,6-10%,2,258.8057
+383,Salud,Salud Sexual,Falta de deseo,6-10%,2,1322.1053
+384,Salud,Fertilidad,Fertilidad y concepción,6-10%,2,4927.6752
+385,Salud,Trastornos digestivos ,Flora intestinal y digestión,6-10%,2,3161.1508
+386,Salud,Trastornos digestivos ,Función hepática,6-10%,2,507.5501
+387,Infantil,Alimentación infantil,Galletitas,6-10%,2,23.8374
+388,Salud,Aparato respiratorio,Garganta y tos,6-10%,2,3599.1711
+389,Salud,Trastornos digestivos ,Gases,6-10%,2,490.3907
+390,Infantil,Higiene infantil,Gel-champú,6-10%,2,3647.7599
+391,Cosmética y Belleza,Manos,Gel desinfectante,6-10%,2,5.1158
+392,Higiene y cuidado personal,Corporal,Geles,6-10%,2,7723.7913
+393,Salud,Botiquín,Golpes y hematomas,6-10%,2,814.3894
+394,Salud,Botiquín,Guantes,6-10%,2,20.0741
+395,Infantil,Mobiliario y descanso del bebé,Hamacas bebe,6-10%,2,147.6663
+396,Salud,Problemas cardiovasculares y circulación,Hemorroides,6-10%,2,35.7242
+397,Salud,Botiquín,Heridas,6-10%,2,20.7024
+398,Cosmética y Belleza,Labial,Herpes labial,6-10%,2,55.291
+399,Cosmética y Belleza,Corporal,Hidratación,6-10%,2,12942.93
+400,Cosmética y Belleza,Facial,Hidratantes,6-10%,2,20678.6701
+401,Infantil,Higiene infantil,Hidratantes,6-10%,2,2889.6175
+402,Cosmética y Belleza,Hombres,Hidratantes,6-10%,2,209.8368
+403,Higiene y cuidado personal,Íntima,Hidratantes,6-10%,2,1649.3786
+404,Cosmética y Belleza,Labial,Hidratantes labiales,6-10%,2,3480.4187
+405,Higiene y cuidado personal,Pies,Hidratantes pies,6-10%,2,889.9199
+406,Higiene y cuidado personal,Mascarillas,Higiénicas - quirúrgicas,6-10%,2,2.2402
+407,Higiene y cuidado personal,Dental,Hilo dental,6-10%,2,792.7284
+408,Cosmética y Belleza,Perfumería,Hombre,6-10%,2,406.7156
+409,Cosmética y Belleza,Uñas,Hongos,6-10%,2,57.0564
+410,Salud,Ortopedia,Humidificadores,6-10%,2,135.2012
+411,Salud,Aparato Urinario,Incontinencia,6-10%,2,683.5224
+412,Higiene y cuidado personal,Íntima,Incontinencia,6-10%,2,1628.4296
+413,Cosmética y Belleza,Perfumería,Infantil,6-10%,2,252.7389
+414,Salud,Mujer,Infecciones íntimas,6-10%,2,1659.6864
+415,Infantil,Alimentación infantil,Infusiones,6-10%,2,11.287
+416,Salud,Descanso y relajación,Insomnio,6-10%,2,583.5432
+417,Higiene y cuidado personal,Dental,Irrigadores bucales,6-10%,2,153.2949
+418,Nutrición,Nutrición Deportiva,Isotónicos y recuperadores,6-10%,2,140.437
+419,Cosmética y Belleza,Manos,Jabón de manos,6-10%,2,191.6337
+420,Salud,Vitaminas y Minerales,Jalea real,6-10%,2,3006.843
+421,Higiene y cuidado personal,Dental,Kit dental,6-10%,2,0.6556
+422,Cosmética y Belleza,Ojos,Lapiz y sombra de ojos,6-10%,2,459.6688
+423,Nutrición,Alimentos,Leche y bebidas vegetales,6-10%,2,63.9742
+424,Infantil,Alimentación infantil,Leches infantiles,6-10%,2,139.6371
+425,Nutrición,Alimentos,Legumbres,6-10%,2,2.8612
+426,Salud,Ortopedia,Lesiones,6-10%,2,256.0922
+427,Higiene y cuidado personal,Pies,Limas y durezas,6-10%,2,214.2978
+428,Cosmética y Belleza,Uñas,Limas y tratamiento uñas,6-10%,2,587.3567
+429,Higiene y cuidado personal,Íntima,Limpieza,6-10%,2,4285.01
+430,Higiene y cuidado personal,Nariz y oído,Limpieza,6-10%,2,3408.958
+431,Salud,Óptica,Líquido lentillas,6-10%,2,1111.4286
+432,Salud,Salud Sexual,Lubricantes,6-10%,2,2120.8431
+433,Cosmética y Belleza,Facial,Luminosidad,6-10%,2,415.8362
+434,Cosmética y Belleza,Facial,Maquillajes,6-10%,2,6215.9048
+435,Higiene y cuidado personal,Cabello,Mascarillas,6-10%,2,2252.816
+436,Higiene y cuidado personal,Facial,Mascarillas,6-10%,2,1694.3181
+437,Salud,Mujer,Menopausia,6-10%,2,3907.7785
+438,Salud,Vitaminas y Minerales,Minerales,6-10%,2,1759.1746
+439,Infantil,Guardería,Mochilas infantiles,6-10%,2,34.0254
+440,Infantil,Juguetes,Mordedores,6-10%,2,220.4838
+441,Salud,Ortopedia,Movilidad y descanso,6-10%,2,47.2847
+442,Cosmética y Belleza,Perfumería,Mujer,6-10%,2,2058.4997
+443,Salud,Vitaminas y Minerales,Multivitamínicos,6-10%,2,15233.6176
+444,Salud,Aparato respiratorio,Nariz,6-10%,2,244.3714
+445,Salud,Ortopedia,Nebulizador,6-10%,2,173.2499
+446,Cosmética y Belleza,Accesorios de Belleza,Neceseres y otros,6-10%,2,62.6712
+447,Salud,Descanso y relajación,Nerviosismo y estrés,6-10%,2,197.4771
+448,Nutrición,Nutrición específica,Niños,6-10%,2,2187.8551
+449,Infantil,Mobiliario y descanso del bebé,Orinales,6-10%,2,381.578
+450,Higiene y cuidado personal,Dental,Ortodoncia,6-10%,2,52.9405
+451,Infantil,Mobiliario y descanso del bebé,Otros descanso del bebé,6-10%,2,46.1167
+452,Nutrición,Alimentos,Pan y tortitas,6-10%,2,2.2497
+453,Infantil,Cambio de pañal,Pañales,6-10%,2,991.2717
+454,Higiene y cuidado personal,Nariz y oído,Pañuelos,6-10%,2,11.2927
+455,Infantil,Alimentación infantil,Papillas,6-10%,2,443.3026
+456,Infantil,Juguetes,Para el baño,6-10%,2,51.4563
+457,Higiene y cuidado personal,Corporal,Pastilla de jabón,6-10%,2,248.1296
+458,Salud,Aparato respiratorio,Pecho,6-10%,2,248.6233
+459,Higiene y cuidado personal,Cabello,Peinado y tratamiento,6-10%,2,5529.4899
+460,Cosmética y Belleza,Accesorios de Belleza,Peines o cepillos,6-10%,2,347.2246
+461,Infantil,Juguetes,Peluches,6-10%,2,4.878
+462,Cosmética y Belleza,Ojos,Pestañas,6-10%,2,4999.9046
+463,Infantil,Lactancia,Pezoneras,6-10%,2,54.1016
+464,Salud,Belleza,Piel,6-10%,2,11063.4032
+465,Cosmética y Belleza,Facial,Piel atópica,6-10%,2,1155.5685
+466,Cosmética y Belleza,Facial,Piel seca,6-10%,2,1654.52
+467,Cosmética y Belleza,Corporal,Piel seca y atópica,6-10%,2,6410.1538
+468,Infantil,Higiene infantil,Pieles atópicas,6-10%,2,1047.3812
+469,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,6-10%,2,825.2689
+470,Cosmética y Belleza,Labial,Pintalabios,6-10%,2,414.7708
+471,Cosmética y Belleza,Uñas,Pintauñas,6-10%,2,244.2401
+472,Cosmética y Belleza,Accesorios de Belleza,Pinzas de depilar,6-10%,2,389.6085
+473,Higiene y cuidado personal,Cabello,Piojos,6-10%,2,1579.2123
+474,Salud,Ortopedia,Plantillas,6-10%,2,537.2468
+475,Infantil,Chupetes,Portachupetes,6-10%,2,19.9988
+476,Nutrición,Alimentos,Postres y dulces,6-10%,2,20.0359
+477,Infantil,Alimentación infantil,Potitos,6-10%,2,125.1765
+478,Salud,Salud Sexual,Preservativos,6-10%,2,2075.3236
+479,Infantil,Higiene infantil,Primeros dientes,6-10%,2,55.2284
+480,Nutrición,Pérdida de peso,Productos sustitutivos y entrehoras,6-10%,2,6401.0727
+481,Salud,Aparato Urinario,Próstata,6-10%,2,423.8771
+482,Cosmética y Belleza,Sol,Protección nieve,6-10%,2,6314.6184
+483,Cosmética y Belleza,Sol,Protectores solares,6-10%,2,19933.3036
+484,Higiene y cuidado personal,Íntima,Protegeslip,6-10%,2,454.2576
+485,Nutrición,Nutrición Deportiva,Proteínas,6-10%,2,1117.9599
+486,Higiene y cuidado personal,Dental,Prótesis dentales,6-10%,2,1081.6092
+487,Salud,Ortopedia,Pulsioximetro,6-10%,2,30.083
+488,Salud,Botiquín,Quemaduras y cicatrices,6-10%,2,7438.7499
+489,Nutrición,Pérdida de peso,Quemagrasas,6-10%,2,3122.8967
+490,Cosmética y Belleza,Uñas,Quitaesmalte,6-10%,2,55.95
+491,Infantil,Accesorios de alimentación,Recipientes de conservación,6-10%,2,234.7865
+492,Salud,Huesos articulaciones y músculos,Recuperación muscular,6-10%,2,2056.2189
+493,Cosmética y Belleza,Hombres,Reductores - abdominales,6-10%,2,94.6428
+494,Cosmética y Belleza,Corporal,Reductores y reafirmantes,6-10%,2,2182.5404
+495,Cosmética y Belleza,Facial,Rojeces,6-10%,2,4588.8207
+496,Infantil,Lactancia,Sacaleches,6-10%,2,787.2951
+497,Nutrición,Pérdida de peso,Saciantes,6-10%,2,1368.8796
+498,Nutrición,Alimentos,Sal y especias,6-10%,2,75.7643
+499,Salud,Óptica,Salud ocular,6-10%,2,2916.0917
+500,Nutrición,Alimentos,Semillas y superalimentos,6-10%,2,65.7934
+501,Cosmética y Belleza,Facial,Serum,6-10%,2,5135.5151
+502,Infantil,Alimentación infantil,Snacks,6-10%,2,49.25
+503,Cosmética y Belleza,Sol,Solar pelo,6-10%,2,260.9076
+504,Infantil,Juguetes,Sonajeros,6-10%,2,27.337
+505,Salud,Botiquín,Suero fisiológico,6-10%,2,761.2208
+506,Infantil,Lactancia,Sujetadores lactancia,6-10%,2,24.8854
+507,Cosmética y Belleza,Sol,Suplementos,6-10%,2,4556.3381
+508,Salud,Vitaminas y Minerales,Suplementos,6-10%,2,11305.1777
+509,Higiene y cuidado personal,Íntima,Tampones,6-10%,2,544.9387
+510,Higiene y cuidado personal,Nariz y oído,Tapones y protección,6-10%,2,336.7562
+511,Salud,Ortopedia,Tensiómetros,6-10%,2,116.5139
+512,Salud,Problemas cardiovasculares y circulación,Tensión,6-10%,2,21.7712
+513,Infantil,Accesorios de alimentación,Termo,6-10%,2,361.1751
+514,Salud,Botiquín,Termómetros,6-10%,2,358.7221
+515,Nutrición,Alimentos,Tés e infusiones,6-10%,2,616.6691
+516,Infantil,Biberones,Tetinas,6-10%,2,984.8996
+517,Higiene y cuidado personal,Cabello,Tintes de pelo,6-10%,2,993.0754
+518,Infantil,Higiene infantil,Toallitas bebé,6-10%,2,2565.7288
+519,Salud,Óptica,Toallitas oculares,6-10%,2,1869.4414
+520,Cosmética y Belleza,Corporal,Urticaria y psoriasis,6-10%,2,1118.5438
+521,Infantil,Accesorios de alimentación,Útiles de aprendizaje,6-10%,2,256.7263
+522,Infantil,Accesorios de alimentación,Vajillas infantiles,6-10%,2,324.5417
+523,Salud,Botiquín,Verrugas,6-10%,2,189.099
+524,Salud,Vitaminas y Minerales,Vitaminas,6-10%,2,620.8951
+525,Salud,Ortopedia,Zapatos y zuecos,6-10%,2,52.9484
+526,Veterinaria,,,11-15%,3,9.4201
+527,Salud,Botiquín,,11-15%,3,0.5179
+528,Salud,Descanso y relajación,,11-15%,3,354.5135
+529,Salud,Problemas cardiovasculares y circulación,,11-15%,3,244.5492
+530,Salud,Trastornos digestivos ,,11-15%,3,132.5818
+531,Salud,Vitaminas y Minerales,,11-15%,3,234.4248
+532,Salud,Salud Sexual,Accesorios,11-15%,3,47.9455
+533,Infantil,Lactancia,Accesorios de extracción,11-15%,3,40.0379
+534,Higiene y cuidado personal,Facial,Accesorios de limpieza,11-15%,3,6.4371
+535,Infantil,Seguridad infantil,Accesorios de seguridad,11-15%,3,16.6802
+536,Cosmética y Belleza,Sol,Aceite solar,11-15%,3,51.3438
+537,Salud,Aromaterapia,Aceites esenciales,11-15%,3,230.0019
+538,Cosmética y Belleza,Facial,Acné,11-15%,3,1650.3207
+539,Nutrición,Pérdida de peso,Activadores,11-15%,3,22.2372
+540,Nutrición,Nutrición específica,Adultos,11-15%,3,89.148
+541,Cosmética y Belleza,Hombres,Afeitado masculino,11-15%,3,39.421
+542,Cosmética y Belleza,Sol,After-sun,11-15%,3,107.9682
+543,Higiene y cuidado personal,Limpieza Hogar,Ambientadores y velas,11-15%,3,35.9646
+544,Cosmética y Belleza,Facial,Ampollas,11-15%,3,1154.6455
+545,Cosmética y Belleza,Facial,Antiarrugas,11-15%,3,7287.2795
+546,Cosmética y Belleza,Labial,Antiarrugas,11-15%,3,149.0425
+547,Cosmética y Belleza,Hombres,Antiarrugas hombre,11-15%,3,62.0015
+548,Higiene y cuidado personal,Cabello,Anticaída,11-15%,3,1117.9443
+549,Higiene y cuidado personal,Cabello,Anticaspa,11-15%,3,121.4554
+550,Salud,Belleza,Antienvejecimiento,11-15%,3,48.7577
+551,Higiene y cuidado personal,Cabello,Antigrasa,11-15%,3,37.3455
+552,Cosmética y Belleza,Facial,Antimanchas,11-15%,3,778.2618
+553,Salud,Botiquín,Antimareo,11-15%,3,0.8385
+554,Salud,Botiquín,Antimosquitos,11-15%,3,34.542
+555,Salud,Botiquín,Apósitos tiritas y gasas,11-15%,3,194.9742
+556,Salud,Trastornos digestivos ,Ardor y reflujo,11-15%,3,119.9985
+557,Cosmética y Belleza,Sol,Auto bronceadores,11-15%,3,104.6254
+558,Infantil,Accesorios de alimentación,Baberos y otros,11-15%,3,3.449
+559,Infantil,Mobiliario y descanso del bebé,Bañeras de bebé,11-15%,3,41.5109
+560,Nutrición,Alimentos,Bebidas y zumos,11-15%,3,6.2172
+561,Infantil,Biberones,Biberones,11-15%,3,101.1878
+562,Salud,Mujer,Bienestar de la mujer,11-15%,3,28.4655
+563,Higiene y cuidado personal,Dental,Blanqueamiento dental,11-15%,3,154.7725
+564,Nutrición,Pérdida de peso,Bloqueadores de hidratos,11-15%,3,9.377
+565,Salud,Ortopedia,Bolsas de frío y calor,11-15%,3,11.9243
+566,Cosmética y Belleza,Ojos,Bolsas en ojos,11-15%,3,332.8018
+567,Infantil,Preparación al parto y maternidad,Bragas y compresas postparto,11-15%,3,5.7031
+568,Cosmética y Belleza,Accesorios de Belleza,Brochas y pinceles,11-15%,3,0.786
+569,Salud,Belleza,Cabello | uñas,11-15%,3,408.5731
+570,Infantil,Chupetes,Cadenitas chupetes,11-15%,3,5.3623
+571,Higiene y cuidado personal,Pies,Callos,11-15%,3,4.5006
+572,Infantil,Higiene infantil,Canastillas y kits bebé,11-15%,3,13.3966
+573,Cosmética y Belleza,Ojos,Cejas,11-15%,3,31.5207
+574,Salud,Belleza,Celulitis,11-15%,3,17.6229
+575,Cosmética y Belleza,Corporal,Celulitis,11-15%,3,193.0187
+576,Higiene y cuidado personal,Dental,Cepillos,11-15%,3,111.2384
+577,Higiene y cuidado personal,Dental,Cepillos eléctricos,11-15%,3,61.9581
+578,Higiene y cuidado personal,Dental,Cepillos interdentales,11-15%,3,19.53
+579,Nutrición,Alimentos,Cereales y harinas,11-15%,3,3.8136
+580,Higiene y cuidado personal,Cabello,Champu,11-15%,3,320.0814
+581,Higiene y cuidado personal,Cabello,Champús especiales,11-15%,3,216.2261
+582,Infantil,Chupetes,Chupetes de latex o caucho,11-15%,3,10.5001
+583,Infantil,Chupetes,Chupetes de silicona,11-15%,3,29.8584
+584,Salud,Aparato Urinario,Cistitis,11-15%,3,103.8624
+585,Infantil,Lactancia,Cojin de lactancia,11-15%,3,2.267
+586,Salud,Huesos articulaciones y músculos,Colágeno,11-15%,3,1972.0639
+587,Infantil,Mobiliario y descanso del bebé,Colchones,11-15%,3,50.9657
+588,Salud,Problemas cardiovasculares y circulación,Colesterol,11-15%,3,483.3093
+589,Salud,Óptica,Colirios,11-15%,3,373.9209
+590,Salud,Trastornos digestivos ,Colon irritable,11-15%,3,163.4332
+591,Infantil,Higiene infantil,Colonias,11-15%,3,23.97
+592,Higiene y cuidado personal,Dental,Colutorios,11-15%,3,263.0094
+593,Nutrición,Nutrición Deportiva,Complementos,11-15%,3,27.0535
+594,Higiene y cuidado personal,Íntima,Compresas,11-15%,3,73.3081
+595,Cosmética y Belleza,Labial,Con protección solar,11-15%,3,49.858
+596,Infantil,Cambio de pañal,Contenedor y recambios pañal,11-15%,3,2.4863
+597,Cosmética y Belleza,Ojos,Contorno de ojos,11-15%,3,1762.1713
+598,Salud,Botiquín,Control de glucosa,11-15%,3,70.3614
+599,Higiene y cuidado personal,Íntima,Copas menstruales,11-15%,3,53.6264
+600,Cosmética y Belleza,Uñas,Cortauñas y tijeras,11-15%,3,14.1133
+601,Infantil,Higiene infantil,Costra láctea,11-15%,3,28.5943
+602,Cosmética y Belleza,Manos,Crema de manos,11-15%,3,231.4323
+603,Infantil,Higiene infantil,Crema pañal,11-15%,3,152.5287
+604,Nutrición,Alimentos,Cremas salsas y siropes,11-15%,3,2.0155
+605,Infantil,Accesorios de alimentación,Cubiertos,11-15%,3,4.4102
+606,Cosmética y Belleza,Corporal,Cuello escote y pecho,11-15%,3,76.7578
+607,Infantil,Lactancia,Cuidado del pezón,11-15%,3,14.1206
+608,Higiene y cuidado personal,Dental,Cuidados especiales,11-15%,3,121.703
+609,Higiene y cuidado personal,Corporal,Decolorante del vello,11-15%,3,14.3044
+610,Higiene y cuidado personal,Dental,Dentífricos,11-15%,3,303.8068
+611,Cosmética y Belleza,Facial,Dermatitis y eczemas,11-15%,3,37.9243
+612,Salud,Botiquín,Desinfectantes,11-15%,3,37.7213
+613,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,11-15%,3,1362.8784
+614,Higiene y cuidado personal,Pies,Desodorante de pies,11-15%,3,7.6704
+615,Higiene y cuidado personal,Corporal,Desodorantes,11-15%,3,160.9366
+616,Salud,Aromaterapia,Difusores,11-15%,3,6.2292
+617,Infantil,Lactancia,Discos de lactancia,11-15%,3,52.4113
+618,Salud,Botiquín,Dolor de cabeza,11-15%,3,1.5326
+619,Salud,Mujer,Dolor menstrual,11-15%,3,19.5074
+620,Salud,Huesos articulaciones y músculos,Dolores articulares,11-15%,3,84.9549
+621,Nutrición,Pérdida de peso,Drenajes,11-15%,3,152.3897
+622,Infantil,Juguetes,Educativos e interactivos,11-15%,3,9.4554
+623,Nutrición,Alimentos,Edulcorantes,11-15%,3,23.2258
+624,Salud,Mujer,Embarazo y lactancia,11-15%,3,128.4924
+625,Nutrición,Nutrición Deportiva,Energéticos,11-15%,3,26.3608
+626,Cosmética y Belleza,Accesorios de Belleza,Espejos,11-15%,3,3.2718
+627,Infantil,Higiene infantil,Esponjas,11-15%,3,40.8159
+628,Higiene y cuidado personal,Corporal,Esponjas y toallitas corporales,11-15%,3,0.9042
+629,Infantil,Accesorios de alimentación,Esterilización y limpieza,11-15%,3,29.3152
+630,Salud,Trastornos digestivos ,Estreñimiento,11-15%,3,166.3142
+631,Cosmética y Belleza,Corporal,Estrias,11-15%,3,196.3441
+632,Higiene y cuidado personal,Corporal,Exfoliantes,11-15%,3,21.0507
+633,Higiene y cuidado personal,Facial,Exfoliantes,11-15%,3,191.7393
+634,Infantil,Preparación al parto y maternidad,Fajas postparto,11-15%,3,22.7809
+635,Salud,Salud Sexual,Falta de deseo,11-15%,3,71.8546
+636,Salud,Fertilidad,Fertilidad y concepción,11-15%,3,172.2331
+637,Salud,Trastornos digestivos ,Flora intestinal y digestión,11-15%,3,237.096
+638,Salud,Trastornos digestivos ,Función hepática,11-15%,3,21.8625
+639,Infantil,Alimentación infantil,Galletitas,11-15%,3,17.7247
+640,Salud,Aparato respiratorio,Garganta y tos,11-15%,3,225.2261
+641,Salud,Trastornos digestivos ,Gases,11-15%,3,17.3811
+642,Infantil,Higiene infantil,Gel-champú,11-15%,3,154.7688
+643,Higiene y cuidado personal,Corporal,Geles,11-15%,3,451.4729
+644,Salud,Botiquín,Golpes y hematomas,11-15%,3,211.5241
+645,Salud,Botiquín,Guantes,11-15%,3,0.204
+646,Infantil,Mobiliario y descanso del bebé,Hamacas bebe,11-15%,3,4.4904
+647,Salud,Problemas cardiovasculares y circulación,Hemorroides,11-15%,3,5.0822
+648,Salud,Botiquín,Heridas,11-15%,3,1.2532
+649,Cosmética y Belleza,Labial,Herpes labial,11-15%,3,2.0713
+650,Cosmética y Belleza,Corporal,Hidratación,11-15%,3,1039.0312
+651,Cosmética y Belleza,Facial,Hidratantes,11-15%,3,2369.5014
+652,Infantil,Higiene infantil,Hidratantes,11-15%,3,79.9158
+653,Cosmética y Belleza,Hombres,Hidratantes,11-15%,3,0.8432
+654,Higiene y cuidado personal,Íntima,Hidratantes,11-15%,3,100.5093
+655,Cosmética y Belleza,Labial,Hidratantes labiales,11-15%,3,238.3783
+656,Higiene y cuidado personal,Pies,Hidratantes pies,11-15%,3,110.3744
+657,Higiene y cuidado personal,Dental,Hilo dental,11-15%,3,31.8619
+658,Cosmética y Belleza,Perfumería,Hombre,11-15%,3,17.1069
+659,Cosmética y Belleza,Uñas,Hongos,11-15%,3,12.6516
+660,Salud,Ortopedia,Humidificadores,11-15%,3,35.492
+661,Salud,Aparato Urinario,Incontinencia,11-15%,3,32.9929
+662,Higiene y cuidado personal,Íntima,Incontinencia,11-15%,3,147.3525
+663,Cosmética y Belleza,Perfumería,Infantil,11-15%,3,3.1364
+664,Salud,Mujer,Infecciones íntimas,11-15%,3,125.3687
+665,Infantil,Alimentación infantil,Infusiones,11-15%,3,0.748
+666,Salud,Descanso y relajación,Insomnio,11-15%,3,62.8019
+667,Nutrición,Nutrición Deportiva,Isotónicos y recuperadores,11-15%,3,22.8765
+668,Cosmética y Belleza,Manos,Jabón de manos,11-15%,3,16.7186
+669,Salud,Vitaminas y Minerales,Jalea real,11-15%,3,288.7149
+670,Cosmética y Belleza,Ojos,Lapiz y sombra de ojos,11-15%,3,28.3967
+671,Nutrición,Alimentos,Leche y bebidas vegetales,11-15%,3,17.077
+672,Infantil,Alimentación infantil,Leches infantiles,11-15%,3,71.5951
+673,Salud,Ortopedia,Lesiones,11-15%,3,38.1508
+674,Higiene y cuidado personal,Pies,Limas y durezas,11-15%,3,13.662
+675,Cosmética y Belleza,Uñas,Limas y tratamiento uñas,11-15%,3,28.8776
+676,Higiene y cuidado personal,Íntima,Limpieza,11-15%,3,293.2024
+677,Higiene y cuidado personal,Nariz y oído,Limpieza,11-15%,3,277.9278
+678,Salud,Óptica,Líquido lentillas,11-15%,3,88.6879
+679,Salud,Salud Sexual,Lubricantes,11-15%,3,150.6038
+680,Cosmética y Belleza,Facial,Luminosidad,11-15%,3,53.041
+681,Cosmética y Belleza,Facial,Maquillajes,11-15%,3,370.7689
+682,Higiene y cuidado personal,Cabello,Mascarillas,11-15%,3,150.1675
+683,Higiene y cuidado personal,Facial,Mascarillas,11-15%,3,166.5956
+684,Salud,Mujer,Menopausia,11-15%,3,256.7889
+685,Salud,Vitaminas y Minerales,Minerales,11-15%,3,132.149
+686,Infantil,Juguetes,Mordedores,11-15%,3,9.211
+687,Salud,Ortopedia,Movilidad y descanso,11-15%,3,8.9278
+688,Cosmética y Belleza,Perfumería,Mujer,11-15%,3,232.3501
+689,Salud,Vitaminas y Minerales,Multivitamínicos,11-15%,3,1349.3669
+690,Salud,Aparato respiratorio,Nariz,11-15%,3,4.8048
+691,Salud,Descanso y relajación,Nerviosismo y estrés,11-15%,3,4.1233
+692,Nutrición,Nutrición específica,Niños,11-15%,3,132.4042
+693,Infantil,Mobiliario y descanso del bebé,Orinales,11-15%,3,19.4108
+694,Higiene y cuidado personal,Dental,Ortodoncia,11-15%,3,4.2181
+695,Infantil,Mobiliario y descanso del bebé,Otros descanso del bebé,11-15%,3,7.3346
+696,Nutrición,Alimentos,Pan y tortitas,11-15%,3,0.4945
+697,Infantil,Cambio de pañal,Pañales,11-15%,3,501.0617
+698,Higiene y cuidado personal,Nariz y oído,Pañuelos,11-15%,3,0.5477
+699,Infantil,Alimentación infantil,Papillas,11-15%,3,26.015
+700,Infantil,Juguetes,Para el baño,11-15%,3,2.1292
+701,Higiene y cuidado personal,Corporal,Pastilla de jabón,11-15%,3,29.5071
+702,Salud,Aparato respiratorio,Pecho,11-15%,3,32.2781
+703,Higiene y cuidado personal,Cabello,Peinado y tratamiento,11-15%,3,623.9142
+704,Cosmética y Belleza,Accesorios de Belleza,Peines o cepillos,11-15%,3,27.0142
+705,Cosmética y Belleza,Ojos,Pestañas,11-15%,3,915.1299
+706,Infantil,Lactancia,Pezoneras,11-15%,3,6.4583
+707,Salud,Belleza,Piel,11-15%,3,385.8035
+708,Cosmética y Belleza,Facial,Piel atópica,11-15%,3,41.3526
+709,Cosmética y Belleza,Facial,Piel seca,11-15%,3,87.1677
+710,Cosmética y Belleza,Corporal,Piel seca y atópica,11-15%,3,130.2929
+711,Infantil,Higiene infantil,Pieles atópicas,11-15%,3,42.5254
+712,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,11-15%,3,55.5993
+713,Cosmética y Belleza,Labial,Pintalabios,11-15%,3,22.1058
+714,Cosmética y Belleza,Uñas,Pintauñas,11-15%,3,17.9616
+715,Cosmética y Belleza,Accesorios de Belleza,Pinzas de depilar,11-15%,3,60.5716
+716,Higiene y cuidado personal,Cabello,Piojos,11-15%,3,-10.5121
+717,Salud,Ortopedia,Plantillas,11-15%,3,30.3475
+718,Nutrición,Alimentos,Postres y dulces,11-15%,3,0.5546
+719,Infantil,Alimentación infantil,Potitos,11-15%,3,24.2243
+720,Salud,Salud Sexual,Preservativos,11-15%,3,116.9449
+721,Infantil,Higiene infantil,Primeros dientes,11-15%,3,4.5252
+722,Nutrición,Pérdida de peso,Productos sustitutivos y entrehoras,11-15%,3,182.9202
+723,Salud,Aparato Urinario,Próstata,11-15%,3,3.0867
+724,Cosmética y Belleza,Sol,Protección nieve,11-15%,3,419.5643
+725,Cosmética y Belleza,Sol,Protectores solares,11-15%,3,1792.1339
+726,Higiene y cuidado personal,Íntima,Protegeslip,11-15%,3,21.7758
+727,Nutrición,Nutrición Deportiva,Proteínas,11-15%,3,45.1407
+728,Higiene y cuidado personal,Dental,Prótesis dentales,11-15%,3,68.6374
+729,Salud,Botiquín,Quemaduras y cicatrices,11-15%,3,527.4256
+730,Nutrición,Pérdida de peso,Quemagrasas,11-15%,3,420.2646
+731,Cosmética y Belleza,Uñas,Quitaesmalte,11-15%,3,1.2793
+732,Infantil,Accesorios de alimentación,Recipientes de conservación,11-15%,3,9.3987
+733,Salud,Huesos articulaciones y músculos,Recuperación muscular,11-15%,3,218.2148
+734,Cosmética y Belleza,Hombres,Reductores - abdominales,11-15%,3,4.6065
+735,Cosmética y Belleza,Corporal,Reductores y reafirmantes,11-15%,3,154.2155
+736,Cosmética y Belleza,Facial,Rojeces,11-15%,3,173.2004
+737,Infantil,Lactancia,Sacaleches,11-15%,3,57.6606
+738,Nutrición,Pérdida de peso,Saciantes,11-15%,3,86.9273
+739,Salud,Óptica,Salud ocular,11-15%,3,142.678
+740,Nutrición,Alimentos,Semillas y superalimentos,11-15%,3,3.6878
+741,Cosmética y Belleza,Facial,Serum,11-15%,3,464.3276
+742,Infantil,Alimentación infantil,Snacks,11-15%,3,3.9264
+743,Cosmética y Belleza,Sol,Solar pelo,11-15%,3,59.9275
+744,Infantil,Juguetes,Sonajeros,11-15%,3,1.575
+745,Salud,Botiquín,Suero fisiológico,11-15%,3,48.2435
+746,Cosmética y Belleza,Sol,Suplementos,11-15%,3,477.5578
+747,Salud,Vitaminas y Minerales,Suplementos,11-15%,3,1018.3647
+748,Higiene y cuidado personal,Íntima,Tampones,11-15%,3,22.0169
+749,Higiene y cuidado personal,Nariz y oído,Tapones y protección,11-15%,3,46.7061
+750,Salud,Ortopedia,Tensiómetros,11-15%,3,0.338
+751,Salud,Problemas cardiovasculares y circulación,Tensión,11-15%,3,7.0692
+752,Infantil,Accesorios de alimentación,Termo,11-15%,3,33.2988
+753,Salud,Botiquín,Termómetros,11-15%,3,34.2676
+754,Nutrición,Alimentos,Tés e infusiones,11-15%,3,30.7344
+755,Infantil,Biberones,Tetinas,11-15%,3,49.1614
+756,Higiene y cuidado personal,Cabello,Tintes de pelo,11-15%,3,94.1588
+757,Infantil,Higiene infantil,Toallitas bebé,11-15%,3,140.3697
+758,Salud,Óptica,Toallitas oculares,11-15%,3,141.2879
+759,Cosmética y Belleza,Corporal,Urticaria y psoriasis,11-15%,3,79.3152
+760,Infantil,Accesorios de alimentación,Útiles de aprendizaje,11-15%,3,11.8213
+761,Infantil,Accesorios de alimentación,Vajillas infantiles,11-15%,3,12.8489
+762,Salud,Botiquín,Verrugas,11-15%,3,15.388
+763,Salud,Vitaminas y Minerales,Vitaminas,11-15%,3,99.4649
+764,Salud,Ortopedia,Zapatos y zuecos,11-15%,3,0.4815
+765,Veterinaria,,,16-20%,4,2.242
+766,Salud,Botiquín,,16-20%,4,0.372
+767,Salud,Descanso y relajación,,16-20%,4,344.8977
+768,Salud,Problemas cardiovasculares y circulación,,16-20%,4,226.7214
+769,Salud,Trastornos digestivos ,,16-20%,4,71.9341
+770,Salud,Vitaminas y Minerales,,16-20%,4,184.0413
+771,Salud,Salud Sexual,Accesorios,16-20%,4,19.7532
+772,Infantil,Lactancia,Accesorios de extracción,16-20%,4,22.4497
+773,Higiene y cuidado personal,Facial,Accesorios de limpieza,16-20%,4,3.5312
+774,Infantil,Seguridad infantil,Accesorios de seguridad,16-20%,4,1.7493
+775,Cosmética y Belleza,Sol,Aceite solar,16-20%,4,45.6117
+776,Salud,Aromaterapia,Aceites esenciales,16-20%,4,87.8097
+777,Cosmética y Belleza,Facial,Acné,16-20%,4,927.2963
+778,Nutrición,Pérdida de peso,Activadores,16-20%,4,11.1454
+779,Nutrición,Nutrición específica,Adultos,16-20%,4,-1.1891
+780,Cosmética y Belleza,Hombres,Afeitado masculino,16-20%,4,-7.7904
+781,Cosmética y Belleza,Sol,After-sun,16-20%,4,192.3324
+782,Higiene y cuidado personal,Limpieza Hogar,Ambientadores y velas,16-20%,4,0.9328
+783,Cosmética y Belleza,Facial,Ampollas,16-20%,4,931.0398
+784,Cosmética y Belleza,Facial,Antiarrugas,16-20%,4,6834.3735
+785,Cosmética y Belleza,Labial,Antiarrugas,16-20%,4,87.0137
+786,Cosmética y Belleza,Hombres,Antiarrugas hombre,16-20%,4,11.1133
+787,Higiene y cuidado personal,Cabello,Anticaída,16-20%,4,1019.7273
+788,Higiene y cuidado personal,Cabello,Anticaspa,16-20%,4,20.1163
+789,Salud,Belleza,Antienvejecimiento,16-20%,4,26.0005
+790,Higiene y cuidado personal,Cabello,Antigrasa,16-20%,4,12.8501
+791,Cosmética y Belleza,Facial,Antimanchas,16-20%,4,498.9131
+792,Salud,Botiquín,Antimareo,16-20%,4,-0.0007
+793,Salud,Botiquín,Antimosquitos,16-20%,4,13.7215
+794,Salud,Botiquín,Apósitos tiritas y gasas,16-20%,4,24.7076
+795,Salud,Trastornos digestivos ,Ardor y reflujo,16-20%,4,48.3908
+796,Cosmética y Belleza,Sol,Auto bronceadores,16-20%,4,189.2852
+797,Infantil,Accesorios de alimentación,Baberos y otros,16-20%,4,0.424
+798,Nutrición,Alimentos,Bebidas y zumos,16-20%,4,3.4256
+799,Infantil,Biberones,Biberones,16-20%,4,9.3988
+800,Salud,Mujer,Bienestar de la mujer,16-20%,4,34.7763
+801,Higiene y cuidado personal,Dental,Blanqueamiento dental,16-20%,4,55.8594
+802,Nutrición,Pérdida de peso,Bloqueadores de hidratos,16-20%,4,0.571
+803,Cosmética y Belleza,Ojos,Bolsas en ojos,16-20%,4,229.677
+804,Infantil,Preparación al parto y maternidad,Bragas y compresas postparto,16-20%,4,1.8309
+805,Cosmética y Belleza,Accesorios de Belleza,Brochas y pinceles,16-20%,4,1.5431
+806,Salud,Belleza,Cabello | uñas,16-20%,4,149.6273
+807,Infantil,Chupetes,Cadenitas chupetes,16-20%,4,0.603
+808,Higiene y cuidado personal,Pies,Callos,16-20%,4,0.1362
+809,Infantil,Higiene infantil,Canastillas y kits bebé,16-20%,4,-39.0182
+810,Cosmética y Belleza,Ojos,Cejas,16-20%,4,6.5909
+811,Salud,Belleza,Celulitis,16-20%,4,5.0899
+812,Cosmética y Belleza,Corporal,Celulitis,16-20%,4,733.3205
+813,Higiene y cuidado personal,Dental,Cepillos,16-20%,4,46.4005
+814,Higiene y cuidado personal,Dental,Cepillos eléctricos,16-20%,4,20.9384
+815,Higiene y cuidado personal,Dental,Cepillos interdentales,16-20%,4,6.4843
+816,Nutrición,Alimentos,Cereales y harinas,16-20%,4,1.0488
+817,Higiene y cuidado personal,Cabello,Champu,16-20%,4,245.2105
+818,Higiene y cuidado personal,Cabello,Champús especiales,16-20%,4,124.3873
+819,Infantil,Chupetes,Chupetes de latex o caucho,16-20%,4,-1.1568
+820,Infantil,Chupetes,Chupetes de silicona,16-20%,4,50.4086
+821,Salud,Aparato Urinario,Cistitis,16-20%,4,-66.1662
+822,Salud,Huesos articulaciones y músculos,Colágeno,16-20%,4,3799.3293
+823,Infantil,Mobiliario y descanso del bebé,Colchones,16-20%,4,27.0057
+824,Salud,Problemas cardiovasculares y circulación,Colesterol,16-20%,4,370.8501
+825,Salud,Óptica,Colirios,16-20%,4,150.0417
+826,Salud,Trastornos digestivos ,Colon irritable,16-20%,4,6.2483
+827,Infantil,Higiene infantil,Colonias,16-20%,4,-12.6255
+828,Higiene y cuidado personal,Dental,Colutorios,16-20%,4,93.2276
+829,Nutrición,Nutrición Deportiva,Complementos,16-20%,4,23.9437
+830,Higiene y cuidado personal,Íntima,Compresas,16-20%,4,31.2407
+831,Cosmética y Belleza,Labial,Con protección solar,16-20%,4,31.8009
+832,Cosmética y Belleza,Ojos,Contorno de ojos,16-20%,4,1634.4346
+833,Salud,Botiquín,Control de glucosa,16-20%,4,1.0048
+834,Higiene y cuidado personal,Íntima,Copas menstruales,16-20%,4,24.1889
+835,Cosmética y Belleza,Uñas,Cortauñas y tijeras,16-20%,4,8.5717
+836,Infantil,Higiene infantil,Costra láctea,16-20%,4,-1.2244
+837,Cosmética y Belleza,Manos,Crema de manos,16-20%,4,13.4908
+838,Infantil,Higiene infantil,Crema pañal,16-20%,4,52.5245
+839,Infantil,Accesorios de alimentación,Cubiertos,16-20%,4,0.6159
+840,Cosmética y Belleza,Corporal,Cuello escote y pecho,16-20%,4,116.6424
+841,Infantil,Lactancia,Cuidado del pezón,16-20%,4,-3.6258
+842,Infantil,Preparación al parto y maternidad,Cuidado perineal,16-20%,4,-1.556
+843,Higiene y cuidado personal,Dental,Cuidados especiales,16-20%,4,57.4115
+844,Infantil,Mobiliario y descanso del bebé,Cunas portatiles,16-20%,4,6.6932
+845,Higiene y cuidado personal,Corporal,Decolorante del vello,16-20%,4,-1.778
+846,Higiene y cuidado personal,Dental,Dentífricos,16-20%,4,145.6287
+847,Higiene y cuidado personal,Corporal,Depilatorios,16-20%,4,0.7965
+848,Cosmética y Belleza,Facial,Dermatitis y eczemas,16-20%,4,7.0184
+849,Salud,Botiquín,Desinfectantes,16-20%,4,7.8306
+850,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,16-20%,4,1786.2841
+851,Higiene y cuidado personal,Pies,Desodorante de pies,16-20%,4,11.4986
+852,Higiene y cuidado personal,Corporal,Desodorantes,16-20%,4,-38.1304
+853,Salud,Aromaterapia,Difusores,16-20%,4,6.448
+854,Infantil,Lactancia,Discos de lactancia,16-20%,4,-2.0887
+855,Salud,Botiquín,Dolor de cabeza,16-20%,4,2.288
+856,Salud,Mujer,Dolor menstrual,16-20%,4,2.134
+857,Salud,Huesos articulaciones y músculos,Dolores articulares,16-20%,4,71.1325
+858,Nutrición,Pérdida de peso,Drenajes,16-20%,4,128.5132
+859,Infantil,Juguetes,Educativos e interactivos,16-20%,4,-2.787
+860,Nutrición,Alimentos,Edulcorantes,16-20%,4,1.2912
+861,Salud,Mujer,Embarazo y lactancia,16-20%,4,54.7327
+862,Nutrición,Nutrición Deportiva,Energéticos,16-20%,4,6.273
+863,Cosmética y Belleza,Accesorios de Belleza,Espejos,16-20%,4,1.6524
+864,Infantil,Higiene infantil,Esponjas,16-20%,4,7.745
+865,Higiene y cuidado personal,Corporal,Esponjas y toallitas corporales,16-20%,4,1.7054
+866,Infantil,Accesorios de alimentación,Esterilización y limpieza,16-20%,4,1.1057
+867,Salud,Trastornos digestivos ,Estreñimiento,16-20%,4,131.9507
+868,Cosmética y Belleza,Corporal,Estrias,16-20%,4,224.779
+869,Higiene y cuidado personal,Corporal,Exfoliantes,16-20%,4,44.0471
+870,Higiene y cuidado personal,Facial,Exfoliantes,16-20%,4,123.2894
+871,Infantil,Preparación al parto y maternidad,Fajas postparto,16-20%,4,0.213
+872,Salud,Salud Sexual,Falta de deseo,16-20%,4,86.356
+873,Salud,Fertilidad,Fertilidad y concepción,16-20%,4,-277.4579
+874,Salud,Trastornos digestivos ,Flora intestinal y digestión,16-20%,4,106.1783
+875,Salud,Trastornos digestivos ,Función hepática,16-20%,4,28.0022
+876,Infantil,Alimentación infantil,Galletitas,16-20%,4,0.842
+877,Salud,Aparato respiratorio,Garganta y tos,16-20%,4,144.0279
+878,Salud,Trastornos digestivos ,Gases,16-20%,4,-4.3463
+879,Infantil,Higiene infantil,Gel-champú,16-20%,4,-12.9509
+880,Higiene y cuidado personal,Corporal,Geles,16-20%,4,552.1487
+881,Salud,Botiquín,Golpes y hematomas,16-20%,4,53.0984
+882,Salud,Problemas cardiovasculares y circulación,Hemorroides,16-20%,4,3.2265
+883,Cosmética y Belleza,Labial,Herpes labial,16-20%,4,0.281
+884,Cosmética y Belleza,Corporal,Hidratación,16-20%,4,290.597
+885,Cosmética y Belleza,Facial,Hidratantes,16-20%,4,2255.5825
+886,Infantil,Higiene infantil,Hidratantes,16-20%,4,52.5653
+887,Cosmética y Belleza,Hombres,Hidratantes,16-20%,4,-4.3448
+888,Higiene y cuidado personal,Íntima,Hidratantes,16-20%,4,-18.2256
+889,Cosmética y Belleza,Labial,Hidratantes labiales,16-20%,4,186.1135
+890,Higiene y cuidado personal,Pies,Hidratantes pies,16-20%,4,54.5932
+891,Higiene y cuidado personal,Dental,Hilo dental,16-20%,4,2.5242
+892,Cosmética y Belleza,Perfumería,Hombre,16-20%,4,1.1724
+893,Salud,Ortopedia,Humidificadores,16-20%,4,6.3945
+894,Salud,Aparato Urinario,Incontinencia,16-20%,4,43.8668
+895,Higiene y cuidado personal,Íntima,Incontinencia,16-20%,4,11.4985
+896,Cosmética y Belleza,Perfumería,Infantil,16-20%,4,5.8015
+897,Salud,Mujer,Infecciones íntimas,16-20%,4,27.3357
+898,Infantil,Alimentación infantil,Infusiones,16-20%,4,-1.992
+899,Salud,Descanso y relajación,Insomnio,16-20%,4,25.0356
+900,Nutrición,Nutrición Deportiva,Isotónicos y recuperadores,16-20%,4,17.264
+901,Cosmética y Belleza,Manos,Jabón de manos,16-20%,4,-8.8004
+902,Salud,Vitaminas y Minerales,Jalea real,16-20%,4,254.7939
+903,Cosmética y Belleza,Ojos,Lapiz y sombra de ojos,16-20%,4,16.9243
+904,Infantil,Alimentación infantil,Leches infantiles,16-20%,4,-302.49
+905,Salud,Ortopedia,Lesiones,16-20%,4,24.7934
+906,Higiene y cuidado personal,Pies,Limas y durezas,16-20%,4,10.2825
+907,Cosmética y Belleza,Uñas,Limas y tratamiento uñas,16-20%,4,23.9517
+908,Higiene y cuidado personal,Íntima,Limpieza,16-20%,4,72.8551
+909,Higiene y cuidado personal,Nariz y oído,Limpieza,16-20%,4,33.6387
+910,Salud,Óptica,Líquido lentillas,16-20%,4,17.056
+911,Salud,Salud Sexual,Lubricantes,16-20%,4,59.9001
+912,Cosmética y Belleza,Facial,Luminosidad,16-20%,4,154.5499
+913,Cosmética y Belleza,Facial,Maquillajes,16-20%,4,368.07
+914,Higiene y cuidado personal,Cabello,Mascarillas,16-20%,4,140.9972
+915,Higiene y cuidado personal,Facial,Mascarillas,16-20%,4,187.1322
+916,Salud,Mujer,Menopausia,16-20%,4,258.6104
+917,Salud,Vitaminas y Minerales,Minerales,16-20%,4,15.4484
+918,Infantil,Juguetes,Mordedores,16-20%,4,-2.4876
+919,Cosmética y Belleza,Perfumería,Mujer,16-20%,4,252.6285
+920,Salud,Vitaminas y Minerales,Multivitamínicos,16-20%,4,805.1329
+921,Salud,Aparato respiratorio,Nariz,16-20%,4,-8.9843
+922,Salud,Ortopedia,Nebulizador,16-20%,4,-4.296
+923,Salud,Descanso y relajación,Nerviosismo y estrés,16-20%,4,0.6232
+924,Nutrición,Nutrición específica,Niños,16-20%,4,-0.3891
+925,Infantil,Mobiliario y descanso del bebé,Orinales,16-20%,4,4.56
+926,Higiene y cuidado personal,Dental,Ortodoncia,16-20%,4,3.0219
+927,Infantil,Mobiliario y descanso del bebé,Otros descanso del bebé,16-20%,4,0.116
+928,Infantil,Cambio de pañal,Pañales,16-20%,4,994.3894
+929,Higiene y cuidado personal,Nariz y oído,Pañuelos,16-20%,4,0.8012
+930,Infantil,Alimentación infantil,Papillas,16-20%,4,-32.1216
+931,Infantil,Juguetes,Para el baño,16-20%,4,0.8068
+932,Higiene y cuidado personal,Corporal,Pastilla de jabón,16-20%,4,4.9941
+933,Salud,Aparato respiratorio,Pecho,16-20%,4,1.61
+934,Higiene y cuidado personal,Cabello,Peinado y tratamiento,16-20%,4,475.7524
+935,Cosmética y Belleza,Accesorios de Belleza,Peines o cepillos,16-20%,4,15.4511
+936,Cosmética y Belleza,Ojos,Pestañas,16-20%,4,545.7547
+937,Infantil,Lactancia,Pezoneras,16-20%,4,-8.5802
+938,Salud,Belleza,Piel,16-20%,4,143.5481
+939,Cosmética y Belleza,Facial,Piel atópica,16-20%,4,36.773
+940,Cosmética y Belleza,Facial,Piel seca,16-20%,4,102.8876
+941,Cosmética y Belleza,Corporal,Piel seca y atópica,16-20%,4,838.921
+942,Infantil,Higiene infantil,Pieles atópicas,16-20%,4,7.0557
+943,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,16-20%,4,27.7498
+944,Cosmética y Belleza,Labial,Pintalabios,16-20%,4,24.0844
+945,Cosmética y Belleza,Uñas,Pintauñas,16-20%,4,-0.1226
+946,Cosmética y Belleza,Accesorios de Belleza,Pinzas de depilar,16-20%,4,15.485
+947,Higiene y cuidado personal,Cabello,Piojos,16-20%,4,25.1874
+948,Salud,Ortopedia,Plantillas,16-20%,4,-0.3593
+949,Infantil,Chupetes,Portachupetes,16-20%,4,2.035
+950,Infantil,Alimentación infantil,Potitos,16-20%,4,63.6114
+951,Salud,Salud Sexual,Preservativos,16-20%,4,11.9751
+952,Infantil,Higiene infantil,Primeros dientes,16-20%,4,1.4584
+953,Nutrición,Pérdida de peso,Productos sustitutivos y entrehoras,16-20%,4,192.3321
+954,Salud,Aparato Urinario,Próstata,16-20%,4,17.0444
+955,Cosmética y Belleza,Sol,Protección nieve,16-20%,4,119.6199
+956,Cosmética y Belleza,Sol,Protectores solares,16-20%,4,2583.0569
+957,Higiene y cuidado personal,Íntima,Protegeslip,16-20%,4,5.575
+958,Nutrición,Nutrición Deportiva,Proteínas,16-20%,4,91.0466
+959,Higiene y cuidado personal,Dental,Prótesis dentales,16-20%,4,-2.4077
+960,Salud,Botiquín,Quemaduras y cicatrices,16-20%,4,57.9982
+961,Nutrición,Pérdida de peso,Quemagrasas,16-20%,4,161.9631
+962,Cosmética y Belleza,Uñas,Quitaesmalte,16-20%,4,1.7997
+963,Infantil,Accesorios de alimentación,Recipientes de conservación,16-20%,4,1.7378
+964,Salud,Huesos articulaciones y músculos,Recuperación muscular,16-20%,4,18.2229
+965,Cosmética y Belleza,Hombres,Reductores - abdominales,16-20%,4,1.7
+966,Cosmética y Belleza,Corporal,Reductores y reafirmantes,16-20%,4,199.4281
+967,Cosmética y Belleza,Facial,Rojeces,16-20%,4,153.8495
+968,Infantil,Lactancia,Sacaleches,16-20%,4,-7.4073
+969,Nutrición,Pérdida de peso,Saciantes,16-20%,4,88.9707
+970,Nutrición,Alimentos,Sal y especias,16-20%,4,2.802
+971,Salud,Óptica,Salud ocular,16-20%,4,-10.6945
+972,Nutrición,Alimentos,Semillas y superalimentos,16-20%,4,5.8372
+973,Cosmética y Belleza,Facial,Serum,16-20%,4,501.2546
+974,Infantil,Alimentación infantil,Snacks,16-20%,4,11.377
+975,Cosmética y Belleza,Sol,Solar pelo,16-20%,4,-45.0051
+976,Salud,Botiquín,Suero fisiológico,16-20%,4,18.7274
+977,Cosmética y Belleza,Sol,Suplementos,16-20%,4,663.9908
+978,Salud,Vitaminas y Minerales,Suplementos,16-20%,4,600.113
+979,Higiene y cuidado personal,Íntima,Tampones,16-20%,4,2.6046
+980,Higiene y cuidado personal,Nariz y oído,Tapones y protección,16-20%,4,1.7354
+981,Salud,Ortopedia,Tensiómetros,16-20%,4,-3.2057
+982,Salud,Problemas cardiovasculares y circulación,Tensión,16-20%,4,0.5972
+983,Infantil,Accesorios de alimentación,Termo,16-20%,4,5.854
+984,Salud,Botiquín,Termómetros,16-20%,4,2.7795
+985,Nutrición,Alimentos,Tés e infusiones,16-20%,4,47.6858
+986,Infantil,Biberones,Tetinas,16-20%,4,16.9198
+987,Higiene y cuidado personal,Cabello,Tintes de pelo,16-20%,4,95.2134
+988,Infantil,Higiene infantil,Toallitas bebé,16-20%,4,51.8885
+989,Salud,Óptica,Toallitas oculares,16-20%,4,48.7816
+990,Cosmética y Belleza,Corporal,Urticaria y psoriasis,16-20%,4,8.2409
+991,Infantil,Accesorios de alimentación,Útiles de aprendizaje,16-20%,4,-4.1005
+992,Infantil,Accesorios de alimentación,Vajillas infantiles,16-20%,4,0.8152
+993,Salud,Vitaminas y Minerales,Vitaminas,16-20%,4,115.6589
+994,Salud,Descanso y relajación,,21-25%,5,-2.2114
+995,Salud,Problemas cardiovasculares y circulación,,21-25%,5,5.0476
+996,Salud,Vitaminas y Minerales,,21-25%,5,2.275
+997,Infantil,Lactancia,Accesorios de extracción,21-25%,5,-6.0866
+998,Cosmética y Belleza,Sol,Aceite solar,21-25%,5,-35.1193
+999,Cosmética y Belleza,Facial,Acné,21-25%,5,191.2742
+1000,Cosmética y Belleza,Sol,After-sun,21-25%,5,32.1532
+1001,Cosmética y Belleza,Facial,Ampollas,21-25%,5,-0.6231
+1002,Cosmética y Belleza,Facial,Antiarrugas,21-25%,5,436.8597
+1003,Cosmética y Belleza,Labial,Antiarrugas,21-25%,5,-44.7316
+1004,Higiene y cuidado personal,Cabello,Anticaída,21-25%,5,17.9519
+1005,Cosmética y Belleza,Facial,Antimanchas,21-25%,5,16.143
+1006,Salud,Botiquín,Antimareo,21-25%,5,16.9608
+1007,Cosmética y Belleza,Sol,Auto bronceadores,21-25%,5,-1.0816
+1008,Infantil,Biberones,Biberones,21-25%,5,-0.2616
+1009,Cosmética y Belleza,Ojos,Bolsas en ojos,21-25%,5,0.221
+1010,Salud,Belleza,Cabello | uñas,21-25%,5,8.191
+1011,Cosmética y Belleza,Corporal,Celulitis,21-25%,5,-0.38
+1012,Higiene y cuidado personal,Cabello,Champu,21-25%,5,-5.0228
+1013,Higiene y cuidado personal,Cabello,Champús especiales,21-25%,5,1.0172
+1014,Infantil,Chupetes,Chupetes de latex o caucho,21-25%,5,-0.1824
+1015,Infantil,Chupetes,Chupetes de silicona,21-25%,5,0.7344
+1016,Salud,Aparato Urinario,Cistitis,21-25%,5,-0.925
+1017,Salud,Huesos articulaciones y músculos,Colágeno,21-25%,5,-91.7117
+1018,Salud,Problemas cardiovasculares y circulación,Colesterol,21-25%,5,2.574
+1019,Cosmética y Belleza,Labial,Con protección solar,21-25%,5,0.0663
+1020,Cosmética y Belleza,Ojos,Contorno de ojos,21-25%,5,119.1949
+1021,Cosmética y Belleza,Manos,Crema de manos,21-25%,5,0.1645
+1022,Cosmética y Belleza,Corporal,Cuello escote y pecho,21-25%,5,-21.6697
+1023,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,21-25%,5,31.2576
+1024,Higiene y cuidado personal,Corporal,Desodorantes,21-25%,5,-8.0608
+1025,Infantil,Lactancia,Discos de lactancia,21-25%,5,-0.1495
+1026,Nutrición,Alimentos,Edulcorantes,21-25%,5,-4.32
+1027,Infantil,Accesorios de alimentación,Esterilización y limpieza,21-25%,5,-1.3238
+1028,Cosmética y Belleza,Corporal,Estrias,21-25%,5,2.2096
+1029,Higiene y cuidado personal,Facial,Exfoliantes,21-25%,5,-0.046
+1030,Salud,Aparato respiratorio,Garganta y tos,21-25%,5,-11.001
+1031,Infantil,Higiene infantil,Gel-champú,21-25%,5,0.0541
+1032,Higiene y cuidado personal,Corporal,Geles,21-25%,5,30.3941
+1033,Salud,Botiquín,Golpes y hematomas,21-25%,5,3.9389
+1034,Cosmética y Belleza,Corporal,Hidratación,21-25%,5,-53.115
+1035,Cosmética y Belleza,Facial,Hidratantes,21-25%,5,415.0932
+1036,Infantil,Higiene infantil,Hidratantes,21-25%,5,-0.3625
+1037,Cosmética y Belleza,Labial,Hidratantes labiales,21-25%,5,19.5396
+1038,Infantil,Alimentación infantil,Leches infantiles,21-25%,5,-2974.4615
+1039,Higiene y cuidado personal,Íntima,Limpieza,21-25%,5,-1.0434
+1040,Higiene y cuidado personal,Nariz y oído,Limpieza,21-25%,5,1.1756
+1041,Cosmética y Belleza,Facial,Maquillajes,21-25%,5,9.2541
+1042,Higiene y cuidado personal,Cabello,Mascarillas,21-25%,5,-0.015
+1043,Higiene y cuidado personal,Facial,Mascarillas,21-25%,5,3.9424
+1044,Cosmética y Belleza,Perfumería,Mujer,21-25%,5,-31.2584
+1045,Salud,Vitaminas y Minerales,Multivitamínicos,21-25%,5,0.3676
+1046,Infantil,Cambio de pañal,Pañales,21-25%,5,16.9508
+1047,Higiene y cuidado personal,Cabello,Peinado y tratamiento,21-25%,5,319.1363
+1048,Cosmética y Belleza,Ojos,Pestañas,21-25%,5,-2.4421
+1049,Salud,Belleza,Piel,21-25%,5,-1.0342
+1050,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,21-25%,5,-0.1775
+1051,Nutrición,Pérdida de peso,Productos sustitutivos y entrehoras,21-25%,5,14.2186
+1052,Cosmética y Belleza,Sol,Protección nieve,21-25%,5,-25.321
+1053,Cosmética y Belleza,Sol,Protectores solares,21-25%,5,-72.0047
+1054,Salud,Botiquín,Quemaduras y cicatrices,21-25%,5,3.7452
+1055,Nutrición,Pérdida de peso,Quemagrasas,21-25%,5,-3.7604
+1056,Infantil,Accesorios de alimentación,Recipientes de conservación,21-25%,5,1.7132
+1057,Salud,Huesos articulaciones y músculos,Recuperación muscular,21-25%,5,-0.936
+1058,Cosmética y Belleza,Facial,Rojeces,21-25%,5,9.46
+1059,Infantil,Lactancia,Sacaleches,21-25%,5,-0.3991
+1060,Nutrición,Alimentos,Sal y especias,21-25%,5,-0.375
+1061,Cosmética y Belleza,Facial,Serum,21-25%,5,80.9248
+1062,Cosmética y Belleza,Sol,Solar pelo,21-25%,5,-31.0862
+1063,Cosmética y Belleza,Sol,Suplementos,21-25%,5,-38.7104
+1064,Salud,Vitaminas y Minerales,Suplementos,21-25%,5,2.1794
+1065,Higiene y cuidado personal,Nariz y oído,Tapones y protección,21-25%,5,-1.686
+1066,Infantil,Biberones,Tetinas,21-25%,5,-2.2977
+1067,Salud,Vitaminas y Minerales,Vitaminas,21-25%,5,12.966
+1068,Cosmética y Belleza,Sol,Aceite solar,26-30%,6,-26.4295
+1069,Cosmética y Belleza,Facial,Acné,26-30%,6,5.8752
+1070,Nutrición,Pérdida de peso,Activadores,26-30%,6,-10.3732
+1071,Cosmética y Belleza,Sol,After-sun,26-30%,6,9.4392
+1072,Cosmética y Belleza,Facial,Antiarrugas,26-30%,6,45.0402
+1073,Cosmética y Belleza,Facial,Antimanchas,26-30%,6,2.7685
+1074,Cosmética y Belleza,Sol,Auto bronceadores,26-30%,6,3.0184
+1075,Infantil,Biberones,Biberones,26-30%,6,-1.2659
+1076,Infantil,Chupetes,Chupetes de silicona,26-30%,6,-1.0996
+1077,Salud,Aparato Urinario,Cistitis,26-30%,6,-4.165
+1078,Cosmética y Belleza,Ojos,Contorno de ojos,26-30%,6,1.426
+1079,Cosmética y Belleza,Manos,Crema de manos,26-30%,6,-1.7674
+1080,Infantil,Higiene infantil,Crema pañal,26-30%,6,-4.356
+1081,Infantil,Accesorios de alimentación,Cubiertos,26-30%,6,0.4835
+1082,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,26-30%,6,14.2011
+1083,Infantil,Lactancia,Discos de lactancia,26-30%,6,-0.4784
+1084,Infantil,Alimentación infantil,Galletitas,26-30%,6,0.1656
+1085,Infantil,Higiene infantil,Gel-champú,26-30%,6,-4.5264
+1086,Higiene y cuidado personal,Corporal,Geles,26-30%,6,2.1508
+1087,Cosmética y Belleza,Corporal,Hidratación,26-30%,6,-9.0364
+1088,Cosmética y Belleza,Facial,Hidratantes,26-30%,6,2.9792
+1089,Infantil,Higiene infantil,Hidratantes,26-30%,6,-9.772
+1090,Cosmética y Belleza,Labial,Hidratantes labiales,26-30%,6,1.459
+1091,Higiene y cuidado personal,Pies,Hidratantes pies,26-30%,6,-1.1313
+1092,Cosmética y Belleza,Manos,Jabón de manos,26-30%,6,-0.249
+1093,Cosmética y Belleza,Facial,Maquillajes,26-30%,6,2.866
+1094,Higiene y cuidado personal,Cabello,Mascarillas,26-30%,6,2.8824
+1095,Cosmética y Belleza,Perfumería,Mujer,26-30%,6,3.6878
+1096,Higiene y cuidado personal,Cabello,Peinado y tratamiento,26-30%,6,52.0499
+1097,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,26-30%,6,-0.365
+1098,Cosmética y Belleza,Labial,Pintalabios,26-30%,6,-11.354
+1099,Infantil,Alimentación infantil,Potitos,26-30%,6,-1.8242
+1100,Cosmética y Belleza,Sol,Protectores solares,26-30%,6,30.0437
+1101,Infantil,Accesorios de alimentación,Recipientes de conservación,26-30%,6,-0.5445
+1102,Cosmética y Belleza,Facial,Rojeces,26-30%,6,1.1611
+1103,Nutrición,Pérdida de peso,Saciantes,26-30%,6,-17.9373
+1104,Nutrición,Alimentos,Sal y especias,26-30%,6,-0.092
+1105,Cosmética y Belleza,Sol,Solar pelo,26-30%,6,0.3567
+1106,Infantil,Accesorios de alimentación,Útiles de aprendizaje,26-30%,6,-0.7075
+1107,Salud,Descanso y relajación,,31-35%,7,-10.7928
+1108,Cosmética y Belleza,Sol,Aceite solar,31-35%,7,-1.5769
+1109,Cosmética y Belleza,Sol,After-sun,31-35%,7,-11.2833
+1110,Cosmética y Belleza,Facial,Antiarrugas,31-35%,7,-2.458
+1111,Salud,Aparato Urinario,Cistitis,31-35%,7,-0.539
+1112,Salud,Huesos articulaciones y músculos,Colágeno,31-35%,7,-28.684
+1113,Salud,Óptica,Colirios,31-35%,7,-11.6244
+1114,Cosmética y Belleza,Manos,Crema de manos,31-35%,7,1.7174
+1115,Cosmética y Belleza,Corporal,Hidratación,31-35%,7,-10.4475
+1116,Cosmética y Belleza,Facial,Hidratantes,31-35%,7,-17.4623
+1117,Cosmética y Belleza,Facial,Maquillajes,31-35%,7,-5.8991
+1118,Cosmética y Belleza,Perfumería,Mujer,31-35%,7,-4.561
+1119,Higiene y cuidado personal,Cabello,Peinado y tratamiento,31-35%,7,-3.0234
+1120,Salud,Problemas cardiovasculares y circulación,Piernas cansadas y varices,31-35%,7,-0.515
+1121,Cosmética y Belleza,Sol,Protectores solares,31-35%,7,-35.4766
+1122,Salud,Botiquín,Quemaduras y cicatrices,31-35%,7,-4.9548
+1123,Salud,Vitaminas y Minerales,Vitaminas,31-35%,7,-0.7504
+1124,Salud,Descanso y relajación,,36-40%,8,-22.966
+1125,Salud,Vitaminas y Minerales,,36-40%,8,-1.9128
+1126,Cosmética y Belleza,Sol,After-sun,36-40%,8,-4.9
+1127,Infantil,Higiene infantil,Hidratantes,36-40%,8,-1.12
+1128,Cosmética y Belleza,Labial,Pintalabios,36-40%,8,-21.0858
+1129,Cosmética y Belleza,Sol,Protectores solares,36-40%,8,-5.716
+1130,Salud,Vitaminas y Minerales,,46-50%,9,-25.2828
+1131,Cosmética y Belleza,Sol,Aceite solar,46-50%,9,-73.1913
+1132,Cosmética y Belleza,Facial,Acné,46-50%,9,-53.3758
+1133,Nutrición,Pérdida de peso,Activadores,46-50%,9,43.8704
+1134,Cosmética y Belleza,Sol,After-sun,46-50%,9,-39.6531
+1135,Cosmética y Belleza,Facial,Ampollas,46-50%,9,-9.7956
+1136,Cosmética y Belleza,Facial,Antiarrugas,46-50%,9,-20.4179
+1137,Higiene y cuidado personal,Cabello,Anticaída,46-50%,9,-546.509
+1138,Cosmética y Belleza,Facial,Antimanchas,46-50%,9,-25.8898
+1139,Salud,Botiquín,Antimareo,46-50%,9,-33.605
+1140,Salud,Botiquín,Apósitos tiritas y gasas,46-50%,9,-0.305
+1141,Cosmética y Belleza,Sol,Auto bronceadores,46-50%,9,50.9808
+1142,Cosmética y Belleza,Ojos,Bolsas en ojos,46-50%,9,32.1431
+1143,Higiene y cuidado personal,Cabello,Champu,46-50%,9,-11.6274
+1144,Infantil,Chupetes,Chupetes de silicona,46-50%,9,-4.209
+1145,Salud,Aparato Urinario,Cistitis,46-50%,9,-283.9204
+1146,Salud,Huesos articulaciones y músculos,Colágeno,46-50%,9,-265.5952
+1147,Salud,Problemas cardiovasculares y circulación,Colesterol,46-50%,9,-6.939
+1148,Salud,Óptica,Colirios,46-50%,9,-78.5175
+1149,Higiene y cuidado personal,Dental,Colutorios,46-50%,9,-1.08
+1150,Cosmética y Belleza,Labial,Con protección solar,46-50%,9,-16.24
+1151,Cosmética y Belleza,Ojos,Contorno de ojos,46-50%,9,-26.8771
+1152,Infantil,Higiene infantil,Crema pañal,46-50%,9,-497.0214
+1153,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,46-50%,9,-43.5373
+1154,Higiene y cuidado personal,Pies,Desodorante de pies,46-50%,9,-208.83
+1155,Higiene y cuidado personal,Corporal,Desodorantes,46-50%,9,-1.4842
+1156,Nutrición,Pérdida de peso,Drenajes,46-50%,9,-149.79
+1157,Nutrición,Alimentos,Edulcorantes,46-50%,9,-25.68
+1158,Higiene y cuidado personal,Facial,Exfoliantes,46-50%,9,-3.4118
+1159,Salud,Aparato respiratorio,Garganta y tos,46-50%,9,-17.9
+1160,Infantil,Higiene infantil,Gel-champú,46-50%,9,-12.3468
+1161,Higiene y cuidado personal,Corporal,Geles,46-50%,9,-12.2928
+1162,Cosmética y Belleza,Corporal,Hidratación,46-50%,9,-128.1029
+1163,Cosmética y Belleza,Facial,Hidratantes,46-50%,9,-39.5365
+1164,Infantil,Higiene infantil,Hidratantes,46-50%,9,-2.905
+1165,Higiene y cuidado personal,Íntima,Hidratantes,46-50%,9,-64.4802
+1166,Cosmética y Belleza,Labial,Hidratantes labiales,46-50%,9,-3.1135
+1167,Salud,Aparato Urinario,Incontinencia,46-50%,9,-296.0604
+1168,Salud,Mujer,Infecciones íntimas,46-50%,9,-60.8339
+1169,Salud,Descanso y relajación,Insomnio,46-50%,9,-170.0316
+1170,Infantil,Alimentación infantil,Leches infantiles,46-50%,9,-173.7952
+1171,Higiene y cuidado personal,Íntima,Limpieza,46-50%,9,-121.3899
+1172,Higiene y cuidado personal,Nariz y oído,Limpieza,46-50%,9,-9.0732
+1173,Salud,Óptica,Líquido lentillas,46-50%,9,-3.325
+1174,Cosmética y Belleza,Facial,Maquillajes,46-50%,9,-140.3085
+1175,Higiene y cuidado personal,Cabello,Mascarillas,46-50%,9,-4.65
+1176,Higiene y cuidado personal,Facial,Mascarillas,46-50%,9,-1.483
+1177,Salud,Mujer,Menopausia,46-50%,9,-30.15
+1178,Infantil,Juguetes,Mordedores,46-50%,9,-17.2717
+1179,Salud,Vitaminas y Minerales,Multivitamínicos,46-50%,9,-1658.8355
+1180,Higiene y cuidado personal,Cabello,Peinado y tratamiento,46-50%,9,-1.3
+1181,Salud,Belleza,Piel,46-50%,9,-21.3392
+1182,Cosmética y Belleza,Facial,Piel atópica,46-50%,9,-52.3468
+1183,Cosmética y Belleza,Corporal,Piel seca y atópica,46-50%,9,-507.5225
+1184,Infantil,Alimentación infantil,Potitos,46-50%,9,-3.5413
+1185,Salud,Aparato Urinario,Próstata,46-50%,9,-5.64
+1186,Cosmética y Belleza,Sol,Protección nieve,46-50%,9,-17.9335
+1187,Cosmética y Belleza,Sol,Protectores solares,46-50%,9,-586.7862
+1188,Nutrición,Pérdida de peso,Quemagrasas,46-50%,9,-43.5425
+1189,Cosmética y Belleza,Facial,Rojeces,46-50%,9,-1.0071
+1190,Cosmética y Belleza,Facial,Serum,46-50%,9,10.2334
+1191,Salud,Vitaminas y Minerales,Suplementos,46-50%,9,-91.545
+1192,Higiene y cuidado personal,Nariz y oído,Tapones y protección,46-50%,9,-29.8725
+1193,Salud,Óptica,Toallitas oculares,46-50%,9,8.34
+1194,Cosmética y Belleza,Sol,Aceite solar,51-55%,10,-30.667
+1195,Cosmética y Belleza,Sol,After-sun,51-55%,10,-12.4185
+1196,Cosmética y Belleza,Sol,Auto bronceadores,51-55%,10,17.1448
+1197,Salud,Óptica,Colirios,51-55%,10,-4.524
+1198,Cosmética y Belleza,Labial,Con protección solar,51-55%,10,-4.8705
+1199,Infantil,Higiene infantil,Crema pañal,51-55%,10,-74.2226
+1200,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,51-55%,10,-3.1732
+1201,Higiene y cuidado personal,Pies,Desodorante de pies,51-55%,10,-38.952
+1202,Nutrición,Pérdida de peso,Drenajes,51-55%,10,-20.6
+1203,Cosmética y Belleza,Corporal,Hidratación,51-55%,10,-44.166
+1204,Higiene y cuidado personal,Íntima,Hidratantes,51-55%,10,-5.2134
+1205,Salud,Aparato Urinario,Incontinencia,51-55%,10,-20.376
+1206,Salud,Mujer,Infecciones íntimas,51-55%,10,-11.3694
+1207,Higiene y cuidado personal,Íntima,Limpieza,51-55%,10,-18.0514
+1208,Cosmética y Belleza,Facial,Maquillajes,51-55%,10,-10.4595
+1209,Salud,Mujer,Menopausia,51-55%,10,-13.311
+1210,Salud,Vitaminas y Minerales,Multivitamínicos,51-55%,10,-71.1732
+1211,Cosmética y Belleza,Corporal,Piel seca y atópica,51-55%,10,-131.5
+1212,Cosmética y Belleza,Sol,Protectores solares,51-55%,10,-127.3592
+1213,Salud,Vitaminas y Minerales,Suplementos,51-55%,10,-6.694
+1214,Salud,Vitaminas y Minerales,,56-60%,11,-10.1584
+1215,Cosmética y Belleza,Sol,Aceite solar,56-60%,11,2.6579
+1216,Higiene y cuidado personal,Cabello,Anticaída,56-60%,11,-78.138
+1217,Salud,Botiquín,Antimareo,56-60%,11,-14.1592
+1218,Salud,Aparato Urinario,Cistitis,56-60%,11,4.2132
+1219,Salud,Huesos articulaciones y músculos,Colágeno,56-60%,11,-46.208
+1220,Infantil,Higiene infantil,Crema pañal,56-60%,11,-239.0319
+1221,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,56-60%,11,-3.4432
+1222,Salud,Aparato respiratorio,Garganta y tos,56-60%,11,-27.7904
+1223,Cosmética y Belleza,Corporal,Hidratación,56-60%,11,-36.8552
+1224,Higiene y cuidado personal,Íntima,Hidratantes,56-60%,11,-33.7823
+1225,Salud,Mujer,Infecciones íntimas,56-60%,11,-38.1588
+1226,Salud,Descanso y relajación,Insomnio,56-60%,11,-6.7756
+1227,Higiene y cuidado personal,Íntima,Limpieza,56-60%,11,-88.1885
+1228,Salud,Vitaminas y Minerales,Multivitamínicos,56-60%,11,-721.4776
+1229,Cosmética y Belleza,Facial,Piel atópica,56-60%,11,-21.2696
+1230,Cosmética y Belleza,Corporal,Piel seca y atópica,56-60%,11,-472.7491
+1231,Cosmética y Belleza,Sol,Protectores solares,56-60%,11,47.8079
+1232,Salud,Botiquín,Quemaduras y cicatrices,56-60%,11,-10.2492
+1233,Salud,Trastornos digestivos ,,66-70%,13,-13.104
+1234,Nutrición,Pérdida de peso,Activadores,66-70%,13,-247.5309
+1235,Nutrición,Alimentos,Edulcorantes,66-70%,13,-5.7057
+1236,Salud,Trastornos digestivos ,Estreñimiento,66-70%,13,-49.53
+1237,Nutrición,Pérdida de peso,Quemagrasas,66-70%,13,-604.5473
+1238,Salud,Descanso y relajación,,100%,14,-114.5448
+1239,Salud,Problemas cardiovasculares y circulación,,100%,14,-118.4004
+1240,Salud,Vitaminas y Minerales,,100%,14,-84.3273
+1241,Cosmética y Belleza,Sol,Aceite solar,100%,14,-466.65
+1242,Salud,Aromaterapia,Aceites esenciales,100%,14,-17.85
+1243,Cosmética y Belleza,Facial,Acné,100%,14,-663.1266
+1244,Nutrición,Pérdida de peso,Activadores,100%,14,-719.62
+1245,Cosmética y Belleza,Sol,After-sun,100%,14,-130.395
+1246,Higiene y cuidado personal,Cabello,Anticaída,100%,14,-65.846
+1247,Cosmética y Belleza,Sol,Auto bronceadores,100%,14,-110.1775
+1248,Infantil,Biberones,Biberones,100%,14,-119.4525
+1249,Salud,Belleza,Cabello | uñas,100%,14,-84.9216
+1250,Cosmética y Belleza,Corporal,Celulitis,100%,14,-29.68
+1251,Higiene y cuidado personal,Cabello,Champús especiales,100%,14,-217.98
+1252,Infantil,Chupetes,Chupetes de silicona,100%,14,-7.9348
+1253,Salud,Huesos articulaciones y músculos,Colágeno,100%,14,-657.8854
+1254,Cosmética y Belleza,Labial,Con protección solar,100%,14,-34.56
+1255,Cosmética y Belleza,Manos,Crema de manos,100%,14,-6.6092
+1256,Infantil,Higiene infantil,Crema pañal,100%,14,-279.285
+1257,Higiene y cuidado personal,Facial,Desmaquillantes y limpiadores,100%,14,-434.3647
+1258,Higiene y cuidado personal,Pies,Desodorante de pies,100%,14,-63.3856
+1259,Nutrición,Pérdida de peso,Drenajes,100%,14,-20.1666
+1260,Salud,Mujer,Embarazo y lactancia,100%,14,-90.517
+1261,Higiene y cuidado personal,Facial,Exfoliantes,100%,14,-75.8455
+1262,Salud,Fertilidad,Fertilidad y concepción,100%,14,-380.7336
+1263,Infantil,Alimentación infantil,Galletitas,100%,14,-41.04
+1264,Infantil,Higiene infantil,Gel-champú,100%,14,-168.5896
+1265,Cosmética y Belleza,Corporal,Hidratación,100%,14,-1186.3264
+1266,Cosmética y Belleza,Facial,Hidratantes,100%,14,-305.2971
+1267,Higiene y cuidado personal,Íntima,Hidratantes,100%,14,-27.7258
+1268,Cosmética y Belleza,Labial,Hidratantes labiales,100%,14,-40.957
+1269,Salud,Aparato Urinario,Incontinencia,100%,14,-22.26
+1270,Salud,Mujer,Infecciones íntimas,100%,14,-17.4262
+1271,Salud,Descanso y relajación,Insomnio,100%,14,-276.82
+1272,Salud,Vitaminas y Minerales,Jalea real,100%,14,-1011.2618
+1273,Cosmética y Belleza,Uñas,Limas y tratamiento uñas,100%,14,-114.0954
+1274,Higiene y cuidado personal,Íntima,Limpieza,100%,14,-69.1262
+1275,Higiene y cuidado personal,Cabello,Mascarillas,100%,14,-639.401
+1276,Salud,Mujer,Menopausia,100%,14,-188.8234
+1277,Salud,Vitaminas y Minerales,Multivitamínicos,100%,14,-1733.3912
+1278,Infantil,Alimentación infantil,Papillas,100%,14,-4.98
+1279,Higiene y cuidado personal,Cabello,Peinado y tratamiento,100%,14,-1062.7216
+1280,Salud,Belleza,Piel,100%,14,-31.6611
+1281,Cosmética y Belleza,Corporal,Piel seca y atópica,100%,14,-110.8372
+1282,Cosmética y Belleza,Uñas,Pintauñas,100%,14,-51.419
+1283,Infantil,Alimentación infantil,Potitos,100%,14,-138.0611
+1284,Cosmética y Belleza,Sol,Protectores solares,100%,14,-1659.604
+1285,Nutrición,Pérdida de peso,Quemagrasas,100%,14,-203.1885
+1286,Cosmética y Belleza,Facial,Rojeces,100%,14,-105.5669
+1287,Nutrición,Pérdida de peso,Saciantes,100%,14,-507.9372
+1288,Infantil,Alimentación infantil,Snacks,100%,14,-168.6541
+1289,Salud,Vitaminas y Minerales,Suplementos,100%,14,-66.4713
+1290,Salud,Vitaminas y Minerales,Vitaminas,100%,14,-70.215
