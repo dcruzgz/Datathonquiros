@@ -412,91 +412,90 @@ def run_UI():
         
         
         ##GRAFICOS TEMPORALES
-        
-        datos_clean['date'] = datos_clean["Month"].astype(str) + "/" + datos_clean["Year"].astype(str)
-        
-        datos_clean['date'] = pd.to_datetime(datos_clean['date'])
 
-        #Seleccion de categoría 
-        
+        datos_clean_map['date'] = datos_clean_map["Month"].astype(str) + "/" + datos_clean_map["Year"].astype(str)
+        fechas = datos_clean_map['date'].unique()
+        datos_clean_map['date'] = pd.to_datetime(datos_clean_map['date'])
+
+        # Seleccion de categoría
+
         if cat1 == 'Toda la Categoría':
-            df_sum = datos_clean.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
-            df_total = datos_clean.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
+            df_sum = datos_clean_map.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
+            df_total = datos_clean_map.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
         else:
-            df_va1 = datos_clean.loc[datos_clean.loc[:, 'productcat1'] == cat1]
+            df_va1 = datos_clean_map.loc[datos_clean_map.loc[:, 'productcat1'] == cat1]
             if cat2 == 'Toda la Categoría':
                 df_sum = df_va1.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
-                df_total = datos_clean.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
+                df_total = df_va1.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
             else:
-                df_va2 = datos_clean.loc[datos_clean.loc[:, 'productcat2'] == cat2]
-                
+                df_va2 = df_va1.loc[datos_clean_map.loc[:, 'productcat2'] == cat2]
+
                 if cat3 == 'Toda la Categoría':
                     df_sum = df_va2.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat2'].sum()
                     df_total = df_va2.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
                 else:
-                    df_va3 = df_va2.loc[datos_clean.loc[:, 'productcat3'] == cat3]
+                    df_va3 = df_va2.loc[datos_clean_map.loc[:, 'productcat3'] == cat3]
                     df_sum = df_va3.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat3'].sum()
                     df_total = df_va3.groupby(['date'])['Precio_calculado', 'productcat2'].sum()
 
-
-        array = df_sum.index #Solo permitimos la selección de provincias que contienen datos
+        array = df_sum.index  # Solo permitimos la selección de provincias que contienen datos
         codigos = []
         for e in array:
             codigos.append(int(e[0]))
         prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
 
         seleccion = st.multiselect(
-            "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok, default=prov_ok[1:3], format_func=pretty
+            "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
+            default=prov_ok[1:3], format_func=pretty
         )
-        
-        fig1 = go.Figure() 
+
+        fig1 = go.Figure()
         fig1.add_hline(y=0)
         for provincia in seleccion:
             cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
             if variable_map == 'Ganancias':
-                x_axis = df_sum.loc[cd_prov, :].index
+                x_axis = fechas
                 y_axis = df_sum.loc[cd_prov, :]["Precio_calculado"]
                 fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
-                    mode='lines',
-                    name=provincia))
+                                          mode='lines',
+                                          name=provincia))
             else:
-                poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0] 
-                x_axis = df_sum.loc[cd_prov, :].index
-                y_axis = ((df_sum.loc[cd_prov, :]["Precio_calculado"])/poblacion)*100000
+                poblacion = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['Total'].values[0]
+                x_axis = fechas
+                y_axis = ((df_sum.loc[cd_prov, :]["Precio_calculado"]) / poblacion) * 100000
                 fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
-                        mode='lines',
-                        name=provincia))
+                                          mode='lines',
+                                          name=provincia))
 
         fig1.update_layout(
-                title="Evolución de las ganancias en: \t " + cat1 + "-" + cat2 + "-" + cat3 + " en las provincias seleccionadas",
-                xaxis_title="Fecha",
-                yaxis_title=variable_map,
-                legend_title="Provincia"
+            title="Evolución de las ganancias en: \t " + cat1 + "-" + cat2 + "-" + cat3 + " en las provincias seleccionadas",
+            xaxis_title="Fecha",
+            yaxis_title=variable_map,
+            legend_title="Provincia"
         )
-        
+
         st.plotly_chart(fig1, use_container_width=True)
         df = pd.DataFrame()
 
         df['Fecha'] = df_total.index
         df['Ganancia'] = df_total['Precio_calculado']
 
-      
-        #Ganancias en categoría en todo el territorio 
+        # Ganancias en categoría en todo el territorio
 
         if variable_map == 'Ganancias':
-            fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
+            fig = px.line(df_total, x=fechas, y="Precio_calculado")
 
         else:
-            fig = px.line(df_total, x=df_total.index, y=(df_total["Precio_calculado"] / 46722980)*100000)
-            
+            fig = px.line(df_total, x=fechas, y=(df_total["Precio_calculado"] / 46722980) * 100000)
+
         fig.update_layout(
-                title="Evolución en todo el país de las ganancias en: \t" + cat1 + "-" + cat2 + "-" + cat3,
-                xaxis_title="Fecha",
-                yaxis_title=variable_map
+            title="Evolución en todo el país de las ganancias en: \t" + cat1 + "-" + cat2 + "-" + cat3,
+            xaxis_title="Fecha",
+            yaxis_title=variable_map
         )
-        
+
         fig.add_hline(y=0)
-      
+
         st.plotly_chart(fig, use_container_width=True)
 
     #Página sobre los productos y marcas
