@@ -449,7 +449,8 @@ def run_UI():
             "Selecciona las provincias deseadas para consultar la evolución temporal:", options=prov_ok, default=prov_ok[1:3], format_func=pretty
         )
         
-        fig1 = go.Figure()      
+        fig1 = go.Figure() 
+        fig1.add_hline(y=0)
         for provincia in seleccion:
             cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
             if variable_map == 'Ganancias':
@@ -472,7 +473,7 @@ def run_UI():
                 yaxis_title=variable_map,
                 legend_title="Provincia"
         )
-        fig1.add_hline(y=0)
+        
         st.plotly_chart(fig1, use_container_width=True)
         df = pd.DataFrame()
 
@@ -481,7 +482,7 @@ def run_UI():
 
 
         #Ganancias en categoría en todo el territorio 
-        
+        fig.add_hline(y=0)
         if variable_map == 'Ganancias':
             fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
 
@@ -493,7 +494,7 @@ def run_UI():
                 xaxis_title="Fecha",
                 yaxis_title=variable_map
         )
-        fig.add_hline(y=0)
+        
         st.plotly_chart(fig, use_container_width=True)
 
     #Página sobre los productos y marcas
