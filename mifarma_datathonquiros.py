@@ -12,9 +12,6 @@ import altair as alt
 from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
-import locale
-
-locale.setlocale(locale.LC_TIME, 'es_ES') #para fechas en castellano
 
 #Páginas de la aplicación web
 
