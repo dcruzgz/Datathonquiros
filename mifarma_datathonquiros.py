@@ -472,7 +472,7 @@ def run_UI():
                 yaxis_title=variable_map,
                 legend_title="Provincia"
         )
-        
+        fig1.add_hline(y=0)
         st.plotly_chart(fig1, use_container_width=True)
         df = pd.DataFrame()
 
