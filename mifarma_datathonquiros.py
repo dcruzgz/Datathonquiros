@@ -12,6 +12,9 @@ import altair as alt
 from streamlit_folium import folium_static
 import plotly.express as px
 import plotly.graph_objects as go
+from PIL import Image
+
+
 
 #Páginas de la aplicación web
 
@@ -248,9 +251,15 @@ def rules(df_rules):
 def run_UI():
     
     if st.session_state.page:
-        page = st.sidebar.radio('Niveles: ', PAGES, index=st.session_state.page)
+      with st.sidebar:
+           image = Image.open('Data/mifarma.png')
+           st.image(image, caption)
+           page = st.radio('Niveles: ', PAGES, index=st.session_state.page)
         
     else:
+      with st.sidebar:
+        image = Image.open('Data/mifarma.png')
+        st.image(image, caption)
         page = st.sidebar.radio('Niveles: ', PAGES, index=0)
 
 #Página MAPA
