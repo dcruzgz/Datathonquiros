@@ -1,3 +1,5 @@
+
+#Librerias
 import streamlit as st
 import streamlit.components.v1 as components
 import os
@@ -12,18 +14,25 @@ import plotly.express as px
 import plotly.graph_objects as go
 import time 
 
+#Páginas de la aplicación web
+
 PAGES = [
     'Nuestras ventas en el territorio',
     'TOP MARCAS',
     'Próximas promociones'
 ]
 
+
+#Configuración de la página
 st.set_page_config(
     page_title="Datathonquiros",
     page_icon=":brain:",
     initial_sidebar_state="expanded",
     layout = 'wide'
 )
+
+
+#Extracción de los datasheet, almacenados en caché para mejorar la experiencia de usuario
 
 @st.experimental_memo(ttl=30)
 def get_data_clean():
@@ -66,36 +75,59 @@ def get_descuentos():
                            encoding="ISO-8859-1")
 
     return data
+    
+#Fin de funciones de extracción de los datos
+
+def pretty(s: str) -> str:
+    try:
+        return dict(js="JavaScript")[s]
+    except KeyError:
+        return s.capitalize()
 
 
-datos_clean_or = get_data_clean()
-data_code = get_data_prov()
-data_geo = get_data_geo()
+#Creación de los DataFrames
+datos_clean_or = get_data_clean() #General con los datos de los tickets
+data_code = get_data_prov() #Datos de las provincias (código y población)
+data_geo = get_data_geo()   #Datos de las coordenadas de las provincias
 
 
+
+# A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
 
 datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
 datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
 datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
+
+# DataFrame donde descartamos los datos sin código postal sólo para la representación del mapa y gráficas de provincias
 datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
+
+
 
 # region MAPA
 # ---------------------------------
 #     MAPA
 # ---------------------------------
 
+#Orgenamos por código postal
+
 dat_1 = data_code.sort_values('CODIGO')
 dat_1['cod_prov'] = data_code['CODIGO'].astype(int).astype(str)
 dat_1['cod_prov'] = dat_1['cod_prov']
 data_all = dat_1.set_index('CODIGO')
 
+#Tipos de variables para el mapa 
+
 dicts = {"Ganancias": 'GAIN',
          "Ganancias € por 100 mil hab": 'GAIN'}
-# showing the maps
+         
+         
+# Creación del mapa con folium
+
 map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.5)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
 
 
+#Función que nos genera los colores para identificar las variables en cada provincia
 
 def threshold(data):
     threshold_scale = np.linspace(data_all[dicts[data]].min(),
@@ -107,7 +139,10 @@ def threshold(data):
     return threshold_scale
 
 
+#Función del mapa donde se genera y se muestra según
+
 def show_maps(data, threshold_scale, nombre_valor):
+
     maps = folium.Choropleth(geo_data=data_geo,
                              data=data_all,
                              columns=['cod_prov',dicts[data]],
@@ -152,8 +187,10 @@ def show_maps(data, threshold_scale, nombre_valor):
 
 #region RULES
 
+#Funciones para mostrar las asociaciones entre productos
+
 def df_rules():
-    url = 'Data/rules.csv'
+    url = 'Data/rules.csv' #Datos del Arules
 
     df_raw = pd.read_csv(url, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
 
@@ -203,14 +240,8 @@ def rules(df_rules):
     return source_code
 #endregion
 
-#region MARCAS
 
-def pretty(s: str) -> str:
-    try:
-        return dict(js="JavaScript")[s]
-    except KeyError:
-        return s.capitalize()
-#endregion
+# Run de la app
 
 def run_UI():
     
@@ -219,6 +250,7 @@ def run_UI():
     else:
         page = st.sidebar.radio('Navigation', PAGES, index=1)
 
+#Página MAPA
     if page == 'Nuestras ventas en el territorio':
         st.sidebar.write("""
             ## About
@@ -278,7 +310,8 @@ def run_UI():
                 datos_clean = datos_clean_map[(datos_clean_map['Month'] == int(mes)) & (datos_clean_map['Year'] == int(year))]
 
 
-            ####
+            # Seleccion de Ganancias netas o por 100 mil habitantes 
+            
             if variable_map == 'Ganancias':
                 nombre_valor = "Balance (k€): "
             else:
@@ -296,7 +329,9 @@ def run_UI():
                     df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
                 data_all['GAIN'] = df_sum['Precio_calculado']
-
+            
+            #Seleccion de categorías
+            
             else:
                 df_va1 = datos_clean.loc[datos_clean.loc[:, 'productcat1'] == cat1]
 
@@ -355,21 +390,28 @@ def run_UI():
                             df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
 
                         data_all['GAIN'] = df_sum['Precio_calculado']
-
+                        
+            # Incorporamos los datos calculados de las ganancias al geojson con las coordenadas de cada provincia 
             for idx in range(51):
                 if pd.isna(data_all['GAIN'][idx + 1]):
                     data_all['GAIN'][idx + 1] = 0
                 data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 3)
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
-
+                
+                
+        #Mostramos mapa
+        
         show_maps(variable_map, threshold(variable_map), nombre_valor)
         
         st.write("Evolución de las ganancias.")
         
         ##GRAFICOS TEMPORALES
+        
         datos_clean['date'] = datos_clean["Month"].astype(str) + "/" + datos_clean["Year"].astype(str)
         datos_clean['date'] = pd.to_datetime(datos_clean['date'])
 
+        #Seleccion de categoría 
+        
         if cat1 == 'Toda la Categoría':
             df_sum = datos_clean.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
             df_total = datos_clean.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
@@ -430,6 +472,9 @@ def run_UI():
         df['Fecha'] = df_total.index
         df['Ganancia'] = df_total['Precio_calculado']
 
+
+        #Ganancias en categoría en todo el territorio 
+        
         if variable_map == 'Ganancias':
             fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
 
@@ -443,15 +488,19 @@ def run_UI():
         )
         st.plotly_chart(fig, use_container_width=True)
 
+    #Página sobre los productos y marcas
+    
     elif page == 'TOP MARCAS':
-        get_data_clean.clear()
+    
+        get_data_clean.clear() #borrar caché
+        
         st.sidebar.write("""
             ## About
           Bayes
           """)
         st.title(" TOP MARCAS :star:")
         
-        descuentos = get_descuentos()
+        descuentos = get_descuentos() #Para descuentos creación del DATAFRAME
 
         ##CATEGORIAS TREEMAP
 
@@ -477,6 +526,8 @@ def run_UI():
         st.write('Marcas')
  
 
+        #Como en mapa filtrar por categoría según marca_gain
+        
         cols = st.columns((1, 1, 1))
 
         prod1 = datos_clean_or['productcat1'].unique()
@@ -522,10 +573,11 @@ def run_UI():
                     df_filter1 = df_filter0.loc[df_filter0['productcat2'] == cat2]
                     df_filter = df_filter1.loc[df_filter1['productcat3'] == cat3]
 
-
+        #Sumatoria de todas las compras por marca
+        
         plot_df1 = df_filter.groupby('productmarca')['qty_ordered'].sum().rename_axis('Marca').reset_index(name='Ventas')
 
-        top = plot_df1.sort_values(by='Ventas', ascending=False)['Marca']
+        top = plot_df1.sort_values(by='Ventas', ascending=False)['Marca'] #Selección de las más vendidas
         plot_df1['Ventas'] = round((plot_df1['Ventas'] / (plot_df1['Ventas'].sum())) * 100, 2)
         st.expander(label='Campo a consultar')
 
@@ -534,14 +586,16 @@ def run_UI():
         marcas = np.delete(marcas1, np.where(marcas1 == 'nan'))
 
 
-
-        langs = st.multiselect(
+        
+        seleccion = st.multiselect(
             "Selección de marcas:", options=marcas, default=top[:20], format_func=pretty
         )
 
-        plot_df = plot_df1[plot_df1.Marca.isin(langs)]
+        plot_df = plot_df1[plot_df1.Marca.isin(seleccion)]
 
-
+        
+        #Representación
+        
         chart = (
             alt.Chart(
                 plot_df,
@@ -565,6 +619,8 @@ def run_UI():
         )
 
         st.altair_chart(chart, use_container_width=True)
+        
+        
         
         #Ganancias de las marcas mas vendidas
 
@@ -602,7 +658,7 @@ def run_UI():
 
         st.altair_chart(chart + yrule, use_container_width=True)
         
-        ####
+        #Marcas con menos ganancias y/o pérdidas en dicha categoría
         
         plot_df = marca_gain.sort_values(by="Ventas €", ascending=True)
         plot_df = plot_df[0:20]
@@ -630,7 +686,9 @@ def run_UI():
 
         st.altair_chart(chart, use_container_width=True)
         
-        ##DESCUENTOS
+        #Ganancias/Pérdidas por categoría seleccionada en función del descuento
+        
+        
         if cat1 == 'Toda la Categoría':
             des1 = descuentos
         else:
@@ -666,6 +724,9 @@ def run_UI():
         st.altair_chart(chart, use_container_width=True)
 
     else:
+    
+    #Página sobre Asociaciones
+    
         get_data_clean.clear()
         st.sidebar.write("""
             ## About
@@ -675,12 +736,17 @@ def run_UI():
            """)
         st.title(":rocket: Próximas promociones")
 
+        #Llamada a la creación del html con la Network y representación 
+        
         components.html(rules(df_rules()), height=480, width=1050)
+        
         st.write(df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"})))
 
 def run_shell():
     st.write("Cargando...")
 
+
+#Main ejecución 
 
 if __name__ == '__main__':
 
