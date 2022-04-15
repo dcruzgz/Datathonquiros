@@ -271,7 +271,7 @@ def run_UI():
             :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
             :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
             :man-woman-girl-boy: Si quieres consultar las ganancias ajustadas a los habitantes de cada provincia seleccionar 
-            'Ganancias relativas (€/100 mil hab.)itantes' de lo 
+            'Ganancias relativas (€/100 mil hab.)' de lo 
             contrario se mostrarán las ganancias totales de cada provincia. \n
             :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
             las provincias que desees y en todo el país. 
@@ -517,7 +517,7 @@ def run_UI():
          
     #Página sobre los productos y marcas
     
-    elif page == 'TOP MARCAS':
+    elif page == 'Nivel de producto':
     
         get_data_clean.clear() #borrar caché
         
