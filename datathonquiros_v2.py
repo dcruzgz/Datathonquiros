@@ -59,6 +59,14 @@ def get_data_prov():
     data = data.merge(data_pobl, on="CODIGO", how="left")
     return data
 
+@st.experimental_memo(ttl=30)
+def get_descuentos():
+    data = pd.read_csv('Data/descuentos.csv', sep=","
+                           , header=0,
+                           encoding="ISO-8859-1")
+
+    return data
+
 
 datos_clean_or = get_data_clean()
 data_code = get_data_prov()
@@ -442,7 +450,8 @@ def run_UI():
           Bayes
           """)
         st.title(" TOP MARCAS :star:")
-
+        
+        descuentos = get_descuentos()
 
         ##CATEGORIAS TREEMAP
 
