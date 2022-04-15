@@ -515,8 +515,7 @@ def run_UI():
 
 
         plot_df1 = df_filter.groupby('productmarca')['qty_ordered'].sum().rename_axis('Marca').reset_index(name='Ventas')
-       # plot_df1 = df_filter['productmarca'].value_counts(dropna=True).rename_axis('Marca').reset_index(
-        #name='Ventas')
+
         top = plot_df1.sort_values(by='Ventas', ascending=False)['Marca']
         plot_df1['Ventas'] = round((plot_df1['Ventas'] / (plot_df1['Ventas'].sum())) * 100, 2)
         st.expander(label='Campo a consultar')
@@ -593,6 +592,34 @@ def run_UI():
         )
 
         st.altair_chart(chart + yrule, use_container_width=True)
+        
+        ####
+        
+        plot_df = marca_gain.sort_values(by="Ventas €", ascending=True)
+        plot_df = plot_df[0:20]
+        chart = (
+            alt.Chart(
+                plot_df,
+                title="Marcas con menos ganancias en Categoría: " + cat1+ "-"+cat2+"-"+cat3,
+            )
+                .mark_bar()
+                .encode(
+                x=alt.Y("Marca",
+                        sort=alt.EncodingSortField(field="Ventas €", order="descending"),
+                        title="",
+                        ),
+                y=alt.X("Ventas €", title="Ganancias"),
+
+                color=alt.Color(
+                    "Marca",
+                    legend=None,
+                    scale=alt.Scale(scheme="category10"),
+                ),
+                tooltip=["Ventas €", "Marca"],
+            )
+        )
+
+        st.altair_chart(chart, use_container_width=True)
 
     else:
         get_data_clean.clear()
