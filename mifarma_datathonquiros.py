@@ -489,7 +489,7 @@ def run_UI():
             fig = px.line(df_total, x=df_total.index, y=(df_total["Precio_calculado"] / 46722980)*100000)
             
         fig.update_layout(
-                title="Evolución en todo el país de las ganancias en" + cat1 + "-" + cat2 + "-" + cat3,
+                title="Evolución en todo el país de las ganancias en: \t" + cat1 + "-" + cat2 + "-" + cat3,
                 xaxis_title="Fecha",
                 yaxis_title=variable_map
         )
