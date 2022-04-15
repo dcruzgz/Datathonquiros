@@ -252,13 +252,13 @@ def run_UI():
     
     if st.session_state.page:
         with st.sidebar:
-            image = Image.open('Data/mifarma.png')
+            image = Image.open('mifarma.png')
             st.image(image, caption)
             page = st.radio('Niveles: ', PAGES, index=st.session_state.page)
 
     else:
         with st.sidebar:
-            image = Image.open('Data/mifarma.png')
+            image = Image.open('mifarma.png')
             st.image(image, caption)
             page = st.sidebar.radio('Niveles: ', PAGES, index=0)
 
