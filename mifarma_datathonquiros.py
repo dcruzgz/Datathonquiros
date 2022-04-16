@@ -784,7 +784,7 @@ def run_UI():
             ## Nivel de cliente
            :rocket: Esta sección muestra los productos que se han comprado conjuntamente en una mayor cantidad de ocasiones según la mayor división en subcategoría del producto. 
            Solo se tienen en cuenta aquellas categorias de productos que se han comprado en al menos un 1% de ocasiones durante los años 2017 y 2018. \n 
-           :mag: Puedes hacer zoom para navegar por la red de manera más detallada.
+           :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el porcentaje de confianza como desees 
            """)
         st.title(":rocket: Nivel de cliente")
 
