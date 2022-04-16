@@ -226,7 +226,11 @@ def run_UI():
             st.image(image)
             page = st.selectbox('Selecciona el nivel de análisis: ', PAGES, index=0)
             
-    if page != 'Nivel de cliente' :
+
+    #Página MAPA
+    
+    if page == 'Nivel geográfico y temporal':
+        
         #Creación de los DataFrames
         datos_clean_or = get_data_clean() #General con los datos de los tickets
         data_code = get_data_prov() #Datos de las provincias (código y población)
@@ -240,13 +244,8 @@ def run_UI():
 
         # DataFrame donde descartamos los datos sin código postal sólo para la representación del mapa y gráficas de provincias
         datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
-
-
-    #Página MAPA
+       
     
-    if page == 'Nivel geográfico y temporal':
-        
-        
         #Orgenamos por código postal
 
         dat_1 = data_code.sort_values('CODIGO')
