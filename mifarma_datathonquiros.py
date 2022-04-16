@@ -266,9 +266,9 @@ def run_UI():
             ## Nivel geográfico y temporal
             :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
             :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
-            :man-woman-girl-boy: Si quieres consultar las ganancias ajustadas a los habitantes de cada provincia seleccionar 
-            'Ganancias relativas (€/100 mil hab.)' de lo 
-            contrario se mostrarán las ganancias totales de cada provincia. \n
+            :man-woman-girl-boy: Puedes consultar las ganancias ajustadas a los habitantes de cada provincia, seleccionando 
+            'Ganancias relativas (€/100 mil hab.)' como 'Dato mostrado', o las ganancias totales generadas en ese territorio, 
+            seleccionando 'Ganancias totales (€)' en ese mismo apartado. \n
             :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
             las provincias que desees y en todo el país. 
           """)
@@ -284,12 +284,12 @@ def run_UI():
             year_1 = datos_clean_map['Year'].unique()
             year_1 = np.append(year_1, ['Todos los años'])
 
-            mes = cols[0].selectbox("Mes",
+            mes = cols[0].selectbox("Mes:",
                               month, index=len(month)-1)
-            year = cols[1].selectbox("Año",
+            year = cols[1].selectbox("Año:",
                               year_1, index=len(year_1)-1)
 
-            variable_map = cols[2].selectbox("Dato",
+            variable_map = cols[2].selectbox("Dato mostrado:",
                                              ("Ganancias totales (€)", "Ganancias relativas (€/100 mil hab.)"), index=1)
 
             prod1 = datos_clean_map['productcat1'].unique()
@@ -417,9 +417,11 @@ def run_UI():
         # Texto de la búsqueda
         
         if cat1 == 'Todas las Categorías':
-            cat_txt = variable_map  + " en Todas las categorías."
+            cat_txt = variable_map  + " en todas las categorías,"
         elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
             cat_txt = variable_map + " en la categoría " + cat1
+        elif cat1 != 'Todas las Categorías' and cat2 != 'Toda la Categoría' and cat3 == 'Toda la Categoría':
+            cat_txt = variable_map + " en " + cat1 + " subcategoría " + cat2 
         else:
             cat_txt = variable_map + " en " + cat1 + " - " + cat2 + " - " + cat3
             
@@ -427,6 +429,8 @@ def run_UI():
             time_txt = " durante todo el registro temporal (2017/2018)"
         elif mes == 'Todo el año' and year != 'Todos los años':
             time_txt = " durante el año " + year
+        elif mes != 'Todo el año' and year == 'Todos los años':
+             time_txt = " durante el mismo mes " + mes + " en los años 2017 y 2018  "
         else:
             time_txt = " en el mes/año, "  + mes +"/"+ year
        
