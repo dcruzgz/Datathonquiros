@@ -77,6 +77,12 @@ def get_descuentos():
                            encoding="ISO-8859-1")
 
     return data
+
+@st.experimental_memo(ttl=30)
+def get_rules():
+    url = 'Data/rules.csv' #Datos del Arules
+    df_raw = pd.read_csv(url, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+    return df_raw
     
 #Fin de funciones de extracción de los datos
 
@@ -192,20 +198,18 @@ def show_maps(data, threshold_scale, nombre_valor):
 
 #Funciones para mostrar las asociaciones entre productos
 
-def df_rules():
-    url = 'Data/rules.csv' #Datos del Arules
+def df_rules(min, max):
+    df1 = get_rules()[["lhs", "rhs", "confidence"]]
 
-    df_raw = pd.read_csv(url, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
-
-    df1 = df_raw[["lhs", "rhs", "confidence"]]
     df_rules = pd.DataFrame()
 
     df_rules["Si el cliente compró"] = df1.loc[:, "lhs"].str.replace(r'[{]', '', regex=True).replace(r'[}]', '',
                                                                                                      regex=True)
     df_rules["Comprará"] = df1.loc[:, "rhs"].str.replace(r'[{]', '', regex=True).replace(r'[}]', '', regex=True)
     df_rules["Con una confianza del (%)"] = round(pd.to_numeric(df1["confidence"]) * 100, 2)
+    df_rules = df_rules.loc[df_rules.loc[:, 'Con una confianza del (%)'] >= min]
+    df_rules = df_rules.loc[ df_rules.loc[:, 'Con una confianza del (%)'] <= max]
     return df_rules
-
 
 def rules(df_rules):
     # Relaciones gráficas
@@ -796,12 +800,16 @@ def run_UI():
            """)
         st.title(":rocket: Nivel de cliente")
 
-        #Llamada a la creación del html con la Network y representación 
-        
-        components.html(rules(df_rules()), height=480, width=1050)
-        
-        st.dataframe(df_rules().style.format(({"Con una confianza del (%)": "{:.2f}"})))
+        # Llamada a la creación del html con la Network y representación
+        values = st.slider(
+            'Selecciona el rango de confianza para crear la red:',
+            10.0, 60.0, (10.0, 30.0))
 
+        components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
+
+        st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
+        
+        
 def run_shell():
     st.write("Cargando...")
 
