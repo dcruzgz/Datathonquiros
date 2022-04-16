@@ -120,8 +120,8 @@ data_all = dat_1.set_index('CODIGO')
 
 #Tipos de variables para el mapa 
 
-dicts = {"Ganancias totales (€)": 'GAIN',
-         "Ganancias relativas (€/100 mil hab.)": 'GAIN'}
+dicts = {"Balance total (€)": 'GAIN',
+         "Balance relativo (€/100 mil hab.)": 'GAIN'}
          
          
 # Creación del mapa con folium
@@ -266,9 +266,9 @@ def run_UI():
             ## Nivel geográfico y temporal
             :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
             :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
-            :man-woman-girl-boy: Puedes consultar las ganancias ajustadas a los habitantes de cada provincia, seleccionando 
-            'Ganancias relativas (€/100 mil hab.)' como 'Dato mostrado', o las ganancias totales generadas en ese territorio, 
-            seleccionando 'Ganancias totales (€)' en ese mismo apartado. \n
+            :man-woman-girl-boy: Puedes consultar el balance de las ventas ajustado a los habitantes de cada provincia, seleccionando 
+			'Balance relativo (€/100 mil hab.)' como 'Dato mostrado', o el balance total generado en ese territorio, seleccionando 
+			'Balance total (€)' en ese mismo apartado. \n
             :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
             las provincias que desees y en todo el país. 
           """)
@@ -290,7 +290,7 @@ def run_UI():
                               year_1, index=len(year_1)-1)
 
             variable_map = cols[2].selectbox("Dato mostrado:",
-                                             ("Ganancias totales (€)", "Ganancias relativas (€/100 mil hab.)"), index=1)
+                                             ("Balance total (€)", "Balance relativo (€/100 mil hab.)"), index=1)
 
             prod1 = datos_clean_map['productcat1'].unique()
             prod1 = np.append(prod1, ['Todas las Categorías'])
@@ -326,18 +326,18 @@ def run_UI():
 
             # Seleccion de Ganancias netas o por 100 mil habitantes 
             
-            if variable_map == 'Ganancias totales (€)':
+            if variable_map == 'Balance total (€)':
                 nombre_valor = "Balance (k€): "
             else:
-                nombre_valor = " Ganancias relativas (€/100 mil hab.): "
+                nombre_valor = " Balance relativo (€/100 mil hab.): "
 
             if cat1 == 'Todas las Categorías':
 
-                if variable_map == 'Ganancias totales (€)':
+                if variable_map == 'Balance total (€)':
                     nombre_valor = "Balance (k€): "
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
                 else:
-                    nombre_valor = " Ganancias relativas (€/100 mil hab.):"
+                    nombre_valor = " Balance relativo (€/100 mil hab.):"
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                     df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                     df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
@@ -351,11 +351,11 @@ def run_UI():
 
                 if cat2 == 'Toda la Categoría':
 
-                    if variable_map == 'Ganancias totales (€)':
+                    if variable_map == 'Balance total (€)':
                         nombre_valor = "Balance (k€): "
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
                     else:
-                        nombre_valor = " Ganancias relativas (€/100 mil hab.):"
+                        nombre_valor = " Balance relativo (€/100 mil hab.):"
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                         df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
@@ -364,11 +364,11 @@ def run_UI():
 
                 else:
 
-                    if variable_map == 'Ganancias totales (€)':
+                    if variable_map == 'Balance total (€)':
                         nombre_valor = "Balance (k€): "
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
                     else:
-                        nombre_valor = " Ganancias relativas (€/100 mil hab.):"
+                        nombre_valor = " Balance relativo (€/100 mil hab.):"
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                         df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
@@ -380,11 +380,11 @@ def run_UI():
 
                     if cat3 == 'Toda la Categoría':
 
-                        if variable_map == 'Ganancias totales (€)':
+                        if variable_map == 'Balance total (€)':
                             nombre_valor = "Balance (k€): "
                             df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
                         else:
-                            nombre_valor = " Ganancias relativas (€/100 mil hab.):"
+                            nombre_valor = " Balance relativo (€/100 mil hab.):"
                             df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                             df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
@@ -394,11 +394,11 @@ def run_UI():
                     else:
                         df_va3 = df_va2.loc[datos_clean.loc[:, 'productcat3'] == cat3]
 
-                        if variable_map == 'Ganancias totales (€)':
+                        if variable_map == 'Balance total (€)':
                             nombre_valor = "Balance (k€): "
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/ 1000
                         else:
-                            nombre_valor = " Ganancias relativas (€/100 mil hab.):"
+                            nombre_valor = " Balance relativo (€/100 mil hab.):"
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
                             df_sum['Precio_calculado'] = (df_sum['Precio_calculado'] / df_sum['Poblacion'])*100000
@@ -485,7 +485,7 @@ def run_UI():
         fig1.add_hline(y=0)
         for provincia in seleccion:
             cd_prov = data_code.loc[data_code.loc[:, 'LITERAL'] == provincia]['CODIGO'].values[0]
-            if variable_map == 'Ganancias totales (€)':
+            if variable_map == 'Balance total (€)':
                 x_axis = df_sum.loc[cd_prov, :].index
                 y_axis = df_sum.loc[cd_prov, :]["Precio_calculado"]
                 fig1.add_trace(go.Scatter(x=x_axis, y=y_axis,
@@ -514,7 +514,7 @@ def run_UI():
 
         # Ganancias en categoría en todo el territorio
 
-        if variable_map == 'Ganancias totales (€)':
+        if variable_map == 'Balance total (€)':
             fig = px.line(df_total, x=df_total.index, y="Precio_calculado")
 
         else:
