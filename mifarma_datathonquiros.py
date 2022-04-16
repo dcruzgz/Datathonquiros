@@ -552,6 +552,7 @@ def run_UI():
         descuentos = get_descuentos() #Para descuentos creación del DATAFRAME
 
         ##CATEGORIAS TREEMAP
+        st.write("")
         st.markdown('**Balance de las ventas para cada categoría y subcategoría**')
         st.write('Puedes navegar por las categorías y subcategorías haciendo click en ellas para tener una vista mas detallada.')  
         
