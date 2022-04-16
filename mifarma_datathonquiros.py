@@ -258,7 +258,7 @@ def run_UI():
         with st.sidebar:
             image = Image.open('Data/mifarma.png')
             st.image(image)
-            page = st.sidebar.radio('Niveles de análisis: ', PAGES, index=0)
+            page = st.selectbox('Niveles de análisis: ', PAGES, index=0)
 
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
