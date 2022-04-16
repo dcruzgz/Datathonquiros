@@ -263,10 +263,8 @@ def run_UI():
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
         st.sidebar.write("""
-	
-            ## Nivel geográfico y temporal
-   		hOLAA
-	    
+            ## About
+          Bayes
           """)
         st.title(":earth_africa: Ventas a nivel geográfico y temporal :clock130:")
         my_expander = st.expander(label='Filtros de la búsqueda', expanded = True)
