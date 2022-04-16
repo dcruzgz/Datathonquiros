@@ -639,7 +639,7 @@ def run_UI():
         # Texto de la búsqueda
         
         if cat1 == 'Todas las Categorías':
-            cat_txt = " en todas las categorías,"
+            cat_txt = " en todas las categorías"
         elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
             cat_txt = " en la categoría " + cat1
         elif cat1 != 'Todas las Categorías' and cat2 != 'Toda la Categoría' and cat3 == 'Toda la Categoría':
