@@ -98,17 +98,41 @@ def pretty(s: str) -> str:
 #     MAPA
 # ---------------------------------
 
-  #Orgenamos por código postal
+#Creación de los DataFrames
+datos_clean_or = get_data_clean() #General con los datos de los tickets
 data_code = get_data_prov() #Datos de las provincias (código y población)
+data_geo = get_data_geo()   #Datos de las coordenadas de las provincias
+
+
+
+# A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
+
+datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
+datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
+datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
+
+# DataFrame donde descartamos los datos sin código postal sólo para la representación del mapa y gráficas de provincias
+datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
+
+
+
+# region MAPA
+# ---------------------------------
+#     MAPA
+# ---------------------------------
+
+#Orgenamos por código postal
+
 dat_1 = data_code.sort_values('CODIGO')
 dat_1['cod_prov'] = data_code['CODIGO'].astype(int).astype(str)
 dat_1['cod_prov'] = dat_1['cod_prov']
 data_all = dat_1.set_index('CODIGO')
 
+#Tipos de variables para el mapa 
 
 dicts = {"Balance total (€)": 'GAIN',
- "Balance relativo (€/100 mil hab.)": 'GAIN'}
-
+         "Balance relativo (€/100 mil hab.)": 'GAIN'}
+         
          
 # Creación del mapa con folium
 map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.5)
@@ -246,21 +270,24 @@ def run_UI():
     #Página MAPA
     
     if page == 'Nivel geográfico y temporal':
-        
-        #Creación de los DataFrames
-        datos_clean_or = get_data_clean() #General con los datos de los tickets
-        data_geo = get_data_geo()   #Datos de las coordenadas de las provincias
+             
+    
+        #Orgenamos por código postal
 
-        # A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
+        dat_1 = data_code.sort_values('CODIGO')
+        dat_1['cod_prov'] = data_code['CODIGO'].astype(int).astype(str)
+        dat_1['cod_prov'] = dat_1['cod_prov']
+        data_all = dat_1.set_index('CODIGO')
 
-        datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
-        datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
-        datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
+        #Tipos de variables para el mapa 
 
-        # DataFrame donde descartamos los datos sin código postal sólo para la representación del mapa y gráficas de provincias
-        datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
+        dicts = {"Balance total (€)": 'GAIN',
+             "Balance relativo (€/100 mil hab.)": 'GAIN'}
 
-      
+        # Creación del mapa con folium
+
+        map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.5)
+        folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
 
         st.sidebar.write("""
           ## Nivel geográfico y temporal
@@ -536,14 +563,6 @@ def run_UI():
     elif page == 'Nivel de producto':
     
         get_data_clean.clear() #borrar caché
-        
-        #Creación de los DataFrames
-        datos_clean_or = get_data_clean() #General con los datos de los tickets
-        # A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
-
-        datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
-        datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
-        datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
         
         st.sidebar.write("""
             ## Nivel de producto
@@ -839,5 +858,3 @@ if __name__ == '__main__':
         run_UI()
     else:
         run_shell()
-
-
