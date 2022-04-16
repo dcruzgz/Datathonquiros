@@ -135,10 +135,8 @@ dicts = {"Ganancias": 'GAIN',
          
          
 # Creación del mapa con folium
-
 map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.5)
 folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
-
 
 #Función que nos genera los colores para identificar las variables en cada provincia
 
