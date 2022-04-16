@@ -574,8 +574,8 @@ def run_UI():
         st.plotly_chart(fig, use_container_width=True)
 
         
-        st.write('Marcas')
- 
+        st.write("")
+        st.markdown('**Ventas según marcas**')
 
         #Como en mapa filtrar por categoría según marca_gain
         
@@ -636,7 +636,16 @@ def run_UI():
 
         marcas = np.delete(marcas1, np.where(marcas1 == 'nan'))
 
-
+        # Texto de la búsqueda
+        
+        if cat1 == 'Todas las Categorías':
+            cat_txt = " en todas las categorías,"
+        elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
+            cat_txt = " en la categoría " + cat1
+        elif cat1 != 'Todas las Categorías' and cat2 != 'Toda la Categoría' and cat3 == 'Toda la Categoría':
+            cat_txt = " en " + cat1 + " - " + cat2 
+        else:
+            cat_txt = " en " + cat1 + " - " + cat2 + " - " + cat3
         
         seleccion = st.multiselect(
             "Selección de marcas:", options=marcas, default=top[:20], format_func=pretty
@@ -650,7 +659,7 @@ def run_UI():
         chart = (
             alt.Chart(
                 plot_df,
-                title="Las marcas más vendidas",
+                title="Las marcas más vendidas" + cat_txt ,
             )
                 .mark_bar()
                 .encode(
@@ -684,7 +693,7 @@ def run_UI():
         chart = (
         alt.Chart(
             plot_df,
-            title="Ganancias de las marcas más vendidas",
+            title="Balance de las ventas de las marcas más vendidas" + cat_txt,
         )
             .mark_bar()
             .encode(
@@ -692,7 +701,7 @@ def run_UI():
                 sort=alt.EncodingSortField(field="Ventas €", order="descending"),
                 title="",
             ),
-            y=alt.X("Ventas €", title="Ganancias"),
+            y=alt.X("Ventas €", title="Balance(€)"),
 
             color=alt.Color(
                 "Marca",
@@ -716,7 +725,7 @@ def run_UI():
         chart = (
             alt.Chart(
                 plot_df,
-                title="Marcas con menos ganancias en Categoría: " + cat1+ "-"+cat2+"-"+cat3,
+                title="Marcas con menos beneficio generado en " + cat_txt,
             )
                 .mark_bar()
                 .encode(
@@ -724,7 +733,7 @@ def run_UI():
                         sort=alt.EncodingSortField(field="Ventas €", order="ascending"),
                         title="",
                         ),
-                y=alt.X("Ventas €", title="Ganancias"),
+                y=alt.X("Ventas €", title="Balance(€)"),
 
                 color=alt.Color(
                     "Marca",
@@ -756,7 +765,7 @@ def run_UI():
 
         chart =  (alt.Chart(
                 des1,
-                title="Ganancias según descuentos en Categoría: " + cat1+ "-"+cat2+"-"+cat3,
+                title="Balance de las ventas según el descuento ofertado "  + cat_txt,
             )
                 .mark_bar()
                 .encode(
