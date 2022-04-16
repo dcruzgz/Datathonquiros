@@ -263,8 +263,14 @@ def run_UI():
 #Página MAPA
     if page == 'Nivel geográfico y temporal':
         st.sidebar.write("""
-            ## About
-          Bayes
+          ## Nivel geográfico y temporal
+          :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
+          :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
+          :man-woman-girl-boy: Si quieres consultar las ganancias ajustadas a los habitantes de cada provincia seleccionar 
+          'Ganancias € por 100 mil habitantes' de lo 
+          contrario se mostrarán las ganancias totales de cada provincia. \n
+          :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
+          las provincias que desees y en todo el país. 
           """)
         st.title(":earth_africa: Ventas a nivel geográfico y temporal :clock130:")
         my_expander = st.expander(label='Filtros de la búsqueda', expanded = True)
