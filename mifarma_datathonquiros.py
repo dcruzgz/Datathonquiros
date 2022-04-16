@@ -413,10 +413,26 @@ def run_UI():
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
                 
                 
-        #Mostramos mapa
-        st.write(variable_map + " en " + cat1 + "-" + cat2 + "-" + cat3 + " en el mes/año, "
-                + mes +"/"+ year)
+       
+        # Texto de la búsqueda
         
+        if cat1 == 'Todas las Categorías':
+            cat_txt = variable_map  + " en Todas las categorías."
+        elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
+            cat_txt = variable_map + " en la categoría: " + cat1
+        else:
+            cat_txt = variable_map + " en " + cat1 + "-" + cat2 + "-" + cat3
+            
+        if mes == 'Todo el año' and year == 'Todos los años':
+            time_txt = "durante todo el registro temporal (2017/2018)"
+        elif mes == 'Todo el año' and year != 'Todos los años':
+            time_txt = "durante el año" + year
+        else:
+            time_txt = " en el mes/año, "  + mes +"/"+ year
+       
+        st.write(cat_txt + time_txt)
+            
+        #Mostramos mapa
         show_maps(variable_map, threshold(variable_map), nombre_valor)
         
         ##GRAFICOS TEMPORALES
