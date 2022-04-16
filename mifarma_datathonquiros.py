@@ -790,10 +790,9 @@ def run_UI():
     
         get_data_clean.clear()
         st.sidebar.write("""
-            ## About
-           ARULES
-            Para mas información sobre los métodos usados:
-            https://cran.r-project.org/web/packages/arules/arules.pdf.
+            ## Nivel de cliente
+           :rocket: Esta sección muestra los productos o conjuntos de productos que se han comprado conjuntamente en una mayor cantidad de ocasiones según la categoría del producto. 
+           Puedes hacer zoom para navegar por la red de manera más detallada.
            """)
         st.title(":rocket: Nivel de cliente")
 
