@@ -450,12 +450,19 @@ def run_UI():
         
         for e in array:
             codigos.append(int(e[0]))
+        
+        #Provincias que se mostrarán por defecto, las que mas datos contengan
 
+        freqs = groupby(Counter(codigos).most_common(), lambda x: x[1])
+        default_code = [val for val, count in next(freqs)[1]]
+        prov_default = data_code.loc[data_code['CODIGO'].isin(default_code)]['LITERAL'].to_numpy()
+        
+        #Todas las provincias disponibles con ese filtro
         prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
-      
+
         seleccion = st.multiselect(
             "Selecciona o elimina las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
-            default=prov_ok, format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
+            default=prov_default, format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
         )
 
         fig1 = go.Figure()
