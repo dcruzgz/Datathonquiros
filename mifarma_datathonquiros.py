@@ -93,58 +93,6 @@ def pretty(s: str) -> str:
         return s.capitalize()
 
 
-# region MAPA
-# ---------------------------------
-#     MAPA
-# ---------------------------------
-
-
-#Función del mapa donde se genera y se muestra según
-
-def show_maps(data, threshold_scale, nombre_valor):
-
-    maps = folium.Choropleth(geo_data=data_geo,
-                             data=data_all,
-                             columns=['cod_prov',dicts[data]],
-                             key_on='feature.properties.cod_prov',
-                             threshold_scale=threshold_scale,
-                             fill_color='YlOrRd',
-                             fill_opacity=0.7,
-                             line_opacity=0.2,
-                             highlight=True,
-                             reset=True, 
-                             prefer_canvas=True).add_to(map_sby)
-
-    style_function = lambda x: {'fillColor': '#ffffff',
-                                'color': '#000000',
-                                'fillOpacity': 0.1,
-                                'weight': 0.1}
-    highlight_function = lambda x: {'fillColor': '#000000',
-                                    'color': '#000000',
-                                    'fillOpacity': 0.50,
-                                    'weight': 0.1}
-
-
-
-    NIL = folium.features.GeoJson(
-        data_geo,
-        style_function=style_function,
-        control=False,
-        highlight_function=highlight_function,
-        tooltip=folium.features.GeoJsonTooltip(
-            fields=['name', 'GAIN'],
-            aliases=['Provincia : ', nombre_valor],
-            style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;")
-        )
-    )
-    map_sby.add_child(NIL)
-    map_sby.keep_in_front(NIL)
-    folium.LayerControl().add_to(map_sby)
-    folium_static(map_sby, width=1030, height=500)
-
-# endregion
-
-
 #region RULES
 
 #Funciones para mostrar las asociaciones entre productos
@@ -435,8 +383,45 @@ def run_UI():
         threshold_scale = threshold_scale.tolist()
         threshold_scale[-1] = threshold_scale[-1]
         
-        #Mostramos mapa
-        show_maps(variable_map, threshold_scale, nombre_valor)
+        maps = folium.Choropleth(geo_data=data_geo,
+                             data=data_all,
+                             columns=['cod_prov',dicts[variable_map]],
+                             key_on='feature.properties.cod_prov',
+                             threshold_scale=threshold_scale,
+                             fill_color='YlOrRd',
+                             fill_opacity=0.7,
+                             line_opacity=0.2,
+                             highlight=True,
+                             reset=True, 
+                             prefer_canvas=True).add_to(map_sby)
+
+        style_function = lambda x: {'fillColor': '#ffffff',
+                                    'color': '#000000',
+                                    'fillOpacity': 0.1,
+                                    'weight': 0.1}
+        highlight_function = lambda x: {'fillColor': '#000000',
+                                        'color': '#000000',
+                                        'fillOpacity': 0.50,
+                                        'weight': 0.1}
+
+
+
+        NIL = folium.features.GeoJson(
+            data_geo,
+            style_function=style_function,
+            control=False,
+            highlight_function=highlight_function,
+            tooltip=folium.features.GeoJsonTooltip(
+                fields=['name', 'GAIN'],
+                aliases=['Provincia : ', nombre_valor],
+                style=("background-color: white; color: #333333; font-family: arial; font-size: 12px; padding: 10px;")
+            )
+        )
+        map_sby.add_child(NIL)
+        map_sby.keep_in_front(NIL)
+        folium.LayerControl().add_to(map_sby)
+        folium_static(map_sby, width=1030, height=500)
+        
         
         ##GRAFICOS TEMPORALES
 
