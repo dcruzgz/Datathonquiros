@@ -544,7 +544,7 @@ def run_UI():
             :bar_chart: Deslizando hacia abajo podrás consultar las marcas más vendidas, las marcas que mayor beneficio generan, y 
             las marcas que menor beneficio generan.
             Utiliza los filtros deseados para seleccionar las categorías de interés. \n
-            :%: :100: Al final de la página podrás observar el balance de las ventas 
+            :ok_hand: Al final de la página podrás observar el balance de las ventas 
             en la categoría seleccionada dependiendo del descuento ofrecido. 
           """)
         st.title(" :baby_bottle: :lipstick: :pill: Nivel de producto")
