@@ -293,7 +293,7 @@ def run_UI():
                                              ("Ganancias Totales (€)", "Ganancias relativas (€/100 mil hab.)"), index=1)
 
             prod1 = datos_clean_map['productcat1'].unique()
-            prod1 = np.append(prod1, ['Toda la Categoría'])
+            prod1 = np.append(prod1, ['Todas las Categorías'])
 
             cat1 = cols[0].selectbox("Categoría:",
                                      prod1, index=len(prod1) - 1)
@@ -331,7 +331,7 @@ def run_UI():
             else:
                 nombre_valor = " Ganancias relativas (€/100 mil hab.): "
 
-            if cat1 == 'Toda la Categoría':
+            if cat1 == 'Todas las Categorías':
 
                 if variable_map == 'Ganancias Totales (€)':
                     nombre_valor = "Balance (k€): "
@@ -427,7 +427,7 @@ def run_UI():
 
         # Seleccion de categoría
 
-        if cat1 == 'Toda la Categoría':
+        if cat1 == 'Todas las Categorías':
             df_sum = datos_clean_map.groupby(['zp_sim', 'date'])['Precio_calculado', 'productcat1'].sum()
             df_total = datos_clean_map.groupby(['date'])['Precio_calculado', 'productcat1'].sum()
         else:
@@ -554,11 +554,11 @@ def run_UI():
         cols = st.columns((1, 1, 1))
 
         prod1 = datos_clean_or['productcat1'].unique()
-        prod1 = np.append(prod1, ['Toda la Categoría'])
+        prod1 = np.append(prod1, ['Todas las Categorías'])
 
         cat1 = cols[0].selectbox("Categoría:",
                                  prod1,  index=len(prod1)-1)
-        if cat1 == 'Toda la Categoría':
+        if cat1 == 'Todas las Categorías':
             cat2 = cols[1].selectbox("Subcategoría 1:",
                               ['Toda la Categoría'])
             cat3 = cols[2].selectbox("Subcategoría 2:",
@@ -712,7 +712,7 @@ def run_UI():
         #Ganancias/Pérdidas por categoría seleccionada en función del descuento
         
         
-        if cat1 == 'Toda la Categoría':
+        if cat1 == 'Todas las Categorías':
             des1 = descuentos
         else:
             des1 = descuentos.loc[descuentos.loc[:, 'productcat1'] == cat1]
