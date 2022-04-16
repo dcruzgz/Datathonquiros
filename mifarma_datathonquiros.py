@@ -81,7 +81,7 @@ def get_descuentos():
 @st.experimental_memo(ttl=30)
 def get_rules():
     url = 'Data/rules.csv' #Datos del Arules
-    df_raw = pd.read_csv(url, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+    df_raw = pd.read_csv(url, encoding="UTF-8")  # read a CSV file inside the 'data" folder next to 'app.py'
     return df_raw
     
 #Fin de funciones de extracción de los datos
@@ -830,7 +830,7 @@ def run_UI():
 
         components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
 
-        st.table(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
+        st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
         
         
 def run_shell():
