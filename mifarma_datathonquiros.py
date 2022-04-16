@@ -268,7 +268,7 @@ def run_UI():
             :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
             :man-woman-girl-boy: Puedes consultar el balance de las ventas ajustado a los habitantes de cada provincia seleccionando 
             'Balance relativo (€/100 mil hab.)' como 'Dato mostrado', o el balance total generado en ese territorio, seleccionando 'Balance total
-	    (€) en ese mismo apartado. \n
+	    (€)' en ese mismo apartado. \n
             :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
             las provincias que desees y en todo el país. 
           """)
