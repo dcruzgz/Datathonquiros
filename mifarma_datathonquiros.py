@@ -538,8 +538,14 @@ def run_UI():
         get_data_clean.clear() #borrar caché
         
         st.sidebar.write("""
-            ## About
-          Bayes
+            ## Nivel de producto
+            :baby_bottle: :lipstick: :pill: :adhesive_bandage: :muscle: \n
+            :leaves: En este apartado se muestran las ganancias para cada tipo de producto \n
+            :bar_chart: Deslizando hacia abajo podrás consultas las marcas más vendidas, las marcas que mayor beneficio generan, y las marcas que menor beneficio generan.
+            Utiliza los filtros deseados para seleccionar las categorías de interés. \n
+            :100: Al final de la página podrás observar las ganancias generadas 
+            en la categoría seleccionada dependiendo del descuento ofrecido.
+          
           """)
         st.title(" Nivel de producto :star:")
         
