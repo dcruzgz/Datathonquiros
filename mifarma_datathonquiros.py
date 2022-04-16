@@ -568,7 +568,8 @@ def run_UI():
         df["Todas"] = "Todas"  # in order to have a single root node
         fig = px.treemap(df, path=[px.Constant("Todas las categorías"), 'productcat1', 'productcat2', 'productcat3'], values='Balance'
                          )
-        fig.update_layout(root_color="lightgrey", margin=dict(t=50, l=25, r=25, b=25), width= 800, height= 700)
+        fig.update_traces(root_color="lightgrey")
+        fig.update_layout(margin=dict(t=50, l=25, r=25, b=25), width= 800, height= 700)
         st.plotly_chart(fig, use_container_width=True)
 
         
