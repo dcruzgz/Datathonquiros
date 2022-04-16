@@ -414,7 +414,7 @@ def run_UI():
                 
                 
         #Mostramos mapa
-        st.write("*"+variable_map + " en " + cat1 + "-" + cat2 + "-" + cat3 + " en el mes/año, "
+        st.write(variable_map + " en " + cat1 + "-" + cat2 + "-" + cat3 + " en el mes/año, "
                 + mes +"/"+ year)
         
         show_maps(variable_map, threshold(variable_map), nombre_valor)
