@@ -421,7 +421,7 @@ def run_UI():
         elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
             cat_txt = variable_map + " en la categoría " + cat1
         elif cat1 != 'Todas las Categorías' and cat2 != 'Toda la Categoría' and cat3 == 'Toda la Categoría':
-            cat_txt = variable_map + " en " + cat1 + " subcategoría " + cat2 
+            cat_txt = variable_map + " en " + cat1 + " - " + cat2 
         else:
             cat_txt = variable_map + " en " + cat1 + " - " + cat2 + " - " + cat3
             
@@ -430,7 +430,7 @@ def run_UI():
         elif mes == 'Todo el año' and year != 'Todos los años':
             time_txt = " durante el año " + year
         elif mes != 'Todo el año' and year == 'Todos los años':
-             time_txt = " durante el mismo mes " + mes + " en los años 2017 y 2018  "
+             time_txt = " durante el mismo mes " + "(" + mes + ")" + " en los años 2017 y 2018  "
         else:
             time_txt = " en el mes/año, "  + mes +"/"+ year
        
