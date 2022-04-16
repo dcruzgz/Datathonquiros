@@ -416,8 +416,10 @@ def run_UI():
         #Mostramos mapa
         
         show_maps(variable_map, threshold(variable_map), nombre_valor)
-        st.write(variable_map + " en " + cat1 + "-" + cat2 + "-" + cat3 + " en el mes/año, "
-                + mes + year)
+        st.write("*"+variable_map + " en " + cat1 + "-" + cat2 + "-" + cat3 + " en el mes/año, "
+                + mes +"/"+ year)
+        
+        st.write("")
         
         ##GRAFICOS TEMPORALES
 
