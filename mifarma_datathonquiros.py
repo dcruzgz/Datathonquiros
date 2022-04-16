@@ -261,16 +261,6 @@ def run_UI():
         dat_1['cod_prov'] = dat_1['cod_prov']
         data_all = dat_1.set_index('CODIGO')
 
-        #Tipos de variables para el mapa 
-
-        dicts = {"Balance total (€)": 'GAIN',
-             "Balance relativo (€/100 mil hab.)": 'GAIN'}
-
-        # Creación del mapa con folium
-
-        map_sby = folium.Map(tiles='OpenStreetMap', location=[40.15775718967773, -3.9205941038156285], zoom_start=5.5)
-        folium.TileLayer('CartoDB positron',name="Light Map",control=False).add_to(map_sby)
-
         st.sidebar.write("""
           ## Nivel geográfico y temporal
           :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
