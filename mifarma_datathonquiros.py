@@ -455,10 +455,10 @@ def run_UI():
       
         # Sacar las provincias con mas fechas por defecto
         freqs = groupby(Counter(prov_ok).most_common(), lambda x:x[1])
-        
+        cod_freq =[val for val,count in next(freqs)[1]]
         seleccion = st.multiselect(
             "Selecciona o elimina las provincias deseadas para consultar la evolución temporal:", options=prov_ok,
-            default=[val for val,count in next(freqs)[1]], format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
+            default=cod_freq, format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
         )
 
         fig1 = go.Figure()
