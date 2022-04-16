@@ -419,7 +419,7 @@ def run_UI():
         if cat1 == 'Todas las Categorías':
             cat_txt = variable_map  + " en Todas las categorías."
         elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
-            cat_txt = variable_map + " en la categoría: " + cat1
+            cat_txt = variable_map + " en la categoría " + cat1
         else:
             cat_txt = variable_map + " en " + cat1 + " - " + cat2 + " - " + cat3
             
