@@ -563,7 +563,7 @@ def run_UI():
         df_categorias['Balance (€)'] = round(df_categorias['Balance (€)'], 0)
         df = pd.DataFrame(
             dict(productcat1=df_categorias['productcat1'],productcat2=df_categorias['productcat2'],
-                 productcat3=df_categorias['productcat3'], Balance (€)=df_categorias['Balance (€)'])
+                 productcat3=df_categorias['productcat3'], 'Balance (€)'=df_categorias['Balance (€)'])
         )
         df["Todas"] = "Todas"  # in order to have a single root node
         fig = px.treemap(df, path=[px.Constant("Todas las categorías"), 'productcat1', 'productcat2', 'productcat3'], values='Balance (€)'
