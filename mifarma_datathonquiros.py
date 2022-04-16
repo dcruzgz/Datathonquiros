@@ -130,8 +130,8 @@ data_all = dat_1.set_index('CODIGO')
 
 #Tipos de variables para el mapa 
 
-dicts = {"Ganancias": 'GAIN',
-         "Ganancias € por 100 mil hab": 'GAIN'}
+dicts = {"Balance total (€)": 'GAIN',
+         "Balance relativo (€/100 mil hab.)": 'GAIN'}
          
          
 # Creación del mapa con folium
