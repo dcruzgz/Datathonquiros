@@ -452,7 +452,7 @@ def run_UI():
             codigos.append(int(e[0]))
         
         prov_ok = data_code.loc[data_code['CODIGO'].isin(codigos)]['LITERAL'].to_numpy()
-        st.markdown(**Evolución temporal**')
+        st.markdown('**Evolución temporal**')
         seleccion = st.multiselect(
             "Selecciona o elimina las provincias deseadas para consultar la evolución temporal. Las provincias no disponibles en la lista no han tenido ventas de la categoría seleccionada:", options=prov_ok,
             default=prov_ok, format_func=pretty #Seleccion por defecto de la provincia con mas meses de compra en dicha categoría
