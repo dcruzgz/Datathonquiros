@@ -99,18 +99,6 @@ def pretty(s: str) -> str:
 # ---------------------------------
 
 
-#Función que nos genera los colores para identificar las variables en cada provincia
-
-def threshold(data, data_all):
-    threshold_scale = np.linspace(data_all[dicts[data]].min(),
-                                  data_all[dicts[data]].max(),
-                                  10, dtype=float)
-    # change the numpy array to a list
-    threshold_scale = threshold_scale.tolist()
-    threshold_scale[-1] = threshold_scale[-1]
-    return threshold_scale
-
-
 #Función del mapa donde se genera y se muestra según
 
 def show_maps(data, threshold_scale, nombre_valor):
@@ -437,9 +425,18 @@ def run_UI():
             time_txt = " en el mes/año, "  + mes +"/"+ year
        
         st.write(cat_txt + time_txt)
-            
+        
+        #Función que nos genera los colores para identificar las variables en cada provincia
+        
+        threshold_scale = np.linspace(data_all[dicts[variable_map]].min(),
+                                  data_all[dicts[variable_map]].max(),
+                                  10, dtype=float)
+        # change the numpy array to a list
+        threshold_scale = threshold_scale.tolist()
+        threshold_scale[-1] = threshold_scale[-1]
+        
         #Mostramos mapa
-        show_maps(variable_map, threshold(variable_map, data_all), nombre_valor)
+        show_maps(variable_map, threshold_scale, nombre_valor)
         
         ##GRAFICOS TEMPORALES
 
