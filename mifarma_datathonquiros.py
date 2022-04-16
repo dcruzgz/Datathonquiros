@@ -830,7 +830,7 @@ def run_UI():
 
         components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
 
-        st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
+        st.table(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
         
         
 def run_shell():
