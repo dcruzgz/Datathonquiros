@@ -791,8 +791,8 @@ def run_UI():
         get_data_clean.clear()
         st.sidebar.write("""
             ## Nivel de cliente
-           :rocket: Esta sección muestra los productos o conjuntos de productos que se han comprado conjuntamente en una mayor cantidad de ocasiones según la categoría del producto. 
-           Puedes hacer zoom para navegar por la red de manera más detallada.
+           :rocket: Esta sección muestra los productos o conjuntos de productos que se han comprado conjuntamente en una mayor cantidad de ocasiones según la categoría del producto. \n 
+           :mag: Puedes hacer zoom para navegar por la red de manera más detallada.
            """)
         st.title(":rocket: Nivel de cliente")
 
