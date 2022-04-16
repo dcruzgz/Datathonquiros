@@ -101,7 +101,7 @@ def pretty(s: str) -> str:
 
 #Función que nos genera los colores para identificar las variables en cada provincia
 
-def threshold(data):
+def threshold(data, data_all):
     threshold_scale = np.linspace(data_all[dicts[data]].min(),
                                   data_all[dicts[data]].max(),
                                   10, dtype=float)
@@ -439,7 +439,7 @@ def run_UI():
         st.write(cat_txt + time_txt)
             
         #Mostramos mapa
-        show_maps(variable_map, threshold(variable_map), nombre_valor)
+        show_maps(variable_map, threshold(variable_map, data_all), nombre_valor)
         
         ##GRAFICOS TEMPORALES
 
