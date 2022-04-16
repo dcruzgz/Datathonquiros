@@ -519,7 +519,14 @@ def run_UI():
     
     elif page == 'Nivel de producto':
     
-        get_data_clean.clear() #borrar caché
+        #Creación de los DataFrames
+        datos_clean_or = get_data_clean() #General con los datos de los tickets
+        
+        # A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
+        
+        datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
+        datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
+        datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
         
         st.sidebar.write("""
             ## Nivel de producto
