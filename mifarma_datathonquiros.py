@@ -204,7 +204,7 @@ def df_rules():
                                                                                                      regex=True)
     df_rules["Comprará"] = df1.loc[:, "rhs"].str.replace(r'[{]', '', regex=True).replace(r'[}]', '', regex=True)
     df_rules["Con una confianza del (%)"] = round(pd.to_numeric(df1["confidence"]) * 100, 2)
-    return df_rules
+    return df_rules[30, :]
 
 
 def rules(df_rules):
