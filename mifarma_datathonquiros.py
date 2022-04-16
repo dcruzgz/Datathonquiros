@@ -227,20 +227,20 @@ def run_UI():
             page = st.selectbox('Selecciona el nivel de análisis: ', PAGES, index=0)
             
     if page != 'Nivel de cliente' :
-    #Creación de los DataFrames
-    datos_clean_or = get_data_clean() #General con los datos de los tickets
-    data_code = get_data_prov() #Datos de las provincias (código y población)
-    data_geo = get_data_geo()   #Datos de las coordenadas de las provincias
+        #Creación de los DataFrames
+        datos_clean_or = get_data_clean() #General con los datos de los tickets
+        data_code = get_data_prov() #Datos de las provincias (código y población)
+        data_geo = get_data_geo()   #Datos de las coordenadas de las provincias
 
-    # A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
+        # A partir del DataFrame original los NA en categoría de producto pasan a designase 'Sin Clasificar'
 
-    datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
-    datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
-    datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
+        datos_clean_or['productcat1'] = datos_clean_or['productcat1'].fillna('Sin clasificar')
+        datos_clean_or['productcat2'] = datos_clean_or['productcat2'].fillna('Sin clasificar')
+        datos_clean_or['productcat3'] = datos_clean_or['productcat3'].fillna('Sin clasificar')
 
-    # DataFrame donde descartamos los datos sin código postal sólo para la representación del mapa y gráficas de provincias
-    datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
-        
+        # DataFrame donde descartamos los datos sin código postal sólo para la representación del mapa y gráficas de provincias
+        datos_clean_map = datos_clean_or[datos_clean_or['zp_sim'].notna()]
+
 
     #Página MAPA
     
