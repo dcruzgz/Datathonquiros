@@ -500,7 +500,7 @@ def run_UI():
                                           name=provincia))
         fig1.update_layout(xaxis=dict(tickformat="%m-%Y"))
         fig1.update_layout(
-            title="Evolución de las " + cat_txt +" en las provincias seleccionadas",
+            title="Evolución del " + cat_txt +" en las provincias seleccionadas",
             xaxis_title="Fecha",
             yaxis_title=variable_map,
             legend_title="Provincia"
@@ -522,7 +522,7 @@ def run_UI():
 
         fig.update_layout(xaxis=dict(tickformat="%m-%Y"))
         fig.update_layout(
-            title="Evolución en todo el país de las "  + cat_txt ,
+            title="Evolución en todo el país del "  + cat_txt ,
             xaxis_title="Fecha",
             yaxis_title=variable_map
         )
