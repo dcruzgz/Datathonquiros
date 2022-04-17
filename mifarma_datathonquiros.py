@@ -45,7 +45,7 @@ def get_data_clean():
                          ,header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
     return data
 
-@st.experimental_memo(ttl=1)
+@st.experimental_memo(ttl=5)
 def get_data_geo():
     data = json.load(
         open('Data/spain_provinces.geojson',
@@ -53,7 +53,7 @@ def get_data_geo():
     return data
 
 
-@st.experimental_memo(ttl=1)
+@st.experimental_memo(ttl=5)
 def get_data_pobl():
     data_raw = pd.read_csv('Data/poblacion.csv', sep=";"
                        , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
