@@ -32,9 +32,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout = 'wide',
     menu_items={
-         'Get Help': 'https://www.extremelycoolapp.com/help',
-         'Report a bug': "https://www.extremelycoolapp.com/bug",
-         'About': "# This is a header. This is an *extremely* cool app!"
+         'Ayuda': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
+         'Report a bug': "Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu'",
+         'About': "# Daniel Jesús Cruz Garzón Antonio González Rodríguez Datathon Cajamar UniversityHack 2022"
      }
 )
 
