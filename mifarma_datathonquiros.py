@@ -793,9 +793,9 @@ def run_UI():
         
            ## NUBE DE PALABRAS
         
-        st.markdown(':thought_balloon: **Nubbe de palabras**')
+        st.markdown(':thought_balloon: **Nube de palabras**')
        
-        st.write("Selecciona la categoría y comprueba las palabras más buscadas por los clientes")
+        st.write("Selecciona la categoría y comprueba las palabras más presentes en los productos favoritos de los clientes.")
         cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
         if cloud == 'Cosmética y Belleza':
@@ -816,10 +816,10 @@ def run_UI():
 
         # Llamada a la creación del html con la Network y representación
         st.write("")
-        st.markdown('**Asociaciones de productos**')
+        st.markdown('**¿Cómo se relacionan los productos?**')
         
         values = st.slider(
-            'Selecciona el rango de confianza para crear la red:',
+            'Selecciona el rango de confianza entre productos comprados a la vez para visualizar la red:',
             10.0, 60.0, (10.0, 30.0))
 
         components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
