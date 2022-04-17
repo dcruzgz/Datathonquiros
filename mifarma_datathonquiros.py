@@ -32,7 +32,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout = 'wide',
     menu_items={
-         'Ayuda': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
+         'Get Help': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
          'Report a bug': "Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu'",
          'About': "# Daniel Jesús Cruz Garzón Antonio González Rodríguez Datathon Cajamar UniversityHack 2022"
      }
