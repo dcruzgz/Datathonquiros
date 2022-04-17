@@ -811,15 +811,15 @@ def run_UI():
         if cloud == 'Cosmética y Belleza':
             HtmlCloud = open("Data/Nube Cosmética y Belleza.html", 'r', encoding='utf-8')          
         elif cloud == 'Higiene y cuidado personal':
-            HtmlCloud = open("Data/Higiene y cuidado personal.html", 'r', encoding='utf-8')
+            HtmlCloud = open("Data/Nube Higiene y cuidado personal.html", 'r', encoding='utf-8')
         elif cloud == 'Infantil':
-            HtmlCloud = open("Data/Infantil.html", 'r', encoding='utf-8')
+            HtmlCloud = open("Data/Nube Infantil.html", 'r', encoding='utf-8')
         elif cloud == 'Nutrición':
-            HtmlCloud = open("Data/Nutrición.html", 'r', encoding='utf-8')     
+            HtmlCloud = open("Data/Nube Nutrición.html", 'r', encoding='utf-8')     
         elif cloud == 'Salud':
-            HtmlCloud = open("Data/Salud.html", 'r', encoding='utf-8')  
+            HtmlCloud = open("Data/Nube Salud.html", 'r', encoding='utf-8')  
         else:
-            HtmlCloud = open("Data/Veterinaria.html", 'r', encoding='utf-8')
+            HtmlCloud = open("Data/Nube Veterinaria.html", 'r', encoding='utf-8')
         
         cloud_source = HtmlCloud.read()
         components.html(cloud_source, height=480, width=1050)   
