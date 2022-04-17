@@ -31,6 +31,10 @@ st.set_page_config(
     page_icon=":brain:",
     initial_sidebar_state="expanded",
     layout = 'wide'
+    menu_items={
+        'About': "# App de análisis de los datos de ventas de Atida Mifarma para el evento del Datathon Cajamar UniversityHack 2022. \n
+        Realizado por: \n Daniel Jesús Cruz Garzón \n Antonio González Rodríguez"
+     }
 )
 
 
