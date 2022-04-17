@@ -84,7 +84,7 @@ def get_descuentos():
 @st.experimental_memo(ttl=30)
 def get_rules():
     url = 'Data/rules.csv' #Datos del Arules
-    df_raw = pd.read_csv(url, encoding="UTF-8")  # read a CSV file inside the 'data" folder next to 'app.py'
+    df_raw = pd.read_csv(url, encoding="UTF-8") 
     return df_raw
     
 #Fin de funciones de extracción de los datos
