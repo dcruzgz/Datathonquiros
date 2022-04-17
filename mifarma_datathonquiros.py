@@ -30,10 +30,9 @@ st.set_page_config(
     page_title="Datathonquiros",
     page_icon=":brain:",
     initial_sidebar_state="expanded",
-    layout = 'wide'
+    layout = 'wide',
     menu_items={
         'Ayuda': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
-        'Report a bug': "Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu",
         'About': "# App de análisis de los datos de ventas de Atida Mifarma para el evento del Datathon Cajamar UniversityHack 2022. \n
         Realizado por: \n Daniel Jesús Cruz Garzón \n Antonio González Rodríguez"
      }
