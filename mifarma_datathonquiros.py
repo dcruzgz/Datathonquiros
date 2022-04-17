@@ -809,13 +809,13 @@ def run_UI():
         cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
         if cloud == 'Cosmética y Belleza':
-            HtmlCloud = open("Data/Nube Cosmética y Belleza.html", 'r', encoding='utf-8')          
+            HtmlCloud = open("Data/Nube Cosmetica y Belleza.html", 'r', encoding='utf-8')          
         elif cloud == 'Higiene y cuidado personal':
             HtmlCloud = open("Data/Nube Higiene y cuidado personal.html", 'r', encoding='utf-8')
         elif cloud == 'Infantil':
             HtmlCloud = open("Data/Nube Infantil.html", 'r', encoding='utf-8')
         elif cloud == 'Nutrición':
-            HtmlCloud = open("Data/Nube Nutrición.html", 'r', encoding='utf-8')     
+            HtmlCloud = open("Data/Nube Nutricion.html", 'r', encoding='utf-8')     
         elif cloud == 'Salud':
             HtmlCloud = open("Data/Nube Salud.html", 'r', encoding='utf-8')  
         else:
