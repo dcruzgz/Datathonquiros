@@ -32,7 +32,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout = 'wide',
         menu_items={
-         'About': " Datathon Cajamar UniversityHack 2022 Daniel Jesús Cruz Garzón Antonio González Rodríguez"
+         'About': " Datathon Cajamar UniversityHack 2022            Daniel Jesús Cruz Garzón Antonio González Rodríguez"
      }
 )
 
