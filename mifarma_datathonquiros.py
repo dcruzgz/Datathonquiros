@@ -39,13 +39,13 @@ st.set_page_config(
 
 #Extracción de los datasheet, almacenados en caché para mejorar la experiencia de usuario
 
-@st.experimental_memo(ttl=30)
+@st.experimental_memo(ttl=1)
 def get_data_clean():
     data = pd.read_csv('https://www.dropbox.com/s/bj5mnpqkq70itd1/tickets_data.csv?dl=1'
                          ,header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
     return data
 
-@st.experimental_memo(ttl=30)
+@st.experimental_memo(ttl=1)
 def get_data_geo():
     data = json.load(
         open('Data/spain_provinces.geojson',
@@ -53,7 +53,7 @@ def get_data_geo():
     return data
 
 
-@st.experimental_memo(ttl=30)
+@st.experimental_memo(ttl=1)
 def get_data_pobl():
     data_raw = pd.read_csv('Data/poblacion.csv', sep=";"
                        , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
@@ -65,7 +65,7 @@ def get_data_pobl():
     data_raw['Total'] = data_raw['Total'].astype(int)
     return data_raw.iloc[:, [1, 2]]
 
-@st.experimental_memo(ttl=30)
+@st.experimental_memo(ttl=1)
 def get_data_prov():
     data = pd.read_excel(
         'Data/codprov.xls')
@@ -73,7 +73,7 @@ def get_data_prov():
     data = data.merge(data_pobl, on="CODIGO", how="left")
     return data
 
-@st.experimental_memo(ttl=30)
+@st.experimental_memo(ttl=1)
 def get_descuentos():
     data = pd.read_csv('Data/descuentos.csv', sep=","
                            , header=0,
@@ -81,7 +81,7 @@ def get_descuentos():
 
     return data
 
-@st.experimental_memo(ttl=30)
+@st.experimental_memo(ttl=1)
 def get_rules():
     url = 'Data/rules.csv' #Datos del Arules
     df_raw = pd.read_csv(url, encoding="UTF-8") 
