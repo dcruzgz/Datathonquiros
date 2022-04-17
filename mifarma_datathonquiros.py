@@ -754,7 +754,9 @@ def run_UI():
         print(etiquetas)
         des1 = des1.groupby('descuentolabel')['Precio_calculado'].sum().rename_axis('Descuento').reset_index(
             name='Balance')
-
+        
+        des1['Balance'] = round(des1['Balance'], 0)
+        
         chart =  (alt.Chart(
                 des1,
                 title="Balance de las ventas según el descuento ofertado "  + cat_txt,
