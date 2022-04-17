@@ -712,6 +712,7 @@ def run_UI():
         #Marcas con menos ganancias y/o pérdidas en dicha categoría
         
         plot_df = marca_gain.sort_values(by="Ventas €", ascending=True)
+        plot_df['Ventas €'] = round(plot_df['Ventas €'], 0)
         plot_df = plot_df[0:20]
         chart = (
             alt.Chart(
