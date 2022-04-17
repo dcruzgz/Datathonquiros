@@ -790,21 +790,11 @@ def run_UI():
            :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el porcentaje de confianza como desees 
            """)
         st.title(":heavy_heart_exclamation_mark_ornament: Nivel de cliente")
-
-        # Llamada a la creación del html con la Network y representación
-        values = st.slider(
-            'Selecciona el rango de confianza para crear la red:',
-            10.0, 60.0, (10.0, 30.0))
-
-        components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
-
-        st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
         
+           ## NUBE DE PALABRAS
         
-        ## NUBE DE PALABRAS
-        
-        st.write("")
-        st.markdown('**Nube de palabras**')
+        st.markdown(':thought_balloon: **Nubbe de palabras**')
+       
         st.write("Selecciona la categoría y comprueba las palabras más buscadas por los clientes")
         cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
@@ -823,6 +813,21 @@ def run_UI():
         
         cloud_source = HtmlCloud.read()
         components.html(cloud_source, height=480, width=1050)   
+
+        # Llamada a la creación del html con la Network y representación
+        st.write("")
+        st.markdown('**Asociaciones de productos**')
+        
+        values = st.slider(
+            'Selecciona el rango de confianza para crear la red:',
+            10.0, 60.0, (10.0, 30.0))
+
+        components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
+
+        st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
+        
+        
+     
         
 def run_shell():
     st.write("Cargando...")
