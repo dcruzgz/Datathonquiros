@@ -246,7 +246,7 @@ def run_UI():
             cat2 = cols[1].selectbox("Subcategoría 1:",
                                      prod2, index=len(prod2) - 1)
 
-            df_cat2 = datos_clean_map.loc[datos_clean_map.loc[:, 'productcat2'] == cat2]
+            df_cat2 = df_cat1.loc[df_cat1.loc[:, 'productcat2'] == cat2]
             prod3 = df_cat2['productcat3'].unique()
             prod3 = np.append(prod3, ['Toda la Categoría'])
             cat3 = cols[2].selectbox("Subcategoría 2:",
