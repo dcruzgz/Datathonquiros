@@ -521,7 +521,8 @@ def run_UI():
     #Página sobre los productos y marcas
     
     elif page == 'Nivel de producto':
-    
+        get_data_geo.clear()
+        get_data_prov.clear()
         #Creación de los DataFrames
         datos_clean_or = get_data_clean() #General con los datos de los tickets
         
@@ -784,8 +785,10 @@ def run_UI():
     else:
     
     #Página sobre Asociaciones
-    
+        get_data_geo.clear()
+        get_data_prov.clear()
         get_data_clean.clear()
+        
         st.sidebar.write("""
             ## Nivel de cliente
            :cloud: En esta sección puedes ver las palabras más presentes en las descripciones de los productos que más han comprado los clientes. \n
