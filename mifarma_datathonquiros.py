@@ -800,6 +800,9 @@ def run_UI():
 
         st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
         
+        
+        ## NUBE DE PALABRAS
+        
         st.write("")
         st.markdown('**Nube de palabras**')
         st.write("Selecciona la categoría y comprueba las palabras más buscadas por los clientes")
@@ -816,9 +819,10 @@ def run_UI():
         elif cloud == 'Salud':
             HtmlCloud = open("Data/Salud.html", 'r', encoding='utf-8')  
         else:
-            HtmlCloud = open("Data/Veterinaria.html", 'r', encoding='utf-8')  
+            HtmlCloud = open("Data/Veterinaria.html", 'r', encoding='utf-8')
         
-        components.html(HtmlCloud, height=480, width=1050)   
+        cloud_source = HtmlCloud.read()
+        components.html(cloud_source, height=480, width=1050)   
         
 def run_shell():
     st.write("Cargando...")
