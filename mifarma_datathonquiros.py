@@ -800,6 +800,8 @@ def run_UI():
 
         st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
         
+        cloud = st.selectbox("Mes:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
+        
         
 def run_shell():
     st.write("Cargando...")
