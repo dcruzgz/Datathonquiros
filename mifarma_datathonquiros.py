@@ -306,9 +306,11 @@ def run_UI():
                 else:
 
                     if variable_map == 'Balance total (€)':
+                        redondeo = 2
                         nombre_valor = "Balance (k€): "
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
                     else:
+                        redondeo = 3
                         nombre_valor = " Balance relativo (€/100 mil hab.):"
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
@@ -317,7 +319,7 @@ def run_UI():
 
                     data_all['GAIN'] = df_sum['Precio_calculado']
 
-                    df_va2 = datos_clean.loc[datos_clean.loc[:, 'productcat2'] == cat2]
+                    df_va2 = df_va1.loc[df_va1.loc[:, 'productcat2'] == cat2]
 
                     if cat3 == 'Toda la Categoría':
 
@@ -350,7 +352,7 @@ def run_UI():
             for idx in range(51):
                 if pd.isna(data_all['GAIN'][idx + 1]):
                     data_all['GAIN'][idx + 1] = 0
-                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], 3)
+                data_geo['features'][idx]['properties']['GAIN'] = round(data_all['GAIN'][idx + 1], redondeo)
                 data_geo['features'][idx]['properties']['cod_prov'] = data_all['cod_prov'][idx + 1]  # igualar los codigos los 0 a la izq dan problemas
                 
                 
@@ -556,7 +558,7 @@ def run_UI():
 
         df_categorias = df_categorias.loc[df_categorias['Balance (€)'] >= 0]
         df_categorias = df_categorias.loc[df_categorias['productcat1'] != 'Sin clasificar']
-        df_categorias['Balance (€)'] = round(df_categorias['Balance (€)'], 0)
+        df_categorias['Balance (€)'] = round(df_categorias['Balance (€)'], 2)
         df = pd.DataFrame(
             dict(productcat1=df_categorias['productcat1'],productcat2=df_categorias['productcat2'],
                  productcat3=df_categorias['productcat3'], Balance=df_categorias['Balance (€)'])
@@ -603,7 +605,7 @@ def run_UI():
                 cat3 = cols[2].selectbox("Subcategoría 2:",
                                   ['Toda la Categoría'])
             else:
-                df_va2 = datos_clean_or.loc[datos_clean_or.loc[:, 'productcat2'] == cat2]
+                df_va2 = df_va1.loc[df_va1.loc[:, 'productcat2'] == cat2]
                 prod3 = df_va2['productcat3'].unique()
 
 
@@ -793,7 +795,8 @@ def run_UI():
             ## Nivel de cliente
            :cloud: En esta sección puedes ver las palabras más presentes en las descripciones de los productos que más han comprado los clientes. \n
            :rocket: Más abajo se muestran los tipos de productos que se compran conjuntamente con mayor probabilidad. \n 
-           :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el rango de confianza como desees.
+           :mag: Puedes hacer zoom para navegar por la red de manera más detallada y desplazar los nodos haciendo click con el ratón como desees.
+           Además, puedes cambiar como desees el rango de confianza.
            """)
         st.title(":heavy_heart_exclamation_mark_ornament: Nivel de cliente")
         
