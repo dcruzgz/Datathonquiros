@@ -786,7 +786,7 @@ def run_UI():
            Solo se tienen en cuenta aquellas categorias de productos que se han comprado en al menos un 1% de ocasiones durante los años 2017 y 2018. \n 
            :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el porcentaje de confianza como desees 
            """)
-        st.title(":rocket: Nivel de cliente")
+        st.title(":woman-heart-man: Nivel de cliente")
 
         # Llamada a la creación del html con la Network y representación
         values = st.slider(
