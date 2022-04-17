@@ -806,18 +806,19 @@ def run_UI():
         cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
         if cloud == 'Cosmética y Belleza':
-            components.iframe('Data/Nube Cosmética y Belleza.html', height=480, width=1050)
+            HtmlCloud = open("Data/Nube Cosmética y Belleza.html", 'r', encoding='utf-8')          
         elif cloud == 'Higiene y cuidado personal':
-            components.html('Data/Higiene y cuidado personal.html', height=480, width=1050)
+            HtmlCloud = open("Data/Higiene y cuidado personal.html", 'r', encoding='utf-8')
         elif cloud == 'Infantil':
-            components.html('Data/Infantil.html', height=480, width=1050)
+            HtmlCloud = open("Data/Infantil.html", 'r', encoding='utf-8')
         elif cloud == 'Nutrición':
-            components.html('Data/Nutrición.html', height=480, width=1050)    
+            HtmlCloud = open("Data/Nutrición.html", 'r', encoding='utf-8')     
         elif cloud == 'Salud':
-            components.html('Data/Salud.html', height=480, width=1050)    
+            HtmlCloud = open("Data/Salud.html", 'r', encoding='utf-8')  
         else:
-            components.html('Data/Veterinaria.html', height=480, width=1050)     
-            
+            HtmlCloud = open("Data/Veterinaria.html", 'r', encoding='utf-8')  
+        
+        components.html(HtmlCloud, height=480, width=1050)   
         
 def run_shell():
     st.write("Cargando...")
