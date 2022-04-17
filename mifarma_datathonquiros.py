@@ -34,7 +34,7 @@ st.set_page_config(
     menu_items={
          'Get Help': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
          'Report a bug': "Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu'",
-         'About': "# Daniel Jesús Cruz Garzón Antonio González Rodríguez Datathon Cajamar UniversityHack 2022"
+         'About': "# Daniel Jesus Cruz Garzon Antonio Gonzalez Rodriguez Datathon Cajamar UniversityHack 2022"
      }
 )
 
