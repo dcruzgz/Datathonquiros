@@ -32,7 +32,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout = 'wide',
         menu_items={
-         'About': "# This is a header. This is an *extremely* cool app!"
+         'About': "# Datathon Cajamar UniversityHack 2022 \n
+            Daniel Jesús Cruz Garzón \n
+            Antonio González Rodríguez"
      }
 )
 
