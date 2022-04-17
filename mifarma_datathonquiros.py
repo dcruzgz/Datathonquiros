@@ -275,9 +275,11 @@ def run_UI():
             if cat1 == 'Todas las Categorías':
 
                 if variable_map == 'Balance total (€)':
+                    redondeo = 2
                     nombre_valor = "Balance (k€): "
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
                 else:
+                    redondeo = 3
                     nombre_valor = " Balance relativo (€/100 mil hab.):"
                     df_sum = datos_clean.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                     df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
@@ -293,9 +295,11 @@ def run_UI():
                 if cat2 == 'Toda la Categoría':
 
                     if variable_map == 'Balance total (€)':
+                        redondeo = 2
                         nombre_valor = "Balance (k€): "
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum() / 1000
                     else:
+                        redondeo = 3
                         nombre_valor = " Balance relativo (€/100 mil hab.):"
                         df_sum = df_va1.groupby(['zp_sim'])['Precio_calculado', 'productcat1'].sum()
                         df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
@@ -324,9 +328,11 @@ def run_UI():
                     if cat3 == 'Toda la Categoría':
 
                         if variable_map == 'Balance total (€)':
+                            redondeo = 2
                             nombre_valor = "Balance (k€): "
                             df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum() / 1000
                         else:
+                            redondeo = 3
                             nombre_valor = " Balance relativo (€/100 mil hab.):"
                             df_sum = df_va2.groupby(['zp_sim'])['Precio_calculado', 'productcat2'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
@@ -338,9 +344,11 @@ def run_UI():
                         df_va3 = df_va2.loc[datos_clean.loc[:, 'productcat3'] == cat3]
 
                         if variable_map == 'Balance total (€)':
+                            redondeo = 2
                             nombre_valor = "Balance (k€): "
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()/ 1000
                         else:
+                            redondeo = 3
                             nombre_valor = " Balance relativo (€/100 mil hab.):"
                             df_sum = df_va3.groupby(['zp_sim'])['Precio_calculado', 'productcat3'].sum()
                             df_sum['Poblacion'] = data_code.sort_values('CODIGO').set_index('CODIGO')['Total']
