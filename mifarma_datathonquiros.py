@@ -32,8 +32,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout = 'wide',
         menu_items={
-         'Get Help': 'dcruzgz@ouc.edu',
-         'Report a bug': "dcruzgz@ouc.edu",
          'About': "# This is a header. This is an *extremely* cool app!"
      }
 )
