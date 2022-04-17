@@ -32,8 +32,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
     layout = 'wide',
     menu_items={
-        'Ayuda': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
-        'About': "# Datathon Cajamar UniversityHack 2022"
+         'Get Help': 'https://www.extremelycoolapp.com/help',
+         'Report a bug': "https://www.extremelycoolapp.com/bug",
+         'About': "# This is a header. This is an *extremely* cool app!"
      }
 )
 
