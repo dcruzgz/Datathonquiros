@@ -33,7 +33,7 @@ st.set_page_config(
     layout = 'wide',
     menu_items={
         'Ayuda': 'Si tienes algún problema con la app envíanoslo escribiendo un mail a dcruzgz@uoc.edu',
-        'Sobre nosotros': "# App de análisis de los datos de ventas de Atida Mifarma para el evento del Datathon Cajamar UniversityHack 2022.  Realizado por:  Daniel Jesús Cruz Garzón  Antonio González Rodríguez"
+        'About': "# App de análisis de los datos de ventas de Atida Mifarma para el evento del Datathon Cajamar UniversityHack 2022.  Realizado por:  Daniel Jesús Cruz Garzón  Antonio González Rodríguez"
      }
 )
 
