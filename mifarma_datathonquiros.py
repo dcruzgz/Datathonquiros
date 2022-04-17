@@ -800,8 +800,24 @@ def run_UI():
 
         st.write(df_rules(values[0], values[1]).style.format(({"Con una confianza del (%)": "{:.2f}"})))
         
-        cloud = st.selectbox("Mes:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
+        st.write("")
+        st.markdown('**Nube de palabras**')
+        st.write("Selecciona la categoría y comprueba las palabras más buscadas por los clientes")
+        cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
+        if cloud == 'Cosmética y Belleza':
+            components.html('Data/Nube Cosmética y Belleza.html', height=480, width=1050)
+        elif cloud == 'Higiene y cuidado personal':
+            components.html('Data/Higiene y cuidado personal.html', height=480, width=1050)
+        elif cloud == 'Infantil':
+            components.html('Data/Infantil.html', height=480, width=1050)
+        elif cloud == 'Nutrición':
+            components.html('Data/Nutrición.html', height=480, width=1050)    
+        elif cloud == 'Salud':
+            components.html('Data/Salud.html', height=480, width=1050)    
+        else:
+            components.html('Data/Veterinaria.html', height=480, width=1050)     
+            
         
 def run_shell():
     st.write("Cargando...")
