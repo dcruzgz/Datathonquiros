@@ -1,7 +1,7 @@
 # Datathonquiros Atmira Pharma Visualization
 Repositorio con la app de análisis de los datos de ventas de Atida Mifarma para el evento del Datathon Cajamar UniversityHack 2022. 
 
-El repositorio tiene como objetivo el tratamiento y visualización de los datos en streamlit: 
+El repositorio tiene como objetivo el tratamiento de los datos su posterior visualización en streamlit: 
 https://share.streamlit.io/dcruzgz/datathonquiros/Master/mifarma_datathonquiros.py
 
 Contiene los siguientes puntos:
