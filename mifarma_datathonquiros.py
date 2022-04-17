@@ -804,7 +804,7 @@ def run_UI():
            :cloud: En esta sección puedes ver las palabras más presentes en las descripciones de los productos que más han comprado los clientes. \n
            :rocket: Más abajo se muestran los tipos de productos que se compran conjuntamente con mayor probabilidad. \n 
            :mag: Puedes hacer zoom para navegar por la red de manera más detallada y desplazar los nodos haciendo click con el ratón como desees.
-           Además, puedes cambiar como desees el rango de confianza.
+           Además, puedes cambiar el rango de confianza.
            """)
         st.title(":heavy_heart_exclamation_mark_ornament: Nivel de cliente")
         
