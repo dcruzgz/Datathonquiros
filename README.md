@@ -14,3 +14,8 @@ Contiene los siguientes puntos:
   - NOMBRE.R con el script usado en RStudio para la limpieza y tratamiento de los datos proporcionados.
 
 
+Daniel Jesús Cruz Garzón
+
+Antonio González Rodríguez
+
+Universitat Oberta de Catalunya (UOC)
