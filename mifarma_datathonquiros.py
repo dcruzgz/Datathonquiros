@@ -788,7 +788,7 @@ def run_UI():
         get_data_clean.clear()
         st.sidebar.write("""
             ## Nivel de cliente
-           :cloud: En esta sección puedes ver las palabras más presentes en las descripciones de los productos que más han comprado los clientes.
+           :cloud: En esta sección puedes ver las palabras más presentes en las descripciones de los productos que más han comprado los clientes. \n
            :rocket: Más abajo se muestran aquellos productos que se han comprado conjuntamente. \n 
            :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el porcentaje de confianza como desees.
            """)
