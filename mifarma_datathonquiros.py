@@ -206,12 +206,12 @@ def run_UI():
         st.sidebar.write("""
           ## Nivel geográfico y temporal
           :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
-          :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian según el territorio y el mes. \n
+          :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian los balances de las ventas según el territorio y el mes. \n
           :man-woman-girl-boy:  Puedes consultar el balance de las ventas ajustado a los habitantes de cada provincia seleccionando 
           'Balance relativo (€/100 mil hab.)' como 'Dato mostrado', o el balance total generado en ese territorio, 
           seleccionando 'Balance total (€)' en ese mismo apartado. \n
           :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
-          las provincias que desees y en todo el país. 
+          las provincias que desees y en todo el conjunto del territorio español. 
           """)
         st.title(":earth_africa: Ventas a nivel geográfico y temporal :clock130:")
         my_expander = st.expander(label='Filtros de la búsqueda', expanded = True)
@@ -534,7 +534,7 @@ def run_UI():
         st.sidebar.write("""
             ## Nivel de producto
 
-            :star: En este apartado se muestran el balance de las ventas producidas durante los años 2017 y 2018 para cada tipo de producto. \n
+            :star: En este apartado se muestra el balance de las ventas producidas durante los años 2017 y 2018 para cada tipo de producto. \n
             :bar_chart: Deslizando hacia abajo podrás consultar las marcas más vendidas, las marcas que mayor beneficio generan, y 
             las marcas que menor beneficio generan.
             Utiliza los filtros deseados para seleccionar las categorías de interés. \n
@@ -762,7 +762,7 @@ def run_UI():
         
         chart =  (alt.Chart(
                 des1,
-                title="Balance de las ventas según el descuento ofertado "  + cat_txt,
+                title="Balance de las ventas según el descuento ofertado"  + cat_txt,
             )
                 .mark_bar()
                 .encode(
@@ -788,9 +788,9 @@ def run_UI():
         get_data_clean.clear()
         st.sidebar.write("""
             ## Nivel de cliente
-           :rocket: Esta sección muestra los productos que se han comprado conjuntamente en una mayor cantidad de ocasiones según la mayor división en subcategoría del producto. 
-           Solo se tienen en cuenta aquellas categorias de productos que se han comprado en al menos un 1% de ocasiones durante los años 2017 y 2018. \n 
-           :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el porcentaje de confianza como desees 
+           :cloud: En esta sección puedes ver las palabras más presentes en las descripciones de los productos que más han comprado los clientes.
+           :rocket: Más abajo se muestran aquellos productos que se han comprado conjuntamente. \n 
+           :mag: Puedes hacer zoom para navegar por la red de manera más detallada y cambiar el porcentaje de confianza como desees.
            """)
         st.title(":heavy_heart_exclamation_mark_ornament: Nivel de cliente")
         
@@ -798,7 +798,7 @@ def run_UI():
         
         st.markdown(':thought_balloon: **Nube de palabras**')
        
-        st.write("Selecciona la categoría y comprueba las palabras más presentes en los productos favoritos de los clientes.")
+        st.write("Selecciona una categoría y comprueba las palabras más presentes en los productos favoritos de los clientes.")
         cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
         if cloud == 'Cosmética y Belleza':
@@ -819,7 +819,7 @@ def run_UI():
 
         # Llamada a la creación del html con la Network y representación
         st.write("")
-        st.markdown('**¿Cómo se relacionan los productos?**')
+        st.markdown(':bulb: **¿Cómo se relacionan los productos?**')
         
         values = st.slider(
             'Selecciona el rango de confianza entre productos comprados a la vez para visualizar la red:',
