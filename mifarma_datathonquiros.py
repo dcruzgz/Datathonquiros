@@ -806,7 +806,7 @@ def run_UI():
         cloud = st.selectbox("Categoría:", ['Cosmética y Belleza', 'Higiene y cuidado personal', 'Infantil', 'Nutrición', 'Salud', 'Veterinaria'])
         
         if cloud == 'Cosmética y Belleza':
-            components.html('Data/Nube Cosmética y Belleza.html', height=480, width=1050)
+            components.iframe('Data/Nube Cosmética y Belleza.html', height=480, width=1050)
         elif cloud == 'Higiene y cuidado personal':
             components.html('Data/Higiene y cuidado personal.html', height=480, width=1050)
         elif cloud == 'Infantil':
