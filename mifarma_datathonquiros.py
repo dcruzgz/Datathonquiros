@@ -652,7 +652,7 @@ def run_UI():
         else:
             cat_txt = " en " + cat1 + " - " + cat2 + " - " + cat3
         
-        arraym = df_sum.index  # Solo permitimos la selección de provincias que contienen datos
+        arraym = plot_df1.index  # Solo permitimos la selección de provincias que contienen datos
         marcas_1 = []
         
         for elem in array:
