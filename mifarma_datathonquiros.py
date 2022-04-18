@@ -767,9 +767,9 @@ def run_UI():
         etiquetas = des1['descuentolabel'].unique()
         print(etiquetas)
         des1 = des1.groupby('descuentolabel')['Precio_calculado'].sum().rename_axis('Descuento').reset_index(
-            name='Balance (€)')
+            name='Balance(€)')
         
-        des1['Balance (€)'] = round(des1['Balance (€)'], 2)
+        des1['Balance(€)'] = round(des1['Balance(€)'], 2)
         
         chart =  (alt.Chart(
                 des1,
@@ -779,14 +779,14 @@ def run_UI():
                 .encode(
                 x=alt.Y("Descuento",
                         sort = etiquetas),
-                y=alt.X("Balance (€)", title="Balance(€)"), 
+                y=alt.X("Balance(€)", title="Balance(€)"), 
 
                 color=alt.condition(
-                    alt.datum.Balance > 0,
+                    alt.datum.Balance(€) > 0,
                     alt.value("steelblue"),  # The positive color
                     alt.value("red")  # The negative color
                     ),
-                tooltip=["Balance (€)", "Descuento"],
+                tooltip=["Balance(€)", "Descuento"],
             )
             )
         st.altair_chart(chart, use_container_width=True)
