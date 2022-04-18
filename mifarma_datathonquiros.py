@@ -206,11 +206,11 @@ def run_UI():
         st.sidebar.write("""
           ## Nivel geográfico y temporal
           :pushpin: En esta página puedes visualizar las ventas de Atida Mifarma a nivel provincial. \n
-          :calendar: Selecciona las categorías que te resulten de interés, y observa como cambian los balances de las ventas según el territorio y el mes. \n
+          :calendar: Selecciona las categorías que te resulten de interés, y observa cómo cambian los balances de las ventas según el territorio y el mes. \n
           :man-woman-girl-boy:  Puedes consultar el balance de las ventas ajustado a los habitantes de cada provincia seleccionando 
           'Balance relativo (€/100 mil hab.)' como 'Dato mostrado', o el balance total generado en ese territorio, 
           seleccionando 'Balance total (€)' en ese mismo apartado. \n
-          :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal de la categoría seleccionada en 
+          :chart_with_upwards_trend: Más abajo podrás encontrar la evolución temporal del balance de las ventas en la categoría seleccionada en 
           las provincias que desees y en todo el conjunto del territorio español. 
           """)
         st.title(":earth_africa: Ventas a nivel geográfico y temporal :clock130:")
