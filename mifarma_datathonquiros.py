@@ -786,7 +786,7 @@ def run_UI():
                     alt.value("steelblue"),  # The positive color
                     alt.value("red")  # The negative color
                     ),
-                tooltip=["Balance", "Descuento"],
+                tooltip=["Balance", "Descuento", title='Balance (€)'],
             )
             )
         st.altair_chart(chart, use_container_width=True)
