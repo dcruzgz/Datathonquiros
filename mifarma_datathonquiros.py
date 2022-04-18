@@ -652,16 +652,9 @@ def run_UI():
         else:
             cat_txt = " en " + cat1 + " - " + cat2 + " - " + cat3
         
-        arraym = plot_df1.index  # Solo permitimos la selección de provincias que contienen datos
-        marcas_1 = []
-        
-        for elem in arraym:
-            marcas_1.append(elem[0])
-        
-        marca_ok = plot_df1.loc[plot_df1['Marca'].isin(marcas_1)]['Marca'].to_numpy()
         
         seleccion = st.multiselect(
-            "Selección de marcas:", options=marca_ok, default=top[:20], format_func=pretty
+            "Selección de marcas:", options=marcas, default=top[:20], format_func=pretty
         )
 
         plot_df = plot_df1[plot_df1.Marca.isin(seleccion)]
