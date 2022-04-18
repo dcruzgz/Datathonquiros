@@ -368,7 +368,7 @@ def run_UI():
         # Texto de la búsqueda
         
         if cat1 == 'Todas las Categorías':
-            cat_txt = variable_map  + " en todas las categorías,"
+            cat_txt = variable_map  + " en todas las categorías"
         elif cat1 != 'Todas las Categorías' and cat2 == 'Toda la Categoría':
             cat_txt = variable_map + " en la categoría " + cat1
         elif cat1 != 'Todas las Categorías' and cat2 != 'Toda la Categoría' and cat3 == 'Toda la Categoría':
@@ -497,7 +497,7 @@ def run_UI():
                                           name=provincia))
         fig1.update_layout(xaxis=dict(tickformat="%m-%Y"))
         fig1.update_layout(
-            title="Evolución del " + cat_txt +" en las provincias seleccionadas",
+            title="Evolución del " + cat_txt +", en las provincias seleccionadas",
             xaxis_title="Fecha",
             yaxis_title=variable_map,
             legend_title="Provincia"
