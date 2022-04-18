@@ -637,7 +637,7 @@ def run_UI():
         plot_df1['% Ventas'] = round((plot_df1['% Ventas'] / (plot_df1['% Ventas'].sum())) * 100, 2)
         st.expander(label='Campo a consultar')
 
-        marcas1 = datos_clean_or['productmarca'].astype(str).unique()
+        marcas1 = plot_df1['Marca'].astype(str).unique()
 
         marcas = np.delete(marcas1, np.where(marcas1 == 'nan'))
 
