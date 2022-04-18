@@ -1,15 +1,3 @@
-[tool.poetry]
-name = "streamlit-aggrid"
-version = "0.2.3-2"
-description = "Streamlit component implementation of ag-grid"
-classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent"]
-homepage = "https://github.com/PablocFonseca/streamlit-aggrid"
-authors = ["Pablo Fonseca <pablo.fonseca+pip@gmail.com>"]
-readme = "README.md"
-exclude = ["**/node_modules/**/*", "**/frontend/src/**/*"]
-include = ["**/frontend/build/**/*"]
-packages = [{include="st_aggrid"}]
-
 [tool.poetry.dependencies]
 python = ">=3.7.1,<4.0"
 streamlit = ">=0.87.0"
