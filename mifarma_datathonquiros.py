@@ -690,11 +690,11 @@ def run_UI():
         #Ganancias de las marcas mas vendidas
 
         marca_gain = df_filter.groupby('productmarca')['Precio_calculado'].sum().rename_axis('Marca').reset_index(
-            name='Ventas €')
+            name='Balance (€)')
 
-        plot_df = marca_gain[marca_gain.Marca.isin(seleccion)].sort_values(by="Ventas €", ascending=False)
+        plot_df = marca_gain[marca_gain.Marca.isin(seleccion)].sort_values(by="Balance (€)", ascending=False)
 
-        plot_df['Ventas €'] = round(plot_df['Ventas €'], 2)
+        plot_df['Balance (€)'] = round(plot_df['Balance (€)'], 2)
         chart = (
         alt.Chart(
             plot_df,
@@ -703,17 +703,17 @@ def run_UI():
             .mark_bar()
             .encode(
             x= alt.Y( "Marca",
-                sort=alt.EncodingSortField(field="Ventas €", order="descending"),
+                sort=alt.EncodingSortField(field="Balance (€)", order="descending"),
                 title="",
             ),
-            y=alt.X("Ventas €", title="Balance(€)"),
+            y=alt.X("Balance (€)", title="Balance(€)"),
 
             color=alt.Color(
                 "Marca",
                 legend=None,
                 scale=alt.Scale(scheme="category10"),
             ),
-            tooltip=["Ventas €", "Marca"],
+            tooltip=["Balance (€)", "Marca"],
         )
         )
 
@@ -725,8 +725,8 @@ def run_UI():
         
         #Marcas con menos ganancias y/o pérdidas en dicha categoría
         
-        plot_df = marca_gain.sort_values(by="Ventas €", ascending=True)
-        plot_df['Ventas €'] = round(plot_df['Ventas €'], 2)
+        plot_df = marca_gain.sort_values(by="Balance (€)", ascending=True)
+        plot_df['Balance (€)'] = round(plot_df['Balance (€)'], 2)
         plot_df = plot_df[0:20]
         chart = (
             alt.Chart(
@@ -736,17 +736,17 @@ def run_UI():
                 .mark_bar()
                 .encode(
                 x=alt.Y("Marca",
-                        sort=alt.EncodingSortField(field="Ventas €", order="ascending"),
+                        sort=alt.EncodingSortField(field="Balance (€)", order="ascending"),
                         title="",
                         ),
-                y=alt.X("Ventas €", title="Balance(€)"),
+                y=alt.X("Balance (€)", title="Balance(€)"),
 
                 color=alt.Color(
                     "Marca",
                     legend=None,
                     scale=alt.Scale(scheme="category10"),
                 ),
-                tooltip=["Ventas €", "Marca"],
+                tooltip=["Balance (€)", "Marca"],
             )
         )
 
