@@ -42,7 +42,7 @@ st.set_page_config(
 @st.experimental_memo(ttl=15)
 def get_data_clean():
     data = pd.read_csv('https://www.dropbox.com/s/bj5mnpqkq70itd1/tickets_data.csv?dl=1'
-                         ,header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+                         ,header=0, encoding="ISO-8859-1")
     return data
 
 @st.experimental_memo(ttl=5)
@@ -56,7 +56,7 @@ def get_data_geo():
 @st.experimental_memo(ttl=5)
 def get_data_pobl():
     data_raw = pd.read_csv('Data/poblacion.csv', sep=";"
-                       , header=0, encoding="ISO-8859-1")  # read a CSV file inside the 'data" folder next to 'app.py'
+                       , header=0, encoding="ISO-8859-1")  
     data_raw['Provincias'] = data_raw['Provincias'].str[:2]
     data_raw = data_raw.sort_values('Provincias')
     data_raw = pd.DataFrame(data_raw.iloc[0:52, [0, 3]])
@@ -118,7 +118,7 @@ def rules(df_rules):
 
     r_net = Network(height='450px', width='1000px', bgcolor='#FFFFFF.', font_color='black')
             
-    # set the physics layout of the network
+
     r_net.barnes_hut(spring_length=1,  central_gravity=10, overlap=0.3)
     sources = df_rules['Si el cliente compró']
     targets = df_rules['Comprará']
@@ -137,7 +137,7 @@ def rules(df_rules):
 
     neighbor_map = r_net.get_adj_list()
 
-    # add neighbor data to node hover data
+
     for node in r_net.nodes:
         node['title'] += ' Relacionado:<br>' + '<br>'.join(neighbor_map[node['id']])
         node['value'] = len(neighbor_map[node['id']])
@@ -147,6 +147,7 @@ def rules(df_rules):
     HtmlFile = open("rules.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read()
     return source_code
+
 #endregion
 
 
@@ -392,7 +393,7 @@ def run_UI():
         threshold_scale = np.linspace(data_all[dicts[variable_map]].min(),
                                   data_all[dicts[variable_map]].max(),
                                   10, dtype=float)
-        # change the numpy array to a list
+       
         threshold_scale = threshold_scale.tolist()
         threshold_scale[-1] = threshold_scale[-1]
         
