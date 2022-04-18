@@ -655,7 +655,7 @@ def run_UI():
         arraym = plot_df1.index  # Solo permitimos la selección de provincias que contienen datos
         marcas_1 = []
         
-        for elem in array:
+        for elem in arraym:
             marcas_1.append(elem[0])
         
         marca_ok = plot_df1.loc[plot_df1['Marca'].isin(marcas_1)]['Marca'].to_numpy()
