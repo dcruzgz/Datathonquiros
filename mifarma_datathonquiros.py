@@ -584,17 +584,17 @@ def run_UI():
 
         #Como en mapa filtrar por categoría según marca_gain
         
-        cols = st.columns((1, 1, 1))
+        colsp = st.columns((1, 1, 1))
 
         prod1 = datos_clean_or['productcat1'].unique()
         prod1 = np.append(prod1, ['Todas las Categorías'])
 
-        cat1 = cols[0].selectbox("Categoría:",
+        cat1 = colsp[0].selectbox("Categoría:",
                                  prod1,  index=len(prod1)-1)
         if cat1 == 'Todas las Categorías':
-            cat2 = cols[1].selectbox("Subcategoría 1:",
+            cat2 = colsp[1].selectbox("Subcategoría 1:",
                               ['Toda la Categoría'])
-            cat3 = cols[2].selectbox("Subcategoría 2:",
+            cat3 = colsp[2].selectbox("Subcategoría 2:",
                               ['Toda la Categoría'])
             df_filter = datos_clean_or
 
@@ -603,14 +603,14 @@ def run_UI():
             prod2 = df_va1['productcat2'].unique()
             prod2 = np.append(prod2, ['Toda la Categoría'])
 
-            cat2 = cols[1].selectbox("Subcategoría 1:",
+            cat2 = colsp[1].selectbox("Subcategoría 1:",
                                      prod2, index=len(prod2)-1)
 
             if cat2 == 'Toda la Categoría':
 
                 df_filter = datos_clean_or.loc[datos_clean_or['productcat1'] == cat1]
 
-                cat3 = cols[2].selectbox("Subcategoría 2:",
+                cat3 = colsp[2].selectbox("Subcategoría 2:",
                                   ['Toda la Categoría'])
             else:
                 df_va2 = df_va1.loc[df_va1.loc[:, 'productcat2'] == cat2]
@@ -618,7 +618,7 @@ def run_UI():
 
 
                 prod3 = np.append(prod3, ['Toda la Categoría'])
-                cat3 = cols[2].selectbox("Subcategoría 2:",
+                cat3 = colsp[2].selectbox("Subcategoría 2:",
                                          prod3, index=len(prod3)-1)
 
                 if cat3 == 'Toda la Categoría':
