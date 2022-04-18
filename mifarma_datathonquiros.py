@@ -694,7 +694,7 @@ def run_UI():
 
         plot_df = marca_gain[marca_gain.Marca.isin(seleccion)].sort_values(by="Ventas €", ascending=False)
 
-        plot_df['Ventas €'] = round(plot_df['Ventas €'], 0)
+        plot_df['Ventas €'] = round(plot_df['Ventas €'], 2)
         chart = (
         alt.Chart(
             plot_df,
@@ -769,7 +769,7 @@ def run_UI():
         des1 = des1.groupby('descuentolabel')['Precio_calculado'].sum().rename_axis('Descuento').reset_index(
             name='Balance')
         
-        des1['Balance'] = round(des1['Balance'], 0)
+        des1['Balance'] = round(des1['Balance'], 2)
         
         chart =  (alt.Chart(
                 des1,
@@ -779,7 +779,7 @@ def run_UI():
                 .encode(
                 x=alt.Y("Descuento",
                         sort = etiquetas),
-                y=alt.X("Balance", title="Balance"), 
+                y=alt.X("Balance", title="Balance(€)"), 
 
                 color=alt.condition(
                     alt.datum.Balance > 0,
