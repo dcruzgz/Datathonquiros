@@ -726,7 +726,7 @@ def run_UI():
         #Marcas con menos ganancias y/o pérdidas en dicha categoría
         
         plot_df = marca_gain.sort_values(by="Ventas €", ascending=True)
-        plot_df['Ventas €'] = round(plot_df['Ventas €'], 0)
+        plot_df['Ventas €'] = round(plot_df['Ventas €'], 2)
         plot_df = plot_df[0:20]
         chart = (
             alt.Chart(
@@ -837,7 +837,7 @@ def run_UI():
         
         values = st.slider(
             'Selecciona el rango de confianza entre productos comprados a la vez para visualizar la red:',
-            10.0, 60.0, (10.0, 30.0))
+            10.0, 60.0, (20.0, 30.0))
 
         components.html(rules(df_rules(values[0], values[1])), height=480, width=1050)
 
