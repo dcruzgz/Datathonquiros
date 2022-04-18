@@ -631,10 +631,10 @@ def run_UI():
 
         #Sumatoria de todas las compras por marca
         
-        plot_df1 = df_filter.groupby('productmarca')['qty_ordered'].sum().rename_axis('Marca').reset_index(name='Ventas (€)')
+        plot_df1 = df_filter.groupby('productmarca')['qty_ordered'].sum().rename_axis('Marca').reset_index(name='% Ventas')
 
-        top = plot_df1.sort_values(by='Ventas (€)', ascending=False)['Marca'] #Selección de las más vendidas
-        plot_df1['Ventas (€)'] = round((plot_df1['Ventas (€)'] / (plot_df1['Ventas (€)'].sum())) * 100, 2)
+        top = plot_df1.sort_values(by='% Ventas', ascending=False)['Marca'] #Selección de las más vendidas
+        plot_df1['% Ventas'] = round((plot_df1['% Ventas'] / (plot_df1['% Ventas'].sum())) * 100, 2)
         st.expander(label='Campo a consultar')
 
         marcas1 = datos_clean_or['productmarca'].astype(str).unique()
@@ -668,10 +668,10 @@ def run_UI():
             )
                 .mark_bar()
                 .encode(
-                x=alt.X("Ventas (€)", title="% Ventas"),
+                x=alt.X("% Ventas", title="% Ventas"),
                 y=alt.Y(
                     "Marca",
-                    sort=alt.EncodingSortField(field="Ventas (€)", order="descending"),
+                    sort=alt.EncodingSortField(field="% Ventas", order="descending"),
                     title="",
                 ),
                 color=alt.Color(
@@ -679,7 +679,7 @@ def run_UI():
                     legend=None,
                     scale=alt.Scale(scheme="category10"),
                 ),
-                tooltip=["Ventas (€)", "Marca"],
+                tooltip=["% Ventas", "Marca"],
             )
         )
 
