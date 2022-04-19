@@ -12,7 +12,7 @@ Este repositorio contiene los siguientes archivos:
   - requirements.txt con los requerimientos para la ejecución del script de python.
   - rules.html con un ejemplo de la salida html del script en la parte de representación gráfica de las asociaciones de los productos. 
   - Script datathon 2022 Clean.R con el script usado en RStudio para la limpieza y tratamiento de los datos proporcionados.
-
+  -	Guía para la ejecución en local en pdf
 
 Daniel Jesús Cruz Garzón
 
