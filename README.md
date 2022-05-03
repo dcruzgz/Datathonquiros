@@ -14,7 +14,7 @@ Este repositorio contiene los siguientes archivos:
   - Script datathon 2022 Clean.R con el script usado en RStudio para la limpieza y tratamiento de los datos proporcionados.
   -	Guía para la ejecución en local en pdf
 
-Daniel Jesús Cruz Garzón
+Daniel Cruz Garzón
 
 Antonio González Rodríguez
 
