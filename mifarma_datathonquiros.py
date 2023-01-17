@@ -858,7 +858,7 @@ if __name__ == '__main__':
 
     if not os.path.exists('Output'):
         os.makedirs('Output')
-    if runtime.exists()::
+    if runtime.exists():
         url_params = st.experimental_get_query_params()
         if 'loaded' not in st.session_state:
             if len(url_params.keys()) == 0:
