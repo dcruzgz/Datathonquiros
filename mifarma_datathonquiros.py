@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 from PIL import Image
 from collections import Counter
 from itertools import groupby
-
+from streamlit import runtime
 
 
 #Páginas de la aplicación web
@@ -858,7 +858,7 @@ if __name__ == '__main__':
 
     if not os.path.exists('Output'):
         os.makedirs('Output')
-    if st._is_running_with_streamlit:
+    if runtime.exists()::
         url_params = st.experimental_get_query_params()
         if 'loaded' not in st.session_state:
             if len(url_params.keys()) == 0:
